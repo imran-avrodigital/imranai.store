@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="IMRAN AI Hub (imranai.store) - Futuristic AI Tools Ecosystem, Video Studio Tools, Content Automation Suites, and Portfolio of Imran Nazir.">
-    <meta name="keywords" content="imranai, imranai.store, AI tools, AI video studio, content automation, reverse video prompting, prompt generator, SEO metadata tool">
-    <meta name="author" content="Imran Nazir">
-    
-    <!-- Open Graph / Social Meta -->
-    <meta property="og:title" content="IMRAN AI // AI TOOLS ECOSYSTEM & PORTFOLIO">
-    <meta property="og:description" content="Discover, launch, and use cutting-edge AI tools, video generators, and automation applications built by Imran Nazir.">
+    <meta name="description" content="Imran Nazir Personal Portfolio & AI Tools Ecosystem - SEO Strategist, AI Automation Lead, WordPress Engineer & Digital Marketing Specialist.">
+    <meta property="og:title" content="IMRAN NAZIR // PERSONAL PORTFOLIO & AI TOOLS ECOSYSTEM">
+    <meta property="og:description" content="5+ Years Experience in SEO Strategy, AI Automation, Video Studio Tools & Digital Marketing.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://imranai.store/">
-    <meta property="og:image" content="https://imranai.store/assets/logo.svg">
-
-    <title>IMRAN AI // AI Tools Ecosystem & Portfolio (imranai.store)</title>
+    <meta property="og:image" content="./assets/logo.svg">
+    
+    <title>IMRAN NAZIR // PERSONAL PORTFOLIO & AI TOOLS</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
@@ -22,12 +18,13 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome & Chart.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Stylesheets -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -36,112 +33,137 @@
     <div id="cyber-cursor"></div>
     <div id="cyber-cursor-ring"></div>
 
-    <!-- Background Animated Canvas & Grid -->
+    <!-- Background Canvas & Grid -->
     <canvas id="bg-canvas"></canvas>
     <div class="cyber-grid"></div>
 
-    <!-- MAIN HEADER -->
+    <!-- Header Navbar -->
     <header class="main-header">
         <a href="#hero" class="brand-container">
             <img src="./assets/logo.svg" alt="Imran AI Logo" class="brand-logo-img">
-            <div>
-                <div class="brand-title">IMRAN <span class="accent-text">AI</span></div>
-                <div class="brand-domain">imranai.store</div>
+            <div class="brand-title">
+                IMRAN <span class="accent-text">NAZIR</span>
             </div>
         </a>
 
-        <div class="header-status">
-            <div class="status-dot-pulse"></div>
-            <span>ALL SYSTEMS OPERATIONAL // AI LAB LIVE</span>
-        </div>
-
-        <nav>
+        <nav class="nav-desktop">
             <ul class="nav-links">
-                <li><a href="#tools-section" class="active">AI TOOLS</a></li>
-                <li><a href="#about">PORTFOLIO</a></li>
-                <li><a href="#terminal">TERMINAL</a></li>
+                <li><a href="#hero" class="active">HOME</a></li>
+                <li><a href="#tools-section">AI TOOLS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#analytics">METRICS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#testimonials">TESTIMONIALS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
 
+        <div class="header-status">
+            <div class="status-dot-pulse"></div>
+            <span>LIVE TELEMETRY // 99.9%</span>
+        </div>
+
         <div class="header-actions">
-            <button onclick="openBuiltInModal('addTool')" class="cyber-btn cyber-btn-outline cyber-btn-sm">
+            <button onclick="openBuiltInModal('addTool')" class="cyber-btn cyber-btn-outline cyber-btn-sm" style="display:inline-flex;">
                 <i class="fa-solid fa-plus"></i> ADD TOOL
             </button>
-            <a href="#contact" class="cyber-btn cyber-btn-sm">
-                <i class="fa-solid fa-paper-plane"></i> HIRE ME
-            </a>
-            <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Mobile Menu">
-                <i class="fa-solid fa-bars"></i>
+            <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars" id="menuBtnIcon"></i>
             </button>
         </div>
     </header>
 
-    <!-- MOBILE MENU DRAWER -->
+    <!-- Mobile Nav Drawer -->
     <div id="mobileNavDrawer" class="mobile-menu-drawer">
-        <a href="#tools-section"><i class="fa-solid fa-microchip"></i> AI TOOLS CATALOG</a>
-        <a href="#about"><i class="fa-solid fa-user-astronaut"></i> PORTFOLIO & BIO</a>
-        <a href="#terminal"><i class="fa-solid fa-terminal"></i> CYBER TERMINAL</a>
-        <a href="#contact"><i class="fa-solid fa-envelope"></i> CONTACT & WORK</a>
-        <button onclick="openBuiltInModal('addTool')" class="cyber-btn cyber-btn-outline" style="width: 100%; justify-content: center; margin-top: 10px;">
-            <i class="fa-solid fa-plus"></i> ADD NEW TOOL
+        <a href="#hero"><i class="fa-solid fa-house" style="color:var(--neon-cyan)"></i> HOME</a>
+        <a href="#tools-section"><i class="fa-solid fa-microchip" style="color:var(--neon-cyan)"></i> AI TOOLS STORE</a>
+        <a href="#about"><i class="fa-solid fa-user-gear" style="color:var(--neon-purple)"></i> ABOUT ME</a>
+        <a href="#analytics"><i class="fa-solid fa-chart-line" style="color:var(--neon-gold)"></i> METRICS & RADAR</a>
+        <a href="#projects"><i class="fa-solid fa-cubes" style="color:var(--neon-cyan)"></i> FEATURED PROJECTS</a>
+        <a href="#testimonials"><i class="fa-solid fa-comment-dots" style="color:var(--neon-magenta)"></i> TESTIMONIALS</a>
+        <a href="#terminal"><i class="fa-solid fa-terminal" style="color:var(--neon-green)"></i> TERMINAL</a>
+        <a href="#contact"><i class="fa-solid fa-paper-plane" style="color:var(--neon-green)"></i> CONTACT</a>
+        <button onclick="openBuiltInModal('addTool')" class="cyber-btn cyber-btn-outline" style="width:100%; justify-content:center; margin-top:10px;">
+            <i class="fa-solid fa-plus"></i> PUBLISH NEW TOOL
         </button>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <main>
-
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        
         <!-- HERO SECTION -->
-        <section id="hero" class="hero-section">
-            <div class="hero-pill-badge">
-                <i class="fa-solid fa-bolt"></i> CENTRAL HUB FOR NEXT-GEN AI TOOLS & AUTOMATION
+        <section id="hero" class="hero">
+            <div class="hero-text cyber-pop pop-hero-warp">
+                <h2>// WELCOME TO MY CYBER SYSTEM</h2>
+                <h1>IMRAN NAZIR</h1>
+
+                <div class="typing-role-wrapper">
+                    <span id="typingRoleText">SEO Strategist</span>
+                    <span class="typing-cursor"></span>
+                </div>
+
+                <p>
+                    5+ Years Experience in SEO Strategy, AI Automation Lead, WordPress Engineering & Digital Marketing. Building high-performance AI engines, content automation systems, and scaling organic web traffic.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#tools-section" class="cyber-btn">
+                        <i class="fa-solid fa-rocket"></i> EXPLORE AI TOOLS
+                    </a>
+                    <a href="#contact" class="cyber-btn cyber-btn-outline">
+                        <i class="fa-solid fa-paper-plane"></i> CONTACT ME
+                    </a>
+                </div>
             </div>
 
-            <h1 class="hero-title">
-                BUILDING THE FUTURE OF <br>
-                <span class="cyan-glow">AI TOOLS</span> & <span class="silver-text">AUTOMATION</span>
-            </h1>
+            <div class="avatar-frame-wrapper cyber-pop pop-avatar-burst">
+                <div class="avatar-frame">
+                    <div class="cyber-train-track"></div>
 
-            <p class="hero-subtitle">
-                Welcome to <strong style="color:var(--neon-cyan);">imranai.store</strong> — A unified suite of AI video creation engines, inverse prompt tools, viral content automation, and SEO intelligence tools built by <span id="typingRoleText" class="typing-container">AI Tool Builder</span>.
-            </p>
+                    <a href="https://www.facebook.com/iamimranai" target="_blank" rel="noopener noreferrer" class="curved-button-wrapper" title="Click Contact Now! to connect on Facebook">
+                        <svg class="curved-btn-svg" viewBox="0 0 380 380">
+                            <defs>
+                                <path id="contactArcPath" d="M 87.2,67.4 A 160 160 0 0 1 292.8,67.4" fill="none" />
+                            </defs>
+                            <text class="arc-btn-text" dy="4">
+                                <textPath href="#contactArcPath" startOffset="50%" text-anchor="middle">
+                                    Contact Now!
+                                </textPath>
+                            </text>
+                        </svg>
+                    </a>
 
-            <div class="hero-ctas">
-                <a href="#tools-section" class="cyber-btn">
-                    <i class="fa-solid fa-rocket"></i> EXPLORE AI TOOLS CATALOG
-                </a>
-                <button onclick="openBuiltInModal('promptGenerator')" class="cyber-btn cyber-btn-outline">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> LAUNCH PROMPT GENERATOR
-                </button>
-            </div>
-
-            <div class="hero-stats-strip">
-                <div class="stat-box">
-                    <div class="stat-num">10+</div>
-                    <div class="stat-label">AI Tools & Extensions</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">5+ Yrs</div>
-                    <div class="stat-label">Automation & SEO Exp</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">100K+</div>
-                    <div class="stat-label">Videos & Assets Processed</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">100%</div>
-                    <div class="stat-label">VERCEL READY HUB</div>
+                    <div class="avatar-ring-2"></div>
+                    <div class="avatar-core">
+                        <img src="./assets/profile.png" alt="Imran Nazir Profile Picture">
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- STATS HUD BANNER -->
+        <div class="hero-stats-strip">
+            <div class="stat-box tilt-card cyber-pop pop-stat-spring">
+                <div class="stat-num stat-counter-val" data-target="260" data-suffix="%">+0%</div>
+                <div class="stat-label">Organic Traffic Growth</div>
+            </div>
+            <div class="stat-box tilt-card cyber-pop pop-stat-spring" style="transition-delay: 0.18s;">
+                <div class="stat-num stat-counter-val" data-target="100" data-suffix="%">0%</div>
+                <div class="stat-label">Automated Workflows</div>
+            </div>
+            <div class="stat-box tilt-card cyber-pop pop-stat-spring" style="transition-delay: 0.36s;">
+                <div class="stat-num stat-counter-val" data-target="7" data-suffix="+">0+</div>
+                <div class="stat-label">#1 Ranking Keywords</div>
+            </div>
+        </div>
+
         <!-- AI TOOLS CATALOG STORE SECTION -->
-        <section id="tools-section" class="section-wrapper">
+        <section id="tools-section" class="section-wrapper" style="padding-top:40px;">
             <div class="section-header">
                 <span class="section-tag">// ECOSYSTEM STORE</span>
                 <h2 class="section-title">IMRAN AI <span>TOOLS CATALOG</span></h2>
                 <p class="section-desc">
-                    Launch live interactive AI tools directly in your browser or access full-stack web applications hosted across subdomains.
+                    Launch live interactive AI tools or click any tool to view its full details and step-by-step usage guide.
                 </p>
             </div>
 
@@ -176,143 +198,402 @@
             </div>
         </section>
 
-        <!-- ABOUT & PORTFOLIO SECTION -->
-        <section id="about" class="section-wrapper">
-            <div class="section-header">
-                <span class="section-tag">// ARCHITECT & FOUNDER</span>
-                <h2 class="section-title">ABOUT <span>IMRAN NAZIR</span></h2>
-                <p class="section-desc">
-                    AI Automation Lead, Full-Stack Web Engineer, and SEO Growth Strategist building high-performance AI engines.
+        <!-- ABOUT SECTION -->
+        <section id="about" style="margin-bottom: 50px;">
+            <h2 class="section-title"><i class="fa-solid fa-user-gear"></i> ABOUT IMRAN NAZIR</h2>
+            <div class="hud-card tilt-card cyber-pop pop-about-holo">
+                <h3 style="font-family:'Orbitron', sans-serif; color:var(--neon-cyan); font-size:1.3rem; margin-bottom:15px;">
+                    Digital Marketing Lead, SEO Strategist & AI Systems Developer
+                </h3>
+                <p style="font-size:1.05rem; color:var(--text-muted); line-height:1.7; margin-bottom:20px;">
+                    Results-driven Digital Marketing Specialist, SEO Strategist, and AI Automation Engineer with 5+ years of experience managing end-to-end digital growth, organic search visibility, and automated video pipelines. Proven track record in executing technical SEO audits, high-converting WordPress development, and multi-channel campaign leadership.
                 </p>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <span class="tag">5+ Years Experience</span>
+                    <span class="tag">Technical SEO Audits</span>
+                    <span class="tag">AI Automation</span>
+                    <span class="tag">WordPress Engineering</span>
+                    <span class="tag">PPC & Meta Ads</span>
+                </div>
             </div>
+        </section>
 
-            <div class="about-grid">
-                <div class="profile-img-frame">
-                    <img src="./assets/profile.png" alt="Imran Nazir Profile">
+        <!-- ANALYTICS & METRICS SECTION -->
+        <section id="analytics" style="margin-bottom: 50px;">
+            <h2 class="section-title"><i class="fa-solid fa-chart-line"></i> SKILLS & SYSTEM TELEMETRY</h2>
+            
+            <div class="analytics-grid">
+                <!-- Skill Progress Bars -->
+                <div class="hud-card tilt-card cyber-pop pop-laser-surge">
+                    <h3>TECHNICAL PROFICIENCIES <i class="fa-solid fa-sliders"></i></h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>SEO Strategy & Analytics</span>
+                            <span class="skill-pct-counter" data-val="95">0%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="95%"></div>
+                        </div>
+                        <div class="skill-tool-tags">
+                            <span class="mini-tag">SEMrush</span>
+                            <span class="mini-tag">Ahrefs</span>
+                            <span class="mini-tag">GSC</span>
+                            <span class="mini-tag">GA4</span>
+                            <span class="mini-tag">Screaming Frog</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>AI & LLM Automation</span>
+                            <span class="skill-pct-counter" data-val="94">0%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="94%"></div>
+                        </div>
+                        <div class="skill-tool-tags">
+                            <span class="mini-tag">Python</span>
+                            <span class="mini-tag">Playwright</span>
+                            <span class="mini-tag">PyQt6</span>
+                            <span class="mini-tag">ChatGPT</span>
+                            <span class="mini-tag">Whisper</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Video Editing & Synthesis</span>
+                            <span class="skill-pct-counter" data-val="92">0%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="92%"></div>
+                        </div>
+                        <div class="skill-tool-tags">
+                            <span class="mini-tag">Kling AI</span>
+                            <span class="mini-tag">Runway ML</span>
+                            <span class="mini-tag">CapCut</span>
+                            <span class="mini-tag">Premiere Pro</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>WordPress & Fullstack Web</span>
+                            <span class="skill-pct-counter" data-val="90">0%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="90%"></div>
+                        </div>
+                        <div class="skill-tool-tags">
+                            <span class="mini-tag">WordPress</span>
+                            <span class="mini-tag">Elementor</span>
+                            <span class="mini-tag">Rank Math</span>
+                            <span class="mini-tag">HTML/CSS/JS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Digital Marketing & PPC</span>
+                            <span class="skill-pct-counter" data-val="88">0%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="88%"></div>
+                        </div>
+                        <div class="skill-tool-tags">
+                            <span class="mini-tag">Facebook Ads</span>
+                            <span class="mini-tag">Content Marketing</span>
+                            <span class="mini-tag">Mailchimp</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin-bottom:15px;">
-                        Engineering Autonomous AI Applications & Media Workflows
-                    </h3>
-                    <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:20px; line-height:1.6;">
-                        With over 5 years of hands-on experience in full-stack web engineering, Python backend architecture, SEO optimization, and synthetic media automation, I build tools that transform complex AI algorithms into effortless, high-converting digital products.
-                    </p>
+                <!-- Radar Chart -->
+                <div class="hud-card tilt-card cyber-pop pop-radar-tornado">
+                    <h3>CORE SKILLS RADAR <i class="fa-solid fa-satellite-dish"></i></h3>
+                    <div style="position: relative; width: 100%; height: 280px; display: flex; justify-content: center; align-items: center;">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="skills-list">
-                        <div class="skill-bar-item">
-                            <div class="skill-info">
-                                <span>AI Video & Inverse Prompting (FastAPI, React, Whisper, TTS)</span>
-                                <span>98%</span>
-                            </div>
-                            <div class="skill-track"><div class="skill-fill" style="width: 98%;"></div></div>
-                        </div>
+            <!-- Line Chart Telemetry -->
+            <div class="hud-card tilt-card cyber-pop pop-matrix-flip" style="margin-bottom: 50px;">
+                <h3>LIVE ORGANIC & SYSTEM TELEMETRY STREAM <i class="fa-solid fa-wave-square"></i></h3>
+                <div style="position: relative; width: 100%; min-height: 200px;">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </section>
 
-                        <div class="skill-bar-item">
-                            <div class="skill-info">
-                                <span>Full-Stack Web Development & Modern UI/UX</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-track"><div class="skill-fill" style="width: 95%;"></div></div>
-                        </div>
+        <!-- FEATURED PROJECTS SECTION -->
+        <section id="projects">
+            <h2 class="section-title"><i class="fa-solid fa-cubes"></i> FEATURED PROJECTS & DEPLOYMENTS</h2>
+            <div class="projects-grid">
+                <div class="project-card tilt-card cyber-pop pop-matrix-flip">
+                    <h4>Avrodigital.co</h4>
+                    <div class="project-role-badge">Digital Marketing Lead & SEO Strategist</div>
+                    <p>Leading comprehensive digital marketing campaigns, technical SEO strategy implementation, and cross-functional team coordination.</p>
+                    <div class="project-result-box">
+                        <div class="result-highlight">Multi-Client Success</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">Ongoing Team Leadership</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Digital Marketing</span>
+                        <span class="tag">SEO Strategy</span>
+                        <span class="tag">Team Lead</span>
+                    </div>
+                </div>
 
-                        <div class="skill-bar-item">
-                            <div class="skill-info">
-                                <span>SEO Strategy & Video Metadata CTR Optimization</span>
-                                <span>92%</span>
-                            </div>
-                            <div class="skill-track"><div class="skill-fill" style="width: 92%;"></div></div>
-                        </div>
+                <div class="project-card tilt-card cyber-pop pop-matrix-flip" style="transition-delay: 0.15s;">
+                    <h4>BuyBigInflatableThings.com</h4>
+                    <div class="project-role-badge">SEO Strategist & Project Manager</div>
+                    <p>Full-site SEO overhaul, content planning, technical speed optimization, and high-authority link building strategy.</p>
+                    <div class="project-result-box">
+                        <div class="result-highlight">+260% Organic Traffic</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">Achieved in 4 Months</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">SEO Audit</span>
+                        <span class="tag">Content Strategy</span>
+                        <span class="tag">WordPress</span>
+                    </div>
+                </div>
 
-                        <div class="skill-bar-item">
-                            <div class="skill-info">
-                                <span>Social Media Batch Publishing & API Automation</span>
-                                <span>96%</span>
-                            </div>
-                            <div class="skill-track"><div class="skill-fill" style="width: 96%;"></div></div>
-                        </div>
+                <div class="project-card tilt-card cyber-pop pop-matrix-flip" style="transition-delay: 0.3s;">
+                    <h4>ElectricScooter.com</h4>
+                    <div class="project-role-badge">Content Writer & WordPress Developer</div>
+                    <p>Designed high-converting landing pages, executed extensive long-tail keyword research, and on-page SEO optimization.</p>
+                    <div class="project-result-box">
+                        <div class="result-highlight">#1 Rankings</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">For 7+ Long-Tail Keywords</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Rank #1</span>
+                        <span class="tag">On-Page SEO</span>
+                        <span class="tag">WordPress</span>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card cyber-pop pop-matrix-flip">
+                    <h4>Phototovector.com</h4>
+                    <div class="project-role-badge">Project Manager & SEO Lead</div>
+                    <p>Ongoing project focusing on keyword gap analysis, blog content direction, and strategic backlink acquisition.</p>
+                    <div class="project-result-box">
+                        <div class="result-highlight">Month 2 KPIs Exceeded</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">In Progress</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Link Building</span>
+                        <span class="tag">Blog Strategy</span>
+                        <span class="tag">Project Mgmt</span>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card cyber-pop pop-matrix-flip" style="transition-delay: 0.15s;">
+                    <h4>Bestwheeled.com</h4>
+                    <div class="project-role-badge">SEO Specialist & Content Strategist</div>
+                    <p>Comprehensive SEO audit, technical content optimization, and mobility sector authority link building.</p>
+                    <div class="project-result-box">
+                        <div class="result-highlight">Top 3 Rankings</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">For Competitive Search Terms</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Keyword Research</span>
+                        <span class="tag">Automotive SEO</span>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card cyber-pop pop-matrix-flip" style="transition-delay: 0.3s;">
+                    <h4>Dola AI Video Automation Studio</h4>
+                    <div class="project-role-badge">AI Systems & Automation Architect</div>
+                    <p>Multi-threaded Playwright automation bot generating AI short videos across 5 concurrent Chrome browser profiles.</p>
+                    <div class="project-result-box">
+                        <div class="result-highlight">100% Automated Workflow</div>
+                        <div style="font-size: 0.8rem; color: var(--text-dim);">PyQt6 + Playwright</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Playwright</span>
+                        <span class="tag">AI Video</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CYBER TERMINAL SECTION -->
-        <section id="terminal" class="section-wrapper">
-            <div class="section-header">
-                <span class="section-tag">// INTERACTIVE SHELL</span>
-                <h2 class="section-title">IA-OS <span>CYBER TERMINAL</span></h2>
-                <p class="section-desc">Type commands to inspect tools, query system diagnostics, or trigger applications directly.</p>
-            </div>
-
-            <div class="terminal-card">
-                <div class="terminal-header">
-                    <div class="terminal-dots">
-                        <div class="dot dot-red"></div>
-                        <div class="dot dot-yellow"></div>
-                        <div class="dot dot-green"></div>
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials">
+            <h2 class="section-title"><i class="fa-solid fa-comment-dots"></i> CLIENT TESTIMONIALS</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card tilt-card cyber-pop pop-testimonial-swing">
+                    <div class="t-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <div class="terminal-title">imranai@store:~ (IA-OS v3.0)</div>
-                    <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--neon-green);">ONLINE</div>
-                </div>
-
-                <div class="terminal-body" id="term-body">
-                    <div class="term-line">
-                        <span class="term-prompt">IA-OS v3.0.4 [BUILD 2026]</span> - Connected to <span style="color:var(--neon-cyan);">imranai.store</span>
-                    </div>
-                    <div class="term-line">
-                        Type <span class="term-prompt">help</span> to view all commands, or <span class="term-prompt">tools</span> to inspect registered AI applications.
+                    <p class="t-quote-text">"Imran is one of the sharpest digital marketers I've worked with. From technical SEO to full multi-channel campaign strategy, he delivers outstanding results."</p>
+                    <div class="t-author-info">
+                        <div class="t-avatar-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <div>
+                            <div class="t-author-name">Arafat Rahman</div>
+                            <div class="t-author-title">CEO, Avro Digital</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="term-input-wrapper">
-                    <span class="term-prompt">imranai@store:~$</span>
-                    <input type="text" id="term-input" class="terminal-input" placeholder="Type a command (e.g. help, tools, status, skills, launch imranai-prompt-generator)...">
+                <div class="testimonial-card tilt-card cyber-pop pop-testimonial-swing" style="transition-delay: 0.2s;">
+                    <div class="t-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="t-quote-text">"Outstanding SEO work! Our organic search traffic increased by 260% in just 4 months. Imran's analytical and strategic approach is impressive."</p>
+                    <div class="t-author-info">
+                        <div class="t-avatar-icon"><i class="fa-solid fa-user-gear"></i></div>
+                        <div>
+                            <div class="t-author-name">Sarah M.</div>
+                            <div class="t-author-title">Marketing Director</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card tilt-card cyber-pop pop-testimonial-swing" style="transition-delay: 0.4s;">
+                    <div class="t-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="t-quote-text">"Professional, reliable, and results-driven. Imran transformed our site's ranking structure and helped us secure #1 positions for key terms."</p>
+                    <div class="t-author-info">
+                        <div class="t-avatar-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <div>
+                            <div class="t-author-name">David K.</div>
+                            <div class="t-author-title">E-commerce Owner</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- CONTACT SECTION -->
-        <section id="contact" class="section-wrapper">
-            <div class="section-header">
-                <span class="section-tag">// COLLABORATE & CONNECT</span>
-                <h2 class="section-title">GET IN <span>TOUCH</span></h2>
-                <p class="section-desc">Have a custom AI tool request, partnership idea, or client project? Send a direct message.</p>
-            </div>
-
-            <div class="contact-card">
-                <form id="contactForm" action="https://formsubmit.co/ajax/iamimranai.com@gmail.com" method="POST">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
-                        <div class="form-group">
-                            <label class="form-label">YOUR NAME</label>
-                            <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+        <section id="contact">
+            <h2 class="section-title"><i class="fa-solid fa-paper-plane"></i> LET'S CONNECT & WORK TOGETHER</h2>
+            <div class="contact-grid">
+                <div class="contact-info-card tilt-card cyber-pop pop-quantum-left">
+                    <h3 style="font-family:'Orbitron', sans-serif; color:var(--neon-cyan); font-size:1.15rem; margin-bottom:10px;">DIRECT CONTACT CHANNELS</h3>
+                    
+                    <a href="mailto:imran.avrodigital.co@gmail.com" class="contact-item">
+                        <div class="contact-icon" style="background:#1877f2;"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div class="contact-label">PRIMARY EMAIL ADDRESS</div>
+                            <div class="contact-val">imran.avrodigital.co@gmail.com</div>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label">YOUR EMAIL ADDRESS</label>
-                            <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+                    </a>
+
+                    <a href="https://wa.me/8801955688996" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon" style="background:#25D366;"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <div class="contact-label">WHATSAPP / PHONE</div>
+                            <div class="contact-val">+8801955688996</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.facebook.com/iamimranai" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon" style="background:#1877f2;"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div>
+                            <div class="contact-label">FACEBOOK PROFILE</div>
+                            <div class="contact-val">facebook.com/iamimranai</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/imranai/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon" style="background:#0a66c2;"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <div class="contact-label">LINKEDIN PROFILE</div>
+                            <div class="contact-val">linkedin.com/in/imranai</div>
+                        </div>
+                    </a>
+
+                    <div class="contact-item" style="cursor:default;">
+                        <div class="contact-icon" style="background:var(--neon-purple);"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div class="contact-label">LOCATION & AVAILABILITY</div>
+                            <div class="contact-val">Based in Bangladesh – Available Worldwide</div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="form-label">PROJECT / TOOL INQUIRY</label>
-                        <textarea name="message" class="form-control" placeholder="Describe your tool idea, automation requirements, or project goal..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="cyber-btn" style="width: 100%; justify-content: center;">
-                        <i class="fa-solid fa-paper-plane"></i> SEND MESSAGE TO IMRAN AI
-                    </button>
-                </form>
-
-                <div class="social-grid">
-                    <a href="https://github.com/iamimranai" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="mailto:iamimranai.com@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://imranai.store" target="_blank" rel="noopener" class="social-icon-btn" title="Domain Store"><i class="fa-solid fa-globe"></i></a>
+                <div class="contact-form-card tilt-card cyber-pop pop-quantum-right">
+                    <h3 style="font-family:'Orbitron', sans-serif; color:var(--neon-cyan); font-size:1.15rem; margin-bottom:20px;">SEND A DIRECT TRANSMISSION</h3>
+                    <form id="portfolioContactForm" action="https://formsubmit.co/ajax/imran.avrodigital.co@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="🚀 New Inquiry for Imran Nazir!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="form-group">
+                            <label>YOUR NAME</label>
+                            <input type="text" name="name" class="form-input" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>YOUR EMAIL</label>
+                            <input type="email" name="email" class="form-input" placeholder="imran.avrodigital.co@gmail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>PROJECT CATEGORY</label>
+                            <select name="category" class="form-select" required>
+                                <option value="" disabled selected>Select project category...</option>
+                                <option>SEO Strategy & Auditing</option>
+                                <option>WordPress Development</option>
+                                <option>AI Automation & Video Studio</option>
+                                <option>Content & Social Marketing</option>
+                                <option>Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>MESSAGE</label>
+                            <textarea name="message" class="form-textarea" placeholder="Describe your project goals..." required></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn" class="cyber-btn" style="width:100%; justify-content:center;">
+                            TRANSMIT MESSAGE <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div id="formStatusMsg" style="margin-top: 15px; font-family: 'Share Tech Mono', monospace; font-size: 0.95rem; text-align: center; display: none;"></div>
+                    </form>
                 </div>
             </div>
         </section>
 
-    </main>
+        <!-- INTERACTIVE TERMINAL SECTION -->
+        <section id="terminal">
+            <h2 class="section-title"><i class="fa-solid fa-terminal"></i> INTERACTIVE CONSOLE</h2>
+            <div class="terminal-container tilt-card cyber-pop pop-crt-power">
+                <div class="terminal-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <div class="terminal-title">bash -- 80x24</div>
+                </div>
+                <div class="terminal-body" id="term-body">
+                    <div>Welcome to Imran Nazir Personal Portfolio Terminal v5.0.0</div>
+                    <div>Type <span style="color:var(--neon-cyan);">help</span> to see available commands.</div>
+                    <br>
+                </div>
+                <div class="terminal-input-line">
+                    <span style="color:var(--neon-magenta);">user@imran-nazir:~$</span>
+                    <input type="text" id="term-input" class="terminal-input" placeholder="Type a command (e.g. help, skills, projects, contact, status, clear)...">
+                </div>
+            </div>
+        </section>
 
-    <!-- BUILT-IN TOOL MODAL 1: PROMPT GENERATOR -->
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/iamimranai" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/imranai/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/8801955688996" target="_blank" rel="noopener noreferrer" class="social-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:imran.avrodigital.co@gmail.com" class="social-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2026 IMRAN NAZIR // PERSONAL PORTFOLIO. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <!-- INTERACTIVE BUILT-IN TOOL MODALS -->
+    
+    <!-- MODAL 1: PROMPT GENERATOR -->
     <div id="modal-promptGenerator" class="modal-overlay">
         <div class="modal-container">
             <button class="modal-close-btn">&times;</button>
@@ -366,7 +647,7 @@
         </div>
     </div>
 
-    <!-- BUILT-IN TOOL MODAL 2: SEO METADATA GENERATOR -->
+    <!-- MODAL 2: SEO METADATA GENERATOR -->
     <div id="modal-seoGenerator" class="modal-overlay">
         <div class="modal-container">
             <button class="modal-close-btn">&times;</button>
@@ -393,7 +674,7 @@
         </div>
     </div>
 
-    <!-- BUILT-IN TOOL MODAL 3: API KEY TESTER -->
+    <!-- MODAL 3: API KEY TESTER -->
     <div id="modal-apiKeyTester" class="modal-overlay">
         <div class="modal-container">
             <button class="modal-close-btn">&times;</button>
@@ -425,13 +706,13 @@
         </div>
     </div>
 
-    <!-- BUILT-IN TOOL MODAL 4: ADD NEW TOOL ADMIN PANEL -->
+    <!-- MODAL 4: ADD NEW TOOL ADMIN PANEL -->
     <div id="modal-addTool" class="modal-overlay">
         <div class="modal-container">
             <button class="modal-close-btn">&times;</button>
             <div class="modal-header">
-                <h3 class="modal-title"><i class="fa-solid fa-plus"></i> Add New Tool to imranai.store</h3>
-                <p class="modal-desc">Easily register a new AI tool or web app into your live website catalog without touching code!</p>
+                <h3 class="modal-title"><i class="fa-solid fa-plus"></i> Add New Tool to Catalog</h3>
+                <p class="modal-desc">Register a new AI tool into your live website catalog without touching code!</p>
             </div>
 
             <form id="addToolForm">
@@ -485,21 +766,8 @@
         </div>
     </div>
 
-    <!-- MAIN FOOTER -->
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div style="display:flex; align-items:center; gap:10px;">
-                <img src="./assets/logo.svg" alt="Imran AI Logo" style="height:28px;">
-                <span style="font-family:var(--font-heading); font-size:1.1rem; color:#fff;">IMRAN <span style="color:var(--neon-cyan);">AI</span></span>
-            </div>
-            <div>&copy; 2026 imranai.store. All Rights Reserved. Built by Imran Nazir.</div>
-            <div style="font-size:0.78rem; color:var(--text-muted);">VERCEL READY // HIGH PERFORMANCE AI TOOLS PLATFORM</div>
-        </div>
-    </footer>
-
     <!-- Scripts -->
     <script src="./js/particles.js"></script>
-    <script src="./js/terminal.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>

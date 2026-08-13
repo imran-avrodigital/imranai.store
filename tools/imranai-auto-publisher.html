@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Automated distribution hub for publishing video and metadata content directly to Facebook Pages, YouTube Shorts, TikTok, and Instagram Reels with scheduling.">
+    <title>ImranAI Multi-Platform Auto Publisher // IMRAN AI TOOL DETAILS</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .detail-hero { padding: 50px 25px 30px 25px; max-width: 1200px; margin: 0 auto; }
+        .back-nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--neon-cyan); text-decoration: none; margin-bottom: 25px; transition: transform 0.3s ease; }
+        .back-nav-link:hover { transform: translateX(-5px); color: #ffffff; }
+        .tool-header-card { background: var(--bg-card); border: 1px solid var(--border-glow); border-radius: var(--radius-lg); padding: 35px; backdrop-filter: blur(20px); box-shadow: 0 15px 40px rgba(0, 243, 255, 0.15); margin-bottom: 40px; }
+        .detail-header-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+        .detail-icon-title { display: flex; align-items: center; gap: 20px; }
+        .detail-icon-box { width: 70px; height: 70px; background: rgba(0, 243, 255, 0.12); border: 1px solid var(--neon-cyan); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--neon-cyan); box-shadow: 0 0 25px rgba(0, 243, 255, 0.3); flex-shrink: 0; }
+        .detail-title { font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: #ffffff; line-height: 1.2; }
+        .detail-subtitle { font-family: var(--font-body); font-size: 1.2rem; color: var(--neon-cyan); margin-bottom: 15px; font-weight: 600; }
+        .detail-desc { font-family: var(--font-body); font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; }
+        .usage-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 25px; }
+        .step-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 25px; backdrop-filter: blur(14px); transition: var(--transition-smooth); }
+        .step-card:hover { border-color: var(--neon-cyan); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2); }
+        .step-badge { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; color: var(--neon-cyan); background: rgba(0, 243, 255, 0.1); border: 1px solid var(--border-glow); width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+        .step-title { font-family: var(--font-heading); font-size: 1.2rem; color: #ffffff; margin-bottom: 10px; }
+        .step-desc { font-family: var(--font-body); font-size: 1.0rem; color: var(--text-muted); line-height: 1.5; }
+        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 20px; }
+        .spec-item { background: rgba(4, 7, 17, 0.8); border: 1px solid var(--border-card); padding: 16px; border-radius: var(--radius-sm); }
+        .spec-label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; }
+        .spec-value { font-family: var(--font-heading); font-size: 1rem; color: var(--neon-cyan); font-weight: 700; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 20px 25px; margin-bottom: 15px; }
+        .faq-q { font-family: var(--font-heading); font-size: 1.1rem; color: #ffffff; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .faq-q i { color: var(--neon-cyan); }
+        .faq-a { font-family: var(--font-body); font-size: 1rem; color: var(--text-muted); line-height: 1.5; padding-left: 28px; }
+    </style>
+</head>
+<body>
+    <div id="cyber-cursor"></div>
+    <div id="cyber-cursor-ring"></div>
+    <canvas id="bg-canvas"></canvas>
+    <div class="cyber-grid"></div>
+
+    <header class="main-header">
+        <a href="../index.html#hero" class="brand-container">
+            <img src="../assets/logo.svg" alt="Imran AI Logo" class="brand-logo-img">
+            <div class="brand-title">IMRAN <span class="accent-text">AI</span></div>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html#tools-section">AI TOOLS</a></li>
+                <li><a href="../index.html#about">PORTFOLIO</a></li>
+                <li><a href="../index.html#terminal">TERMINAL</a></li>
+                <li><a href="../index.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../index.html#contact" class="cyber-btn cyber-btn-sm">
+                <i class="fa-solid fa-paper-plane"></i> HIRE ME
+            </a>
+        </div>
+    </header>
+
+    <main class="detail-hero">
+        <a href="../index.html#tools-section" class="back-nav-link">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ALL AI TOOLS CATALOG
+        </a>
+
+        <div class="tool-header-card tilt-card">
+            <div class="detail-header-top">
+                <div class="detail-icon-title">
+                    <div class="detail-icon-box">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <div>
+                        <h1 class="detail-title">ImranAI Multi-Platform Auto Publisher</h1>
+                        <div class="status-badge status-live" style="display:inline-block; margin-top:6px;">LIVE APP</div>
+                    </div>
+                </div>
+                <div class="btn-group" style="margin:0;">
+                    <a href="https://publisher.imranai.store" target="_blank" rel="noopener" class="cyber-btn"><i class="fa-solid fa-rocket"></i> LAUNCH TOOL APP</a>
+                    <a href="https://github.com/iamimranai" target="_blank" rel="noopener" class="cyber-btn cyber-btn-outline"><i class="fa-brands fa-github"></i> VIEW REPOSITORY</a>
+                </div>
+            </div>
+            <div class="detail-subtitle">Multi-Channel Social Media Distribution & Scheduling Hub</div>
+            <p class="detail-desc">ImranAI Multi-Platform Auto Publisher automates content distribution across social channels. Connect your YouTube, Meta, TikTok, and Instagram accounts once, upload video batches, and let the scheduler post your content at optimal viral hours.</p>
+            <div class="tag-pills"><span class="tag-pill">Python</span><span class="tag-pill">Meta API</span><span class="tag-pill">YouTube Data API</span><span class="tag-pill">Scheduler</span></div>
+        </div>
+
+        <section class="section-wrapper" style="padding-top:10px;">
+            <div class="section-header">
+                <span class="section-tag">// STEP-BY-STEP WORKFLOW</span>
+                <h2 class="section-title">HOW TO <span>USE THIS TOOL</span></h2>
+                <p class="section-desc">Follow these quick operational steps to achieve optimal results with this AI application.</p>
+            </div>
+            <div class="usage-steps-grid">
+                
+        <div class="step-card tilt-card cyber-pop pop-matrix-flip">
+            <div class="step-badge">01</div>
+            <h3 class="step-title">Connect Social Accounts</h3>
+            <p class="step-desc">Authorize your Facebook Pages, YouTube Channels, and TikTok accounts via OAuth.</p>
+        </div>
+    
+        <div class="step-card tilt-card cyber-pop pop-matrix-flip">
+            <div class="step-badge">02</div>
+            <h3 class="step-title">Upload Content Queue</h3>
+            <p class="step-desc">Select video files, auto-generate titles and hashtags using built-in AI tools, and pick publishing times.</p>
+        </div>
+    
+        <div class="step-card tilt-card cyber-pop pop-matrix-flip">
+            <div class="step-badge">03</div>
+            <h3 class="step-title">Automate & Monitor</h3>
+            <p class="step-desc">The background publisher delivers posts on schedule and displays real-time engagement telemetry.</p>
+        </div>
+    
+            </div>
+        </section>
+
+        <section class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// SYSTEM ARCHITECTURE</span>
+                <h2 class="section-title">TECHNICAL <span>SPECIFICATIONS</span></h2>
+            </div>
+            <div class="hud-card tilt-card">
+                <div class="specs-grid">
+                    
+        <div class="spec-item">
+            <div class="spec-label">Integrations</div>
+            <div class="spec-value">YouTube Data API v3, Meta Graph API, TikTok API</div>
+        </div>
+    
+        <div class="spec-item">
+            <div class="spec-label">Security</div>
+            <div class="spec-value">Encrypted Access Token Storage</div>
+        </div>
+    
+        <div class="spec-item">
+            <div class="spec-label">Scheduling</div>
+            <div class="spec-value">Cron-Based Queue Manager</div>
+        </div>
+    
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// KNOWLEDGE BASE</span>
+                <h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
+            </div>
+            <div>
+                
+        <div class="faq-item tilt-card cyber-pop pop-matrix-flip">
+            <div class="faq-q"><i class="fa-solid fa-circle-question"></i> Does it support custom scheduling?</div>
+            <div class="faq-a">Yes, you can set precise publishing dates and times or use smart recommendations based on audience activity.</div>
+        </div>
+    
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <img src="../assets/logo.svg" alt="Imran AI Logo" style="height:28px;">
+                <span style="font-family:var(--font-heading); font-size:1.1rem; color:#fff;">IMRAN <span style="color:var(--neon-cyan);">AI</span></span>
+            </div>
+            <div>&copy; 2026 IMRAN NAZIR // PERSONAL PORTFOLIO & AI TOOLS ECOSYSTEM.</div>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script>
+        const cursorDot = document.getElementById('cyber-cursor');
+        const cursorRing = document.getElementById('cyber-cursor-ring');
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let ringX = mouseX, ringY = mouseY;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            if (cursorDot) { cursorDot.style.left = `${mouseX}px`; cursorDot.style.top = `${mouseY}px`; }
+        });
+        function animateCursorRing() {
+            if (cursorRing) {
+                ringX += (mouseX - ringX) * 0.12; ringY += (mouseY - ringY) * 0.12;
+                cursorRing.style.left = `${ringX}px`; cursorRing.style.top = `${ringY}px`;
+            }
+            requestAnimationFrame(animateCursorRing);
+        }
+        animateCursorRing();
+    </script>
+</body>
+</html>

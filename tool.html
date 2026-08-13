@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Imran AI Tools Ecosystem - Detailed tool specifications, documentation, and step-by-step usage guide.">
+    <meta name="author" content="Imran Nazir">
+    
+    <title id="pageTitle">AI Tool Details & Documentation // IMRAN AI</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        .detail-hero {
+            padding: 50px 25px 30px 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--neon-cyan);
+            text-decoration: none;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-nav-link:hover {
+            transform: translateX(-50px);
+            color: #ffffff;
+        }
+
+        .tool-header-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 15px 40px rgba(0, 243, 255, 0.15);
+            margin-bottom: 40px;
+        }
+
+        .detail-header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .detail-icon-title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .detail-icon-box {
+            width: 70px;
+            height: 70px;
+            background: rgba(0, 243, 255, 0.12);
+            border: 1px solid var(--neon-cyan);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--neon-cyan);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.3);
+            flex-shrink: 0;
+        }
+
+        .detail-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .detail-subtitle {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .detail-desc {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* STEP BY STEP USAGE GUIDE */
+        .usage-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-md);
+            padding: 25px;
+            position: relative;
+            backdrop-filter: blur(14px);
+            transition: var(--transition-smooth);
+        }
+
+        .step-card:hover {
+            border-color: var(--neon-cyan);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2);
+        }
+
+        .step-badge {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--neon-cyan);
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--border-glow);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .step-title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .step-desc {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* SPECS & FAQS */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .spec-item {
+            background: rgba(4, 7, 17, 0.8);
+            border: 1px solid var(--border-card);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+        }
+
+        .spec-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .spec-value {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--neon-cyan);
+            font-weight: 700;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-md);
+            padding: 20px 25px;
+            margin-bottom: 15px;
+        }
+
+        .faq-q {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-q i { color: var(--neon-cyan); }
+
+        .faq-a {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            padding-left: 28px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cyber Cursor -->
+    <div id="cyber-cursor"></div>
+    <div id="cyber-cursor-ring"></div>
+
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="cyber-grid"></div>
+
+    <!-- MAIN HEADER -->
+    <header class="main-header">
+        <a href="./index.html#hero" class="brand-container">
+            <img src="./assets/logo.svg" alt="Imran AI Logo" class="brand-logo-img">
+            <div class="brand-title">IMRAN <span class="accent-text">AI</span></div>
+        </a>
+
+        <div class="header-status">
+            <div class="status-dot-pulse"></div>
+            <span>LIVE TOOL TELEMETRY // ONLINE</span>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="./index.html#tools-section">AI TOOLS</a></li>
+                <li><a href="./index.html#about">PORTFOLIO</a></li>
+                <li><a href="./index.html#terminal">TERMINAL</a></li>
+                <li><a href="./index.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="./index.html#contact" class="cyber-btn cyber-btn-sm">
+                <i class="fa-solid fa-paper-plane"></i> HIRE ME
+            </a>
+            <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div id="mobileNavDrawer" class="mobile-menu-drawer">
+        <a href="./index.html#tools-section"><i class="fa-solid fa-microchip"></i> ALL AI TOOLS</a>
+        <a href="./index.html#about"><i class="fa-solid fa-user"></i> PORTFOLIO & BIO</a>
+        <a href="./index.html#terminal"><i class="fa-solid fa-terminal"></i> CYBER TERMINAL</a>
+        <a href="./index.html#contact"><i class="fa-solid fa-envelope"></i> CONTACT & WORK</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="detail-hero">
+
+        <a href="./index.html#tools-section" class="back-nav-link">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ALL AI TOOLS CATALOG
+        </a>
+
+        <!-- TOOL HEADER CARD -->
+        <div class="tool-header-card tilt-card cyber-pop pop-hero-warp">
+            <div class="detail-header-top">
+                <div class="detail-icon-title">
+                    <div id="toolIconBox" class="detail-icon-box">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <div>
+                        <h1 id="toolTitle" class="detail-title">Loading Tool Details...</h1>
+                        <div id="toolBadge" class="status-badge status-live" style="display:inline-block; margin-top:6px;">LIVE APP</div>
+                    </div>
+                </div>
+
+                <div id="actionButtons" class="btn-group" style="margin:0;">
+                    <!-- Inserted via JS -->
+                </div>
+            </div>
+
+            <div id="toolSubtitle" class="detail-subtitle">AI Tool Specification & Operating Instructions</div>
+            <p id="toolOverview" class="detail-desc">Loading tool description...</p>
+
+            <div id="toolTags" class="tag-pills">
+                <!-- Tag Pills -->
+            </div>
+        </div>
+
+        <!-- HOW TO USE IT SECTION -->
+        <section class="section-wrapper" style="padding-top:10px;">
+            <div class="section-header">
+                <span class="section-tag">// STEP-BY-STEP WORKFLOW</span>
+                <h2 class="section-title">HOW TO <span>USE THIS TOOL</span></h2>
+                <p class="section-desc">Follow these quick operational steps to achieve optimal results with this AI application.</p>
+            </div>
+
+            <div id="usageStepsGrid" class="usage-steps-grid">
+                <!-- Step Cards injected dynamically -->
+            </div>
+        </section>
+
+        <!-- TECHNICAL SPECS SECTION -->
+        <section class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// SYSTEM ARCHITECTURE</span>
+                <h2 class="section-title">TECHNICAL <span>SPECIFICATIONS</span></h2>
+            </div>
+
+            <div class="hud-card tilt-card cyber-pop pop-matrix-flip">
+                <div id="specsGrid" class="specs-grid">
+                    <!-- Specs injected dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FREQUENTLY ASKED QUESTIONS -->
+        <section class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// KNOWLEDGE BASE</span>
+                <h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
+            </div>
+
+            <div id="faqContainer">
+                <!-- FAQs injected dynamically -->
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// CUSTOM TOOL REQUESTS</span>
+                <h2 class="section-title">NEED A <span>CUSTOM AI TOOL?</span></h2>
+                <p class="section-desc">Have a specific video automation or SEO tool idea? Reach out directly to build it.</p>
+            </div>
+
+            <div class="contact-card tilt-card cyber-pop pop-quantum-right">
+                <form id="toolContactForm" action="https://formsubmit.co/ajax/imran.avrodigital.co@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="🚀 Custom Tool Inquiry via imranai.store!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+                        <div class="form-group">
+                            <label class="form-label">YOUR NAME</label>
+                            <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">YOUR EMAIL ADDRESS</label>
+                            <input type="email" name="email" class="form-control" placeholder="imran.avrodigital.co@gmail.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">TOOL REQUIREMENTS & GOALS</label>
+                        <textarea name="message" class="form-control" placeholder="Describe the custom AI tool or feature you need..." required></textarea>
+                    </div>
+
+                    <button type="submit" id="toolFormSubmitBtn" class="cyber-btn" style="width: 100%; justify-content: center;">
+                        <i class="fa-solid fa-paper-plane"></i> TRANSMIT INQUIRY TO IMRAN NAZIR
+                    </button>
+                    <div id="toolFormMsg" style="margin-top: 15px; font-family: var(--font-mono); font-size: 0.95rem; text-align: center; display: none;"></div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <img src="./assets/logo.svg" alt="Imran AI Logo" style="height:28px;">
+                <span style="font-family:var(--font-heading); font-size:1.1rem; color:#fff;">IMRAN <span style="color:var(--neon-cyan);">AI</span></span>
+            </div>
+            <div>&copy; 2026 IMRAN NAZIR // PERSONAL PORTFOLIO & AI TOOLS ECOSYSTEM.</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/particles.js"></script>
+    <script>
+        // CURSOR ANIMATION
+        const cursorDot = document.getElementById('cyber-cursor');
+        const cursorRing = document.getElementById('cyber-cursor-ring');
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let ringX = mouseX, ringY = mouseY;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            if (cursorDot) {
+                cursorDot.style.left = `${mouseX}px`;
+                cursorDot.style.top = `${mouseY}px`;
+            }
+        });
+
+        function animateCursorRing() {
+            if (cursorRing) {
+                ringX += (mouseX - ringX) * 0.12;
+                ringY += (mouseY - ringY) * 0.12;
+                cursorRing.style.left = `${ringX}px`;
+                cursorRing.style.top = `${ringY}px`;
+            }
+            requestAnimationFrame(animateCursorRing);
+        }
+        animateCursorRing();
+
+        // DYNAMIC TOOL PAGE LOADER
+        document.addEventListener('DOMContentLoaded', async () => {
+            const params = new URLSearchParams(window.location.search);
+            const toolId = params.get('id') || 'imranai-video-studio';
+
+            try {
+                const res = await fetch('./data/tools.json');
+                const tools = await res.json();
+                const tool = tools.find(t => t.id === toolId) || tools[0];
+                renderToolDetails(tool);
+            } catch (err) {
+                console.error('Error fetching tool details:', err);
+            }
+
+            // Contact Form handler
+            const form = document.getElementById('toolContactForm');
+            const submitBtn = document.getElementById('toolFormSubmitBtn');
+            const statusMsg = document.getElementById('toolFormMsg');
+
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = `TRANSMITTING... <i class="fa-solid fa-spinner fa-spin"></i>`;
+                    statusMsg.style.display = 'block';
+                    statusMsg.style.color = 'var(--neon-cyan)';
+                    statusMsg.innerHTML = `📡 TRANSMITTING INQUIRY TO IMRAN NAZIR...`;
+
+                    try {
+                        const formData = new FormData(form);
+                        const response = await fetch('https://formsubmit.co/ajax/imran.avrodigital.co@gmail.com', {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        });
+
+                        if (response.ok) {
+                            statusMsg.style.color = 'var(--neon-green)';
+                            statusMsg.innerHTML = `✅ INQUIRY DELIVERED TO imran.avrodigital.co@gmail.com!`;
+                            form.reset();
+                        } else {
+                            statusMsg.style.color = 'var(--neon-green)';
+                            statusMsg.innerHTML = `✅ TRANSMISSION SENT to imran.avrodigital.co@gmail.com!`;
+                            form.reset();
+                        }
+                    } catch (err) {
+                        statusMsg.style.color = 'var(--neon-gold)';
+                        statusMsg.innerHTML = `📩 Message queued! You can email directly to <a href="mailto:imran.avrodigital.co@gmail.com" style="color:var(--neon-cyan);">imran.avrodigital.co@gmail.com</a>.`;
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> TRANSMIT INQUIRY TO IMRAN NAZIR`;
+                    }
+                });
+            }
+        });
+
+        function renderToolDetails(tool) {
+            document.getElementById('pageTitle').textContent = `${tool.name} // IMRAN AI TOOL DETAILS`;
+            document.getElementById('toolTitle').textContent = tool.name;
+            document.getElementById('toolBadge').textContent = tool.status;
+            document.getElementById('toolBadge').className = `status-badge ${tool.statusClass || 'status-live'}`;
+            
+            const iconBox = document.getElementById('toolIconBox');
+            if (iconBox) iconBox.innerHTML = `<i class="${tool.icon || 'fa-solid fa-cube'}"></i>`;
+
+            const details = tool.fullDetails || {};
+            document.getElementById('toolSubtitle').textContent = details.subtitle || tool.description;
+            document.getElementById('toolOverview').textContent = details.overview || tool.description;
+
+            // Render Action Buttons
+            const btnGroup = document.getElementById('actionButtons');
+            if (btnGroup) {
+                let launchHTML = '';
+                if (tool.links && tool.links.launch && tool.links.launch !== '#') {
+                    launchHTML = `<a href="${tool.links.launch}" target="_blank" rel="noopener" class="cyber-btn"><i class="fa-solid fa-rocket"></i> LAUNCH TOOL APP</a>`;
+                }
+                const githubHTML = `<a href="${tool.links ? tool.links.github : 'https://github.com/iamimranai'}" target="_blank" rel="noopener" class="cyber-btn cyber-btn-outline"><i class="fa-brands fa-github"></i> VIEW REPOSITORY</a>`;
+                btnGroup.innerHTML = `${launchHTML} ${githubHTML}`;
+            }
+
+            // Render Tags
+            const tagsBox = document.getElementById('toolTags');
+            if (tagsBox && tool.tags) {
+                tagsBox.innerHTML = tool.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
+            }
+
+            // Render Usage Steps
+            const stepsGrid = document.getElementById('usageStepsGrid');
+            if (stepsGrid) {
+                const steps = details.howToUse || [
+                    { step: "01", title: "Access Application", description: "Open the tool launcher or desktop client environment." },
+                    { step: "02", title: "Configure Parameters", description: "Input your text prompts, target topics, or media files." },
+                    { step: "03", title: "Generate & Export", description: "Click generate to process scenes and export high quality files." }
+                ];
+
+                stepsGrid.innerHTML = steps.map(s => `
+                    <div class="step-card tilt-card cyber-pop pop-matrix-flip">
+                        <div class="step-badge">${s.step}</div>
+                        <h3 class="step-title">${s.title}</h3>
+                        <p class="step-desc">${s.description}</p>
+                    </div>
+                `).join('');
+            }
+
+            // Render Specs
+            const specsGrid = document.getElementById('specsGrid');
+            if (specsGrid) {
+                const specs = details.specs || [
+                    { label: "Execution Environment", value: "Cloud API / Local Runtime" },
+                    { label: "Category", value: tool.categoryName || "AI Utility" },
+                    { label: "Status", value: tool.status }
+                ];
+
+                specsGrid.innerHTML = specs.map(sp => `
+                    <div class="spec-item">
+                        <div class="spec-label">${sp.label}</div>
+                        <div class="spec-value">${sp.value}</div>
+                    </div>
+                `).join('');
+            }
+
+            // Render FAQs
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                const faqs = details.faqs || [
+                    { q: "How do I get started?", a: "Click the 'LAUNCH TOOL APP' button above to launch the live application." }
+                ];
+
+                faqContainer.innerHTML = faqs.map(f => `
+                    <div class="faq-item tilt-card cyber-pop pop-matrix-flip">
+                        <div class="faq-q"><i class="fa-solid fa-circle-question"></i> ${f.q}</div>
+                        <div class="faq-a">${f.a}</div>
+                    </div>
+                `).join('');
+            }
+        }
+    </script>
+</body>
+</html>
