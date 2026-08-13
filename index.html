@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="IMRAN AI Hub (imranai.store) - Futuristic AI Tools Ecosystem, Video Studio Tools, Content Automation Suites, and Portfolio of Imran Nazir.">
+    <meta name="keywords" content="imranai, imranai.store, AI tools, AI video studio, content automation, reverse video prompting, prompt generator, SEO metadata tool">
+    <meta name="author" content="Imran Nazir">
+    
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="IMRAN AI // AI TOOLS ECOSYSTEM & PORTFOLIO">
+    <meta property="og:description" content="Discover, launch, and use cutting-edge AI tools, video generators, and automation applications built by Imran Nazir.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imranai.store/">
+    <meta property="og:image" content="https://imranai.store/assets/logo.svg">
+
+    <title>IMRAN AI // AI Tools Ecosystem & Portfolio (imranai.store)</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Cyber Mouse Cursor -->
+    <div id="cyber-cursor"></div>
+    <div id="cyber-cursor-ring"></div>
+
+    <!-- Background Animated Canvas & Grid -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="cyber-grid"></div>
+
+    <!-- MAIN HEADER -->
+    <header class="main-header">
+        <a href="#hero" class="brand-container">
+            <img src="./assets/logo.svg" alt="Imran AI Logo" class="brand-logo-img">
+            <div>
+                <div class="brand-title">IMRAN <span class="accent-text">AI</span></div>
+                <div class="brand-domain">imranai.store</div>
+            </div>
+        </a>
+
+        <div class="header-status">
+            <div class="status-dot-pulse"></div>
+            <span>ALL SYSTEMS OPERATIONAL // AI LAB LIVE</span>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#tools-section" class="active">AI TOOLS</a></li>
+                <li><a href="#about">PORTFOLIO</a></li>
+                <li><a href="#terminal">TERMINAL</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button onclick="openBuiltInModal('addTool')" class="cyber-btn cyber-btn-outline cyber-btn-sm">
+                <i class="fa-solid fa-plus"></i> ADD TOOL
+            </button>
+            <a href="#contact" class="cyber-btn cyber-btn-sm">
+                <i class="fa-solid fa-paper-plane"></i> HIRE ME
+            </a>
+            <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Mobile Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobileNavDrawer" class="mobile-menu-drawer">
+        <a href="#tools-section"><i class="fa-solid fa-microchip"></i> AI TOOLS CATALOG</a>
+        <a href="#about"><i class="fa-solid fa-user-astronaut"></i> PORTFOLIO & BIO</a>
+        <a href="#terminal"><i class="fa-solid fa-terminal"></i> CYBER TERMINAL</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i> CONTACT & WORK</a>
+        <button onclick="openBuiltInModal('addTool')" class="cyber-btn cyber-btn-outline" style="width: 100%; justify-content: center; margin-top: 10px;">
+            <i class="fa-solid fa-plus"></i> ADD NEW TOOL
+        </button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-pill-badge">
+                <i class="fa-solid fa-bolt"></i> CENTRAL HUB FOR NEXT-GEN AI TOOLS & AUTOMATION
+            </div>
+
+            <h1 class="hero-title">
+                BUILDING THE FUTURE OF <br>
+                <span class="cyan-glow">AI TOOLS</span> & <span class="silver-text">AUTOMATION</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Welcome to <strong style="color:var(--neon-cyan);">imranai.store</strong> — A unified suite of AI video creation engines, inverse prompt tools, viral content automation, and SEO intelligence tools built by <span id="typingRoleText" class="typing-container">AI Tool Builder</span>.
+            </p>
+
+            <div class="hero-ctas">
+                <a href="#tools-section" class="cyber-btn">
+                    <i class="fa-solid fa-rocket"></i> EXPLORE AI TOOLS CATALOG
+                </a>
+                <button onclick="openBuiltInModal('promptGenerator')" class="cyber-btn cyber-btn-outline">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> LAUNCH PROMPT GENERATOR
+                </button>
+            </div>
+
+            <div class="hero-stats-strip">
+                <div class="stat-box">
+                    <div class="stat-num">10+</div>
+                    <div class="stat-label">AI Tools & Extensions</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">5+ Yrs</div>
+                    <div class="stat-label">Automation & SEO Exp</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">100K+</div>
+                    <div class="stat-label">Videos & Assets Processed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">VERCEL READY HUB</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI TOOLS CATALOG STORE SECTION -->
+        <section id="tools-section" class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// ECOSYSTEM STORE</span>
+                <h2 class="section-title">IMRAN AI <span>TOOLS CATALOG</span></h2>
+                <p class="section-desc">
+                    Launch live interactive AI tools directly in your browser or access full-stack web applications hosted across subdomains.
+                </p>
+            </div>
+
+            <!-- CONTROLS: SEARCH & CATEGORIES -->
+            <div class="catalog-controls">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="toolSearchInput" class="search-input" placeholder="Search AI tools by name, tag (e.g., video, prompt, SEO, chrome)...">
+                </div>
+
+                <div class="filter-chips">
+                    <button class="chip-btn active" data-category="all">ALL TOOLS</button>
+                    <button class="chip-btn" data-category="ai-video">AI VIDEO STUDIO</button>
+                    <button class="chip-btn" data-category="content-automation">AUTOMATION</button>
+                    <button class="chip-btn" data-category="seo-growth">SEO & METADATA</button>
+                    <button class="chip-btn" data-category="utilities">AI UTILITIES</button>
+                </div>
+            </div>
+
+            <div class="catalog-stats-bar">
+                <div id="toolCounterText"><i class="fa-solid fa-microchip"></i> Loading AI Tools...</div>
+                <div>
+                    <button onclick="openBuiltInModal('addTool')" class="cyber-btn cyber-btn-outline cyber-btn-sm" style="font-family:var(--font-mono);">
+                        <i class="fa-solid fa-plus"></i> PUBLISH NEW TOOL
+                    </button>
+                </div>
+            </div>
+
+            <!-- DYNAMIC TOOLS GRID CONTAINER -->
+            <div id="toolsCatalogGrid" class="catalog-grid">
+                <!-- Populated dynamically via js/app.js -->
+            </div>
+        </section>
+
+        <!-- ABOUT & PORTFOLIO SECTION -->
+        <section id="about" class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// ARCHITECT & FOUNDER</span>
+                <h2 class="section-title">ABOUT <span>IMRAN NAZIR</span></h2>
+                <p class="section-desc">
+                    AI Automation Lead, Full-Stack Web Engineer, and SEO Growth Strategist building high-performance AI engines.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="profile-img-frame">
+                    <img src="./assets/profile.png" alt="Imran Nazir Profile">
+                </div>
+
+                <div>
+                    <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:#fff; margin-bottom:15px;">
+                        Engineering Autonomous AI Applications & Media Workflows
+                    </h3>
+                    <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:20px; line-height:1.6;">
+                        With over 5 years of hands-on experience in full-stack web engineering, Python backend architecture, SEO optimization, and synthetic media automation, I build tools that transform complex AI algorithms into effortless, high-converting digital products.
+                    </p>
+
+                    <div class="skills-list">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>AI Video & Inverse Prompting (FastAPI, React, Whisper, TTS)</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" style="width: 98%;"></div></div>
+                        </div>
+
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Full-Stack Web Development & Modern UI/UX</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" style="width: 95%;"></div></div>
+                        </div>
+
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>SEO Strategy & Video Metadata CTR Optimization</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" style="width: 92%;"></div></div>
+                        </div>
+
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Social Media Batch Publishing & API Automation</span>
+                                <span>96%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" style="width: 96%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CYBER TERMINAL SECTION -->
+        <section id="terminal" class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// INTERACTIVE SHELL</span>
+                <h2 class="section-title">IA-OS <span>CYBER TERMINAL</span></h2>
+                <p class="section-desc">Type commands to inspect tools, query system diagnostics, or trigger applications directly.</p>
+            </div>
+
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                    </div>
+                    <div class="terminal-title">imranai@store:~ (IA-OS v3.0)</div>
+                    <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--neon-green);">ONLINE</div>
+                </div>
+
+                <div class="terminal-body" id="term-body">
+                    <div class="term-line">
+                        <span class="term-prompt">IA-OS v3.0.4 [BUILD 2026]</span> - Connected to <span style="color:var(--neon-cyan);">imranai.store</span>
+                    </div>
+                    <div class="term-line">
+                        Type <span class="term-prompt">help</span> to view all commands, or <span class="term-prompt">tools</span> to inspect registered AI applications.
+                    </div>
+                </div>
+
+                <div class="term-input-wrapper">
+                    <span class="term-prompt">imranai@store:~$</span>
+                    <input type="text" id="term-input" class="terminal-input" placeholder="Type a command (e.g. help, tools, status, skills, launch imranai-prompt-generator)...">
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// COLLABORATE & CONNECT</span>
+                <h2 class="section-title">GET IN <span>TOUCH</span></h2>
+                <p class="section-desc">Have a custom AI tool request, partnership idea, or client project? Send a direct message.</p>
+            </div>
+
+            <div class="contact-card">
+                <form id="contactForm" action="https://formsubmit.co/ajax/iamimranai.com@gmail.com" method="POST">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+                        <div class="form-group">
+                            <label class="form-label">YOUR NAME</label>
+                            <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">YOUR EMAIL ADDRESS</label>
+                            <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">PROJECT / TOOL INQUIRY</label>
+                        <textarea name="message" class="form-control" placeholder="Describe your tool idea, automation requirements, or project goal..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="cyber-btn" style="width: 100%; justify-content: center;">
+                        <i class="fa-solid fa-paper-plane"></i> SEND MESSAGE TO IMRAN AI
+                    </button>
+                </form>
+
+                <div class="social-grid">
+                    <a href="https://github.com/iamimranai" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:iamimranai.com@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://imranai.store" target="_blank" rel="noopener" class="social-icon-btn" title="Domain Store"><i class="fa-solid fa-globe"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BUILT-IN TOOL MODAL 1: PROMPT GENERATOR -->
+    <div id="modal-promptGenerator" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa-solid fa-wand-magic-sparkles"></i> ImranAI Master Prompt Generator</h3>
+                <p class="modal-desc">Synthesize high-performing prompts for Midjourney v6, Flux, ChatGPT, and Sora AI video models.</p>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">SUBJECT OR SCENE CONCEPT</label>
+                <input type="text" id="promptSubject" class="form-control" placeholder="e.g. Cyberpunk hacker standing in neon-lit Tokyo street during heavy rain">
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div class="form-group">
+                    <label class="form-label">ART & RENDERING STYLE</label>
+                    <select id="promptStyle" class="form-control">
+                        <option value="cyberpunk photorealistic 8k">Cyberpunk Photorealistic</option>
+                        <option value="cinematic 35mm movie scene">Cinematic Movie Still</option>
+                        <option value="unreal engine 5 3D render">Unreal Engine 5 Render</option>
+                        <option value="anime aesthetic by Makoto Shinkai">Anime Studio Aesthetic</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">LIGHTING ATMOSPHERE</label>
+                    <select id="promptLighting" class="form-control">
+                        <option value="volumetric cyan and magenta neon glow">Cyan & Magenta Neon</option>
+                        <option value="golden hour dramatic sunlight">Golden Hour Sunlight</option>
+                        <option value="dark moody atmospheric rim lighting">Moody Rim Light</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">CAMERA & LENS VIEW</label>
+                    <select id="promptCamera" class="form-control">
+                        <option value="cinematic wide angle 24mm lens">24mm Wide Angle</option>
+                        <option value="portrait 85mm lens f/1.4 bokeh">85mm Portrait Bokeh</option>
+                        <option value="macro close-up extreme detail">Extreme Macro Detail</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="generatePromptBtn" class="cyber-btn" style="width: 100%; justify-content: center; margin-top: 10px;">
+                <i class="fa-solid fa-bolt"></i> SYNTHESIZE MASTER PROMPT
+            </button>
+
+            <div id="promptOutputText" class="output-box">// Your generated master prompt will appear here...</div>
+
+            <button onclick="copyToClipboard('promptOutputText')" class="cyber-btn cyber-btn-outline cyber-btn-sm" style="margin-top: 12px;">
+                <i class="fa-solid fa-copy"></i> COPY PROMPT
+            </button>
+        </div>
+    </div>
+
+    <!-- BUILT-IN TOOL MODAL 2: SEO METADATA GENERATOR -->
+    <div id="modal-seoGenerator" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa-solid fa-magnifying-glass-chart"></i> YouTube SEO & Metadata Suite</h3>
+                <p class="modal-desc">Generate high-CTR titles, tag clouds, and optimized descriptions for video content.</p>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">VIDEO TOPIC OR KEYWORD</label>
+                <input type="text" id="seoTopic" class="form-control" placeholder="e.g. AI Video Creation Tools for Beginners">
+            </div>
+
+            <button id="generateSeoBtn" class="cyber-btn" style="width: 100%; justify-content: center;">
+                <i class="fa-solid fa-chart-line"></i> GENERATE METADATA MATRIX
+            </button>
+
+            <div id="seoTitleOutput" class="output-box">// High-CTR Titles will appear here...</div>
+            <div id="seoTagsOutput" class="output-box">// Keyword tags will appear here...</div>
+
+            <button onclick="copyToClipboard('seoTitleOutput')" class="cyber-btn cyber-btn-outline cyber-btn-sm" style="margin-top: 12px;">
+                <i class="fa-solid fa-copy"></i> COPY TITLES
+            </button>
+        </div>
+    </div>
+
+    <!-- BUILT-IN TOOL MODAL 3: API KEY TESTER -->
+    <div id="modal-apiKeyTester" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa-solid fa-key"></i> Multi-Provider API Key Validator</h3>
+                <p class="modal-desc">Test key structure, active status, and provider format. 100% Client-side (Zero server logging).</p>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">API PROVIDER</label>
+                <select id="apiProvider" class="form-control">
+                    <option value="openai">OpenAI (sk-...)</option>
+                    <option value="gemini">Google Gemini AI Key</option>
+                    <option value="elevenlabs">ElevenLabs TTS Key</option>
+                    <option value="claude">Anthropic Claude (sk-ant-...)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">ENTER API KEY TO VALIDATE</label>
+                <input type="password" id="apiKeyInput" class="form-control" placeholder="Paste key here...">
+            </div>
+
+            <button id="apiTestBtn" class="cyber-btn" style="width: 100%; justify-content: center;">
+                <i class="fa-solid fa-shield-halved"></i> VALIDATE KEY FORMAT
+            </button>
+
+            <div id="apiTestOutput" class="output-box">// Security output will display here...</div>
+        </div>
+    </div>
+
+    <!-- BUILT-IN TOOL MODAL 4: ADD NEW TOOL ADMIN PANEL -->
+    <div id="modal-addTool" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa-solid fa-plus"></i> Add New Tool to imranai.store</h3>
+                <p class="modal-desc">Easily register a new AI tool or web app into your live website catalog without touching code!</p>
+            </div>
+
+            <form id="addToolForm">
+                <div class="form-group">
+                    <label class="form-label">TOOL NAME</label>
+                    <input type="text" id="newToolName" class="form-control" placeholder="e.g. ImranAI Voice Synthesizer" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div class="form-group">
+                        <label class="form-label">CATEGORY</label>
+                        <select id="newToolCategory" class="form-control">
+                            <option value="ai-video">AI Video Studio</option>
+                            <option value="content-automation">Content Automation</option>
+                            <option value="seo-growth">SEO & Metadata</option>
+                            <option value="utilities">AI Utilities</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">STATUS</label>
+                        <select id="newToolStatus" class="form-control">
+                            <option value="live">LIVE APP</option>
+                            <option value="builtin">BUILT-IN</option>
+                            <option value="beta">BETA</option>
+                            <option value="extension">CHROME EXTENSION</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">TOOL ACCESS / LAUNCH URL</label>
+                    <input type="url" id="newToolLink" class="form-control" placeholder="https://voice.imranai.store">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">DESCRIPTION</label>
+                    <textarea id="newToolDesc" class="form-control" placeholder="Describe key capabilities of the tool..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">TAGS (COMMA SEPARATED)</label>
+                    <input type="text" id="newToolTags" class="form-control" placeholder="Voice, TTS, Python, AI">
+                </div>
+
+                <button type="submit" class="cyber-btn" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-plus"></i> PUBLISH TOOL TO LIVE CATALOG
+                </button>
+            </form>
+
+            <div id="adminJsonOutput" class="output-box" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- MAIN FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <img src="./assets/logo.svg" alt="Imran AI Logo" style="height:28px;">
+                <span style="font-family:var(--font-heading); font-size:1.1rem; color:#fff;">IMRAN <span style="color:var(--neon-cyan);">AI</span></span>
+            </div>
+            <div>&copy; 2026 imranai.store. All Rights Reserved. Built by Imran Nazir.</div>
+            <div style="font-size:0.78rem; color:var(--text-muted);">VERCEL READY // HIGH PERFORMANCE AI TOOLS PLATFORM</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/particles.js"></script>
+    <script src="./js/terminal.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <filter id="favGlow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="favCyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#0066ff" />
+    </linearGradient>
+    <linearGradient id="favSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Cyan Shape -->
+  <g filter="url(#favGlow)">
+    <path d="M 16 110 L 58 110 L 68 80 L 40 80 L 68 35 L 54 35 Z" fill="url(#favCyan)" />
+    <path d="M 16 110 L 36 110 L 45 82 L 68 80 L 58 110 Z" fill="#00d2ff" opacity="0.8"/>
+  </g>
+
+  <!-- Right Silver Slash -->
+  <path d="M 60 10 L 76 10 L 118 110 L 102 110 Z" fill="url(#favSilver)" />
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" aria-label="IMRAN AI Logo">
+  <defs>
+    <!-- Cyberpunk Glow Filters -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur1" />
+      <feGaussianBlur stdDeviation="5" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="silverGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Electric Cyan Facet Gradients -->
+    <linearGradient id="cyanFacetMain" x1="0%" y1="100%" x2="70%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="60%" stop-color="#00b8ff" />
+      <stop offset="100%" stop-color="#0066ff" />
+    </linearGradient>
+
+    <linearGradient id="cyanFacetBevelTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38ef7d" />
+      <stop offset="30%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#0077fe" />
+    </linearGradient>
+
+    <linearGradient id="cyanFacetInnerShadow" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#0055c4" />
+      <stop offset="100%" stop-color="#002266" />
+    </linearGradient>
+
+    <!-- Metallic Silver Gradients -->
+    <linearGradient id="silverMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="25%" stop-color="#cbd5e1" />
+      <stop offset="60%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+
+    <linearGradient id="silverHighlight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas for Standalone Viewer (Transparent by Default) -->
+
+  <!-- LEFT CYAN GEOMETRIC CHEVRON / 'i' -->
+  <g filter="url(#neonGlow)">
+    <!-- Main Facet Body -->
+    <path d="M 75 425 L 235 425 L 270 310 L 165 310 L 270 140 L 220 140 Z" fill="url(#cyanFacetMain)" />
+    
+    <!-- Top 3D Bevel Edge -->
+    <path d="M 220 140 L 270 140 L 255 180 L 185 285 Z" fill="url(#cyanFacetBevelTop)" opacity="0.9" />
+
+    <!-- Inner Bevel Highlight -->
+    <path d="M 75 425 L 145 425 L 180 320 L 270 310 L 235 425 Z" fill="url(#cyanFacetInnerShadow)" />
+  </g>
+
+  <!-- RIGHT METALLIC SILVER SLASH / 'A' -->
+  <g filter="url(#silverGlow)">
+    <!-- Main Slanted Bar -->
+    <path d="M 245 40 L 305 40 L 465 440 L 405 440 Z" fill="url(#silverMain)" />
+    
+    <!-- Top Beveled Tip -->
+    <path d="M 245 40 L 305 40 L 290 85 L 260 85 Z" fill="url(#silverHighlight)" opacity="0.85" />
+    
+    <!-- Right Bevel Rim Shadow -->
+    <path d="M 305 40 L 465 440 L 445 440 L 290 85 Z" fill="#1e293b" opacity="0.4" />
+  </g>
+</svg>

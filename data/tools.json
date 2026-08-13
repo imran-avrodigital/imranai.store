@@ -1,0 +1,248 @@
+[
+  {
+    "id": "imranai-video-studio",
+    "name": "ImranAI Video & Reverse Prompt Studio",
+    "category": "ai-video",
+    "categoryName": "AI Video Studio",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
+    "featured": true,
+    "icon": "fa-solid fa-wand-magic-sparkles",
+    "badge": "FLAGSHIP",
+    "description": "Full-stack AI video creation platform featuring inverse video reverse prompting, voice synthesis, multi-track timeline editing, and automated script-to-video workflow.",
+    "tags": ["FastAPI", "React", "Reverse Prompting", "TTS", "FFmpeg"],
+    "links": {
+      "launch": "https://video.imranai.store",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "AI Reverse Video Prompt Generation",
+      "ElevenLabs & Edge Voice Integration",
+      "Automated Subtitle & Motion Captions",
+      "Multi-Scene Video Assembly"
+    ]
+  },
+  {
+    "id": "dola-auto-video-generator",
+    "name": "Dola Automated Video Generator Suite",
+    "category": "content-automation",
+    "categoryName": "Content Automation",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
+    "featured": true,
+    "icon": "fa-solid fa-robot",
+    "badge": "AUTOMATION",
+    "description": "Autonomous video rendering engine that ingests trending topics, generates AI narration scripts, synthesizes voiceovers, and renders HD short-form video content.",
+    "tags": ["Python", "Automated Editing", "AI Scripting", "Batch Processing"],
+    "links": {
+      "launch": "https://dola.imranai.store",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "Bulk Video Creation Engine",
+      "Dynamic Overlay Templates",
+      "Automated Audio Normalization",
+      "Render Progress Dashboard"
+    ]
+  },
+  {
+    "id": "imranai-prompt-generator",
+    "name": "ImranAI Master Prompt Generator",
+    "category": "utilities",
+    "categoryName": "AI Utilities",
+    "status": "BUILT-IN",
+    "statusClass": "status-builtin",
+    "featured": true,
+    "icon": "fa-solid fa-terminal",
+    "badge": "BUILT-IN TOOL",
+    "description": "Engineered prompt synthesis tool designed to create photorealistic Midjourney/Flux image prompts, ChatGPT master system prompts, and Sora video prompts.",
+    "tags": ["Prompt Engineering", "Midjourney", "ChatGPT", "Flux", "Sora"],
+    "isInteractiveModal": true,
+    "modalType": "promptGenerator",
+    "links": {
+      "launch": "#interactive-prompt-generator",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "Lighting & Camera Control Controls",
+      "Negative Prompt Filtering",
+      "One-Click Copy & Enhancers",
+      "Pre-built Persona Templates"
+    ]
+  },
+  {
+    "id": "imranai-auto-publisher",
+    "name": "ImranAI Multi-Platform Auto Publisher",
+    "category": "content-automation",
+    "categoryName": "Content Automation",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
+    "featured": true,
+    "icon": "fa-solid fa-paper-plane",
+    "badge": "SOCIAL AI",
+    "description": "Automated distribution hub for publishing video and metadata content directly to Facebook Pages, YouTube Shorts, TikTok, and Instagram Reels with scheduling.",
+    "tags": ["Python", "Meta API", "YouTube Data API", "Scheduler"],
+    "links": {
+      "launch": "https://publisher.imranai.store",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "Cross-platform Batch Scheduling",
+      "Dynamic Hashtag Generator",
+      "Real-time Post Analytics",
+      "Token Auto-Refresh Manager"
+    ]
+  },
+  {
+    "id": "youtube-seo-metadata-generator",
+    "name": "YouTube & Social Video Metadata Generator",
+    "category": "seo-growth",
+    "categoryName": "SEO & Metadata",
+    "status": "BUILT-IN",
+    "statusClass": "status-builtin",
+    "featured": true,
+    "icon": "fa-solid fa-magnifying-glass-chart",
+    "badge": "BUILT-IN TOOL",
+    "description": "AI-powered metadata suite for generating high-CTR YouTube titles, SEO optimized video descriptions, hashtag clusters, and keyword tag arrays.",
+    "tags": ["SEO", "YouTube API", "CTR Optimization", "Keyword Analytics"],
+    "isInteractiveModal": true,
+    "modalType": "seoGenerator",
+    "links": {
+      "launch": "#interactive-seo-generator",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "High-CTR Title Pattern Finder",
+      "Algorithmic Tag Generator",
+      "SEO Description Formatter",
+      "Hashtag Matrix Builder"
+    ]
+  },
+  {
+    "id": "imranai-content-cloner",
+    "name": "ImranAI Viral Content Cloner",
+    "category": "content-automation",
+    "categoryName": "Content Automation",
+    "status": "BETA",
+    "statusClass": "status-beta",
+    "featured": false,
+    "icon": "fa-solid fa-clone",
+    "badge": "BETA TOOL",
+    "description": "Analyzes viral video structures, extracts hooks, transcriptions, and pacing to re-create optimized video scripts and visual storytelling blueprints.",
+    "tags": ["Content Research", "Hook Extraction", "Viral Analytics"],
+    "links": {
+      "launch": "https://cloner.imranai.store",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "Hook Performance Rating",
+      "Transcript Parsing Engine",
+      "Script Restructuring Tool",
+      "Visual Pacing Breakdown"
+    ]
+  },
+  {
+    "id": "imranai-dola-downloader-extension",
+    "name": "ImranAI Video Downloader Chrome Extension",
+    "category": "utilities",
+    "categoryName": "AI Utilities",
+    "status": "EXTENSION",
+    "statusClass": "status-ext",
+    "featured": false,
+    "icon": "fa-puzzle-piece",
+    "badge": "CHROME EXTENSION",
+    "description": "Custom Manifest V3 Chrome Extension for downloading HD videos, audio tracks, and metadata directly from Facebook, TikTok, and web sources.",
+    "tags": ["Chrome Extension", "Manifest V3", "Media Extractor"],
+    "links": {
+      "launch": "https://github.com/iamimranai/imranai_dola_downloader_extension",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "1-Click HD Video Downloader",
+      "Background Audio Extractor",
+      "No Watermark Filter",
+      "Batch Download Support"
+    ]
+  },
+  {
+    "id": "imranai-video-translator",
+    "name": "ImranAI AI Video Translator & Dubber",
+    "category": "ai-video",
+    "categoryName": "AI Video Studio",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
+    "featured": false,
+    "icon": "fa-solid fa-language",
+    "badge": "AI VOICE",
+    "description": "Multi-lingual video dubbing and subtitle translation platform supporting over 30 languages with voice tone cloning and lip-sync synchronization.",
+    "tags": ["Whisper AI", "Translation", "Voice Dubbing", "Subtitles"],
+    "links": {
+      "launch": "https://translator.imranai.store",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "Automated SRT/VTT Subtitles",
+      "30+ Global Languages",
+      "Voice Emotion Preservation",
+      "Audio Track Replacement"
+    ]
+  },
+  {
+    "id": "tiktok-fb-creator-finder",
+    "name": "Creator & Lead Intelligence Finder",
+    "category": "seo-growth",
+    "categoryName": "SEO & Metadata",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
+    "featured": false,
+    "icon": "fa-solid fa-users-viewfinder",
+    "badge": "GROWTH TOOL",
+    "description": "Scrapes, filters, and indexes top-performing content creators, pages, and viral posts on Facebook and TikTok for competitor research.",
+    "tags": ["Scraper", "Lead Generation", "Analytics", "Automation"],
+    "links": {
+      "launch": "https://creatorfinder.imranai.store",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "Niche Creator Discovery",
+      "Engagement Rate Metrics",
+      "Contact Info Extraction",
+      "Viral Video Trend Alerts"
+    ]
+  },
+  {
+    "id": "api-key-tester",
+    "name": "Multi-Provider API Key Tester & Validator",
+    "category": "utilities",
+    "categoryName": "AI Utilities",
+    "status": "BUILT-IN",
+    "statusClass": "status-builtin",
+    "featured": false,
+    "icon": "fa-solid fa-key",
+    "badge": "BUILT-IN TOOL",
+    "description": "Secure client-side utility to verify API key validity, rate limits, available models, and quota balances for OpenAI, Gemini, Claude, and ElevenLabs.",
+    "tags": ["API Tester", "Client-Side Security", "OpenAI", "Gemini", "ElevenLabs"],
+    "isInteractiveModal": true,
+    "modalType": "apiKeyTester",
+    "links": {
+      "launch": "#interactive-api-tester",
+      "docs": "#",
+      "github": "https://github.com/iamimranai"
+    },
+    "highlights": [
+      "100% Client-Side (Zero Server Logging)",
+      "Model Access Verification",
+      "Rate Limit & Token Quota Check",
+      "Instant Response Latency Test"
+    ]
+  }
+]
