@@ -11,7 +11,7 @@
     "tags": ["FastAPI", "React", "Reverse Prompting", "TTS", "FFmpeg"],
     "links": {
       "detail": "./tools/imranai-video-studio.html",
-      "launch": "https://video.imranai.store",
+      "launch": "./tools/imranai-video-studio.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
@@ -35,6 +35,41 @@
     }
   },
   {
+    "id": "imranai-social-video-downloader",
+    "name": "ImranAI 4K Social Media Video Downloader",
+    "description": "Multi-platform 4K video & audio downloader engine supporting YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Pinterest, Reddit, Threads, and 17+ platforms.",
+    "category": "utilities",
+    "categoryName": "AI Utilities",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
+    "icon": "fa-solid fa-download",
+    "tags": ["yt-dlp", "Python", "4K Downloader", "MP3 Extractor", "Multi-Platform"],
+    "links": {
+      "detail": "./tools/imranai-social-video-downloader.html",
+      "launch": "./tools/imranai-social-video-downloader.html",
+      "github": "https://github.com/iamimranai"
+    },
+    "fullDetails": {
+      "subtitle": "Universal Multi-Platform 4K Video & Audio Extraction Suite",
+      "overview": "ImranAI Social Media Video Downloader is a high-speed media extraction engine supporting 17+ major video and audio streaming platforms. Built with curl_cffi and yt-dlp engines, it strips tracking tokens, parses direct CDN media links, and extracts 4K MP4 videos or 320kbps MP3 audio streams in seconds.",
+      "howToUse": [
+        { "step": "01", "title": "Paste Social Media Link", "description": "Paste any video or post URL from YouTube, TikTok, Instagram, Facebook, or Twitter into the input bar." },
+        { "step": "02", "title": "Select Output Quality & Format", "description": "Choose between 4K Ultra HD, 1080p Full HD, 720p HD, or 320kbps MP3 Audio Only." },
+        { "step": "03", "title": "Extract & Download Media Stream", "description": "Click Extract Media to generate direct high-speed CDN download links." }
+      ],
+      "specs": [
+        { "label": "Supported Networks", "value": "YouTube, TikTok, Instagram, FB, Twitter/X, Pinterest, Reddit, Threads, Vimeo, Twitch" },
+        { "label": "Format Options", "value": "4K MP4, 1080p HD, 720p, MP3 Audio (320kbps)" },
+        { "label": "Extraction Engine", "value": "yt-dlp + FFmpeg + curl_cffi Bypass" },
+        { "label": "Processing Speed", "value": "Sub-Second Link Resolution" }
+      ],
+      "faqs": [
+        { "q": "Does this downloader support watermarked videos like TikTok?", "a": "Yes! The downloader automatically strips watermarks from TikTok and Instagram Reels for clean HD output." },
+        { "q": "Can I extract audio only?", "a": "Yes, you can extract high-fidelity 320kbps MP3 or M4A audio tracks from any supported video." }
+      ]
+    }
+  },
+  {
     "id": "dola-auto-video-generator",
     "name": "Dola AI Automated Script-to-Video Engine",
     "description": "Headless batch video generator converting raw article text or scripts into formatted short-form vertical videos with AI voiceovers, stock B-roll, and caption burn-in.",
@@ -46,7 +81,7 @@
     "tags": ["Python", "Playwright", "Auto-Editor", "Shorts"],
     "links": {
       "detail": "./tools/dola-auto-video-generator.html",
-      "launch": "https://video.imranai.store",
+      "launch": "./tools/dola-auto-video-generator.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
@@ -74,13 +109,13 @@
     "description": "Advanced prompt engineering utility generating optimized Midjourney, Stable Diffusion, ChatGPT, and Claude prompts with custom lighting, camera lens, and style modifiers.",
     "category": "automation",
     "categoryName": "Content Automation",
-    "status": "BUILT-IN",
-    "statusClass": "status-builtin",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
     "icon": "fa-solid fa-terminal",
     "tags": ["Prompt Eng", "GPT-4o", "Midjourney", "Claude"],
     "links": {
       "detail": "./tools/imranai-prompt-generator.html",
-      "launch": "#modal-prompt",
+      "launch": "./tools/imranai-prompt-generator.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
@@ -107,13 +142,13 @@
     "description": "Headless browser automation tool that schedules and auto-posts generated videos across YouTube Shorts, TikTok, Facebook Reels, and Pinterest.",
     "category": "automation",
     "categoryName": "Content Automation",
-    "status": "BETA",
-    "statusClass": "status-beta",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
     "icon": "fa-solid fa-share-nodes",
     "tags": ["Playwright", "Python", "Social Bot", "OAuth"],
     "links": {
       "detail": "./tools/imranai-auto-publisher.html",
-      "launch": "https://github.com/iamimranai",
+      "launch": "./tools/imranai-auto-publisher.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
@@ -140,30 +175,30 @@
     "description": "Comprehensive YouTube SEO tool generating high-CTR titles, structured description templates, long-tail tag arrays, and Rank Math compatibility scores.",
     "category": "seo",
     "categoryName": "SEO & Metadata",
-    "status": "BUILT-IN",
-    "statusClass": "status-builtin",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
     "icon": "fa-solid fa-magnifying-glass-chart",
     "tags": ["SEO", "YouTube API", "Keywords", "Rank Math"],
     "links": {
       "detail": "./tools/youtube-seo-metadata-generator.html",
-      "launch": "#modal-seo",
+      "launch": "./tools/youtube-seo-metadata-generator.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
-      "subtitle": "Maximize Video Reach & CTR With Data-Driven Metadata",
-      "overview": "Engineered by SEO Strategist Imran Nazir based on 5+ years of digital marketing optimization. This tool extracts trending YouTube search queries and generates complete video titles, description copy, and tag clouds tailored to rank #1.",
+      "subtitle": "Complete YouTube Video SEO & Title Optimization Package",
+      "overview": "Designed specifically for video creators and SEO agencies, this tool generates viral high-CTR titles, fully formatted descriptions with timestamp placeholders, 30 target tags, hashtag clusters, and Rank Math score compatibility.",
       "howToUse": [
-        { "step": "01", "title": "Input Target Topic", "description": "Type your video focus keyword or main topic." },
-        { "step": "02", "title": "Generate SEO Package", "description": "Click Generate to build 5 high-CTR titles, description templates, and tag lists." },
-        { "step": "03", "title": "Paste to YouTube Studio", "description": "Copy optimized metadata directly into your YouTube upload form." }
+        { "step": "01", "title": "Enter Primary Keyword", "description": "Input your video's core topic or target keyword." },
+        { "step": "02", "title": "Select Target Audience", "description": "Specify the niche category (Tech, Gaming, Finance, Fitness)." },
+        { "step": "03", "title": "Copy SEO Package", "description": "Copy titles, descriptions, and tags directly into YouTube Studio." }
       ],
       "specs": [
-        { "label": "Keyword Engine", "value": "YouTube Autocomplete & Search API" },
-        { "label": "CTR Scoring", "value": "Algorithmic Title CTR Evaluator" },
-        { "label": "Tag Limit", "value": "Auto-Formatted < 500 Characters" }
+        { "label": "Tag Capacity", "value": "Up to 500 Characters (YouTube Max)" },
+        { "label": "CTR Scoring Model", "value": "Trained on Top 100k Viral Videos" },
+        { "label": "Hashtag Generator", "value": "Automatic Low & High Competition Mix" }
       ],
       "faqs": [
-        { "q": "Will this help my video rank higher?", "a": "Yes, properly structured titles and LSI keyword tags significantly increase YouTube recommendation index placement." }
+        { "q": "Does this work for Shorts?", "a": "Yes, it includes specialized high-velocity title hooks optimized for YouTube Shorts." }
       ]
     }
   },
@@ -171,63 +206,32 @@
     "id": "imranai-content-cloner",
     "name": "ImranAI Video Content Cloner Suite",
     "description": "Intelligent video repackaging engine that strips metadata, re-encodes video streams with altered frame rates, and applies subtle visual filters for original content detection bypass.",
-    "category": "automation",
-    "categoryName": "Content Automation",
-    "status": "BETA",
-    "statusClass": "status-beta",
+    "category": "video-ai",
+    "categoryName": "AI Video Studio",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
     "icon": "fa-solid fa-copy",
     "tags": ["FFmpeg", "Content Re-encoder", "Metadata Stripper"],
     "links": {
       "detail": "./tools/imranai-content-cloner.html",
-      "launch": "https://github.com/iamimranai",
+      "launch": "./tools/imranai-content-cloner.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
-      "subtitle": "Automated Stream Re-encoding & Metadata Sanitization",
-      "overview": "Content creators managing multiple regional channels can re-encode and transform existing videos automatically. Strips camera EXIF metadata, adjusts pitch and speed slightly, and overlays background atmosphere.",
+      "subtitle": "Advanced Video Re-encoding & Metadata Anonymization Utility",
+      "overview": "The Content Cloner Suite assists video repurposers by re-encoding video tracks, adjusting audio frequencies, stripping original EXIF/ID3 metadata, and applying subtle color matrix shifts to bypass duplicate content filters.",
       "howToUse": [
-        { "step": "01", "title": "Select Source File", "description": "Upload your raw source MP4 video file." },
-        { "step": "02", "title": "Configure Audio/Video Tweaks", "description": "Enable subtle speed shift, pitch adjustment, and color LUT filter." },
-        { "step": "03", "title": "Process & Download", "description": "Export the transformed video file." }
+        { "step": "01", "title": "Upload Source Video", "description": "Select the video file you wish to re-package." },
+        { "step": "02", "title": "Choose Transformation Filters", "description": "Select frame rate shifting, audio pitch adjustments, or color overlays." },
+        { "step": "03", "title": "Export Anonymized File", "description": "Download a clean, freshly encoded video file." }
       ],
       "specs": [
-        { "label": "Video Codec", "value": "H.264 / H.265 (HEVC)" },
-        { "label": "Audio Processing", "value": "FFmpeg Pitch Shift & Equalization" }
+        { "label": "Processing Core", "value": "FFmpeg GPU Accelerated" },
+        { "label": "Metadata Stripping", "value": "Full EXIF / ID3 / Encoder Tag Wipe" },
+        { "label": "Audio Resampling", "value": "Pitch & Speed Variance Filter" }
       ],
       "faqs": [
-        { "q": "Does it alter video quality?", "a": "No, re-encoding uses high-bitrate CRF settings to preserve visual fidelity." }
-      ]
-    }
-  },
-  {
-    "id": "imranai-dola-downloader-extension",
-    "name": "ImranAI Dola Downloader Chrome Extension",
-    "description": "Manifest V3 Chrome Extension providing 1-click 4K video downloads from YouTube, Instagram, TikTok, and Twitter with auto audio extraction.",
-    "category": "utilities",
-    "categoryName": "AI Utilities",
-    "status": "EXTENSION",
-    "statusClass": "status-ext",
-    "icon": "fa-brands fa-chrome",
-    "tags": ["Chrome Ext", "Manifest V3", "4K Downloader"],
-    "links": {
-      "detail": "./tools/imranai-dola-downloader-extension.html",
-      "launch": "https://github.com/iamimranai",
-      "github": "https://github.com/iamimranai"
-    },
-    "fullDetails": {
-      "subtitle": "High-Speed Media Extraction Chrome Extension",
-      "overview": "Integrates directly into your browser context menu. Detects video streams on any web page and offers one-click downloads in 1080p, 4K, or MP3 audio format.",
-      "howToUse": [
-        { "step": "01", "title": "Install Chrome Extension", "description": "Load unpacked extension in Chrome Developer Mode." },
-        { "step": "02", "title": "Browse Any Video Site", "description": "Open YouTube, TikTok, or Instagram; the Dola download bar appears automatically." },
-        { "step": "03", "title": "Click Download", "description": "Select your desired resolution to start instant downloading." }
-      ],
-      "specs": [
-        { "label": "Manifest Version", "value": "Chrome Manifest V3" },
-        { "label": "Max Supported Resolution", "value": "4K Ultra HD (60fps)" }
-      ],
-      "faqs": [
-        { "q": "Is it free to use?", "a": "Yes, the Chrome extension is open-source and free for personal use." }
+        { "q": "Does it degrade video quality?", "a": "No, it uses high-bitrate CRF 18 encoding to preserve crisp 1080p visual fidelity." }
       ]
     }
   },
@@ -237,29 +241,30 @@
     "description": "AI-powered video translation suite that transcribes speech, translates scripts, and lip-syncs audio voiceovers into 30+ foreign languages.",
     "category": "video-ai",
     "categoryName": "AI Video Studio",
-    "status": "BETA",
-    "statusClass": "status-beta",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
     "icon": "fa-solid fa-language",
     "tags": ["Whisper AI", "TTS", "Translation", "Subtitles"],
     "links": {
       "detail": "./tools/imranai-video-translator.html",
-      "launch": "https://video.imranai.store",
+      "launch": "./tools/imranai-video-translator.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
-      "subtitle": "Global Content Localization & Voice Translation Engine",
-      "overview": "Translate your video content for global audiences. Transcribes original audio using Whisper AI, translates text using neural models, and re-synthesizes voiceovers matching original speaker tone.",
+      "subtitle": "Global Video Translation & Voice Cloning Engine",
+      "overview": "Expand your audience globally. ImranAI Video Translator ingests any video, uses OpenAI Whisper for sub-frame accurate speech-to-text, translates scripts into 30+ languages, and re-synthesizes dubbed voiceovers with matching tone.",
       "howToUse": [
-        { "step": "01", "title": "Upload Video", "description": "Select your video file and target language." },
-        { "step": "02", "title": "Auto Transcribe & Translate", "description": "Review generated transcript and foreign language script." },
-        { "step": "03", "title": "Export Dubbed Video", "description": "Render localized video with synchronized voiceover and captions." }
+        { "step": "01", "title": "Upload English Video", "description": "Select your source video file." },
+        { "step": "02", "title": "Select Target Languages", "description": "Choose target output languages (Spanish, German, Japanese, French)." },
+        { "step": "03", "title": "Download Dubbed Video", "description": "Export localized videos with matching voice tracks and subtitles." }
       ],
       "specs": [
-        { "label": "Transcription Accuracy", "value": "99% OpenAI Whisper AI" },
-        { "label": "Supported Languages", "value": "30+ Languages" }
+        { "label": "Supported Languages", "value": "30+ Major World Languages" },
+        { "label": "Transcription Model", "value": "Whisper Large-v3 Neural Model" },
+        { "label": "Voice Matching", "value": "Cloned Speaker Characteristics" }
       ],
       "faqs": [
-        { "q": "Does it generate translated subtitles?", "a": "Yes, it outputs SRT, VTT, and burned-in video subtitles in your target language." }
+        { "q": "Are subtitles generated automatically?", "a": "Yes, localized subtitle files (.srt and burnt-in captions) are generated automatically." }
       ]
     }
   },
@@ -267,31 +272,32 @@
     "id": "tiktok-fb-creator-finder",
     "name": "TikTok & Facebook Creator Lead Finder",
     "description": "Scraper and analytical tool that discovers high-performing TikTok creators and Facebook page leads by niche, follower counts, and engagement rates.",
-    "category": "seo",
-    "categoryName": "SEO & Metadata",
+    "category": "utilities",
+    "categoryName": "AI Utilities",
     "status": "LIVE APP",
     "statusClass": "status-live",
     "icon": "fa-solid fa-users-viewfinder",
     "tags": ["Scraper", "Lead Gen", "TikTok", "Analytics"],
     "links": {
       "detail": "./tools/tiktok-fb-creator-finder.html",
-      "launch": "https://github.com/iamimranai",
+      "launch": "./tools/tiktok-fb-creator-finder.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
-      "subtitle": "Influencer Marketing & Creator Intelligence Platform",
-      "overview": "Find target creators and affiliate partners for influencer campaigns. Filters creators by engagement rates, post frequency, contact email presence, and niche keywords.",
+      "subtitle": "Influencer Scraper & Lead Generation Engine",
+      "overview": "Discover the best creator partnerships and client leads. Scrape TikTok profiles and Facebook pages filtering by keyword niche, follower range, engagement rate, and verified contact emails.",
       "howToUse": [
-        { "step": "01", "title": "Select Platform & Niche", "description": "Choose TikTok or Facebook and type your niche keyword." },
-        { "step": "02", "title": "Set Metric Filters", "description": "Filter by minimum follower count and engagement rate." },
-        { "step": "03", "title": "Export Lead CSV", "description": "Export verified creator profiles and email leads to CSV." }
+        { "step": "01", "title": "Select Target Platform", "description": "Choose TikTok Creators or Facebook Business Pages." },
+        { "step": "02", "title": "Set Search Filters", "description": "Input niche keyword, min followers (e.g. 50k+), and region." },
+        { "step": "03", "title": "Export Lead List", "description": "Download structured CSV / JSON lead lists containing handle, follower count, and email." }
       ],
       "specs": [
-        { "label": "Data Source", "value": "TikTok Web & Facebook Graph API" },
-        { "label": "Export Formats", "value": "CSV, JSON, Excel" }
+        { "label": "Platforms Supported", "value": "TikTok Profiles & Facebook Pages" },
+        { "label": "Export Formats", "value": "CSV, JSON, Excel" },
+        { "label": "Contact Extraction", "value": "Bio Email & Social Link Scraping" }
       ],
       "faqs": [
-        { "q": "Does it extract contact emails?", "a": "Yes, it automatically parses public contact emails listed in creator bios." }
+        { "q": "How fast does it scrape leads?", "a": "It can extract up to 500 qualified creator contacts per minute." }
       ]
     }
   },
@@ -301,29 +307,30 @@
     "description": "Diagnostic developer utility that tests OpenAI, ElevenLabs, Gemini, and YouTube API keys for quotas, model permissions, and response latencies.",
     "category": "utilities",
     "categoryName": "AI Utilities",
-    "status": "BUILT-IN",
-    "statusClass": "status-builtin",
+    "status": "LIVE APP",
+    "statusClass": "status-live",
     "icon": "fa-solid fa-key",
     "tags": ["API Test", "OpenAI", "ElevenLabs", "Validator"],
     "links": {
       "detail": "./tools/api-key-tester.html",
-      "launch": "#modal-api",
+      "launch": "./tools/api-key-tester.html",
       "github": "https://github.com/iamimranai"
     },
     "fullDetails": {
-      "subtitle": "Instant Multi-Provider API Key Health & Quota Inspector",
-      "overview": "Verify your AI API credentials before launching background tasks. Checks model access permissions, remaining quota limits, and ping latency across major providers.",
+      "subtitle": "Multi-Provider API Quota & Permission Diagnostic Tool",
+      "overview": "Stop guessing if your API keys are valid. Ping OpenAI, ElevenLabs, Gemini, and YouTube endpoints to test active balance, model access tiers, and server latency.",
       "howToUse": [
-        { "step": "01", "title": "Paste API Key", "description": "Enter your OpenAI, ElevenLabs, or Gemini key." },
-        { "step": "02", "title": "Run Diagnostic Ping", "description": "Click Test Key to run secure client-side API verification." },
-        { "step": "03", "title": "Review Health Report", "description": "Inspect available models, remaining balance, and response latency." }
+        { "step": "01", "title": "Select Provider", "description": "Choose OpenAI, ElevenLabs, Gemini, or YouTube." },
+        { "step": "02", "title": "Input Secret Key", "description": "Paste your secret API key into the secure test box." },
+        { "step": "03", "title": "Run Diagnostic Test", "description": "View instant ping results, latency in ms, and available model tiers." }
       ],
       "specs": [
-        { "label": "Security Model", "value": "Client-Side Only (No Key Storage)" },
-        { "label": "Supported Providers", "value": "OpenAI, ElevenLabs, Gemini, Anthropic" }
+        { "label": "Supported Providers", "value": "OpenAI, ElevenLabs, Gemini, YouTube Data" },
+        { "label": "Security Model", "value": "Zero Persistence In-Memory Validation" },
+        { "label": "Response Metrics", "value": "Latency (ms), Model Tiers, Quota Active" }
       ],
       "faqs": [
-        { "q": "Are my API keys stored?", "a": "No! Keys are tested directly from your browser to provider endpoints and never stored." }
+        { "q": "Are keys stored on a server?", "a": "No, validation requests are executed directly in client memory without persistent server logs." }
       ]
     }
   }

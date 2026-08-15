@@ -505,10 +505,10 @@ function createToolCardHTML(tool, index = 0) {
 
     const modalTriggerHTML = (launchUrl && launchUrl.startsWith('#modal'))
         ? `onclick="event.stopPropagation(); document.querySelector('${launchUrl}').classList.add('active');"`
-        : `onclick="event.stopPropagation(); window.open('${launchUrl}', '_blank');"`;
+        : `onclick="event.stopPropagation(); window.location.href='${launchUrl}#live-app-section';"`;
 
     const launchBtnHTML = (launchUrl && launchUrl !== '#') 
-        ? `<button class="cyber-btn cyber-btn-sm" ${modalTriggerHTML}><i class="fa-solid fa-rocket"></i> LAUNCH</button>`
+        ? `<a href="${launchUrl}#live-app-section" class="cyber-btn cyber-btn-sm" ${modalTriggerHTML}><i class="fa-solid fa-rocket"></i> LAUNCH WEB APP</a>`
         : '';
 
     return `
@@ -576,6 +576,17 @@ function setupFilterListeners(container) {
 function getFallbackToolsData() {
     return [
         {
+            "id": "imranai-social-video-downloader",
+            "name": "ImranAI 4K Social Media Video Downloader",
+            "description": "Multi-platform 4K video & audio downloader engine supporting YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Pinterest, Reddit, Threads, and 17+ platforms.",
+            "category": "utilities",
+            "status": "LIVE APP",
+            "statusClass": "status-live",
+            "icon": "fa-solid fa-download",
+            "tags": ["yt-dlp", "Python", "4K Downloader", "MP3 Extractor"],
+            "links": { "detail": "./tools/imranai-social-video-downloader.html", "launch": "./tools/imranai-social-video-downloader.html" }
+        },
+        {
             "id": "imranai-video-studio",
             "name": "ImranAI Video & Reverse Prompt Studio",
             "description": "Full-stack AI video creation platform featuring inverse video reverse prompting, voice synthesis, multi-track timeline editing, and automated script-to-video workflow.",
@@ -584,7 +595,7 @@ function getFallbackToolsData() {
             "statusClass": "status-live",
             "icon": "fa-solid fa-wand-magic-sparkles",
             "tags": ["FastAPI", "React", "Reverse Prompting", "TTS"],
-            "links": { "detail": "./tools/imranai-video-studio.html", "launch": "https://video.imranai.store" }
+            "links": { "detail": "./tools/imranai-video-studio.html", "launch": "./tools/imranai-video-studio.html" }
         }
     ];
 }
