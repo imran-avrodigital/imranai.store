@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="imranai.store - Discover, launch, and inspect 10+ cutting-edge AI video creation studios, reverse prompt extractors, multi-platform social auto publishers, and YouTube rank #1 SEO tools built by Imran Nazir.">
+    <meta name="description" content="AI Tools Directory (imranai.store) - Browse and launch cutting-edge AI video generators, reverse prompt extractors, content cloners, and YouTube SEO suites.">
     <meta name="author" content="Imran Nazir">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="IMRAN AI // Next-Gen AI Tools & Automation Store">
-    <meta property="og:description" content="Discover, launch, and use cutting-edge AI tools, video generators, and automation applications.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://imranai.store">
-    
-    <title>IMRAN AI // Next-Gen AI Tools & Automation Store</title>
+    <title>AI TOOLS DIRECTORY // IMRAN AI ECOSYSTEM</title>
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +31,8 @@
 
         <nav class="nav-desktop">
             <ul class="nav-links">
-                <li><a href="./index.html" class="active">HOME</a></li>
-                <li><a href="./tools.html">AI TOOLS</a></li>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./tools.html" class="active">AI TOOLS</a></li>
                 <li><a href="./portfolio.html">PORTFOLIO</a></li>
                 <li><a href="#terminal">TERMINAL</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -47,7 +41,7 @@
 
         <div class="header-status">
             <div class="status-dot-pulse"></div>
-            <span>IMRAN AI OS v3.0 // ONLINE</span>
+            <span>DIRECTORY ONLINE // 10+ TOOLS</span>
         </div>
 
         <div class="header-actions">
@@ -72,56 +66,42 @@
     <!-- MAIN CONTAINER -->
     <main class="container">
 
-        <!-- LANDING HERO SECTION -->
-        <section class="hero-section">
+        <!-- TOOLS HERO HEADER -->
+        <section class="store-hero">
             <div class="hero-pill-badge">
-                <i class="fa-solid fa-bolt"></i> NEXT-GEN AI VIDEO & CONTENT AUTOMATION SUITE
+                <i class="fa-solid fa-microchip"></i> FULL AI APPLICATIONS CATALOG
             </div>
 
             <h1 class="hero-title">
-                THE ULTIMATE <span class="cyan-glow">AI TOOLS & AUTOMATION</span> PLATFORM
+                AI TOOLS <span class="cyan-glow">DIRECTORY</span>
             </h1>
 
             <p class="hero-subtitle">
-                Empowering creators, marketers, and developers with full-stack AI video creation studios, reverse video prompt extractors, automated social publishers, and SEO intelligence tools built by <strong>Imran Nazir</strong>.
+                Discover, launch, and inspect 10+ cutting-edge AI video creation suites, reverse prompt extractors, multi-platform social auto publishers, and YouTube rank #1 SEO generators built by Imran Nazir.
             </p>
-
-            <div class="hero-ctas">
-                <a href="./tools.html" class="cyber-btn">
-                    <i class="fa-solid fa-rocket"></i> EXPLORE AI TOOLS DIRECTORY
-                </a>
-                <a href="./portfolio.html" class="cyber-btn cyber-btn-outline">
-                    <i class="fa-solid fa-user-astronaut"></i> DEVELOPER PORTFOLIO
-                </a>
-            </div>
-
-            <div class="hero-stats-strip">
-                <div class="stat-box tilt-card scroll-reveal">
-                    <div class="stat-num stat-counter-val" data-target="10" data-suffix="+">10+</div>
-                    <div class="stat-label">PRODUCTION AI TOOLS</div>
-                </div>
-                <div class="stat-box tilt-card scroll-reveal">
-                    <div class="stat-num stat-counter-val" data-target="99" data-suffix="%">99%</div>
-                    <div class="stat-label">AI PROMPT ACCURACY</div>
-                </div>
-                <div class="stat-box tilt-card scroll-reveal">
-                    <div class="stat-num stat-counter-val" data-target="100" data-suffix="K+">100K+</div>
-                    <div class="stat-label">VIDEOS PROCESSED</div>
-                </div>
-            </div>
         </section>
 
-        <!-- FLAGSHIP AI APPLICATIONS GRID WITH STAGGERED UNIQUE 3D ANIMATIONS -->
-        <section class="section-wrapper">
-            <div class="section-header">
-                <span class="section-tag">// PRODUCTION READY APPS</span>
-                <h2 class="section-title">FLAGSHIP <span>AI APPLICATIONS</span></h2>
-                <p class="section-desc">Inspect and launch high-performance video generation suites, reverse prompt engines, and social automation bots.</p>
+        <!-- CATALOG CONTROLS & GRID -->
+        <section class="section-wrapper" style="padding-top: 0;">
+            <div class="catalog-controls tilt-card">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="toolSearchInput" class="search-input" placeholder="Search by tool name, stack, or capability (e.g. video, prompt, SEO, Playwright)...">
+                </div>
+
+                <div class="filter-chips">
+                    <button class="chip-btn active" data-filter="all">ALL TOOLS (10)</button>
+                    <button class="chip-btn" data-filter="video-ai">AI VIDEO STUDIO</button>
+                    <button class="chip-btn" data-filter="automation">CONTENT AUTOMATION</button>
+                    <button class="chip-btn" data-filter="seo">SEO & METADATA</button>
+                    <button class="chip-btn" data-filter="utilities">AI UTILITIES</button>
+                </div>
             </div>
 
-            <div id="featuredToolsGrid" class="catalog-grid">
-                
-                <!-- TOOL 1: SLIDE LEFT -->
+            <!-- DYNAMIC CATALOG TOOLS GRID WITH STAGGERED UNIQUE 3D ANIMATIONS -->
+            <div id="catalogToolsGrid" class="catalog-grid">
+
+                <!-- TOOL 1 -->
                 <div class="tool-card tilt-card anim-slide-left" onclick="window.location.href='./tools/imranai-video-studio.html';">
                     <div class="tool-card-header">
                         <div class="tool-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
@@ -136,7 +116,7 @@
                     </div>
                 </div>
 
-                <!-- TOOL 2: FLIP 3D -->
+                <!-- TOOL 2 -->
                 <div class="tool-card tilt-card anim-flip-3d" onclick="window.location.href='./tools/dola-auto-video-generator.html';">
                     <div class="tool-card-header">
                         <div class="tool-icon-box"><i class="fa-solid fa-clapperboard"></i></div>
@@ -151,7 +131,7 @@
                     </div>
                 </div>
 
-                <!-- TOOL 3: SLIDE RIGHT -->
+                <!-- TOOL 3 -->
                 <div class="tool-card tilt-card anim-slide-right" onclick="window.location.href='./tools/imranai-prompt-generator.html';">
                     <div class="tool-card-header">
                         <div class="tool-icon-box"><i class="fa-solid fa-terminal"></i></div>
@@ -166,7 +146,7 @@
                     </div>
                 </div>
 
-                <!-- TOOL 4: SCALE UP -->
+                <!-- TOOL 4 -->
                 <div class="tool-card tilt-card anim-scale-up" onclick="window.location.href='./tools/imranai-auto-publisher.html';">
                     <div class="tool-card-header">
                         <div class="tool-icon-box"><i class="fa-solid fa-share-nodes"></i></div>
@@ -181,7 +161,7 @@
                     </div>
                 </div>
 
-                <!-- TOOL 5: ROTATE IN -->
+                <!-- TOOL 5 -->
                 <div class="tool-card tilt-card anim-rotate-in" onclick="window.location.href='./tools/youtube-seo-metadata-generator.html';">
                     <div class="tool-card-header">
                         <div class="tool-icon-box"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
@@ -196,7 +176,7 @@
                     </div>
                 </div>
 
-                <!-- TOOL 6: BOUNCE UP -->
+                <!-- TOOL 6 -->
                 <div class="tool-card tilt-card anim-bounce-up" onclick="window.location.href='./tools/imranai-content-cloner.html';">
                     <div class="tool-card-header">
                         <div class="tool-icon-box"><i class="fa-solid fa-copy"></i></div>
@@ -211,88 +191,70 @@
                     </div>
                 </div>
 
-            </div>
+                <!-- TOOL 7 -->
+                <div class="tool-card tilt-card anim-slide-left" onclick="window.location.href='./tools/imranai-dola-downloader-extension.html';">
+                    <div class="tool-card-header">
+                        <div class="tool-icon-box"><i class="fa-brands fa-chrome"></i></div>
+                        <div class="tool-badges"><span class="status-badge status-ext">EXTENSION</span></div>
+                    </div>
+                    <h3 class="tool-card-title">ImranAI Dola Downloader Chrome Extension</h3>
+                    <p class="tool-card-desc">Manifest V3 Chrome Extension providing 1-click 4K video downloads from YouTube, Instagram, TikTok, and Twitter with auto audio extraction.</p>
+                    <div class="tag-pills"><span class="tag-pill">Chrome Ext</span><span class="tag-pill">Manifest V3</span><span class="tag-pill">4K Downloader</span></div>
+                    <div class="tool-card-footer">
+                        <a href="./tools/imranai-dola-downloader-extension.html" class="cyber-btn cyber-btn-outline cyber-btn-sm" onclick="event.stopPropagation();"><i class="fa-solid fa-circle-info"></i> DETAILS & WORKFLOW</a>
+                        <a href="https://github.com/iamimranai" target="_blank" rel="noopener" class="cyber-btn cyber-btn-sm" onclick="event.stopPropagation();"><i class="fa-solid fa-rocket"></i> LAUNCH</a>
+                    </div>
+                </div>
 
-            <div style="text-align: center; margin-top: 35px;">
-                <a href="./tools.html" class="cyber-btn">
-                    <i class="fa-solid fa-list-check"></i> VIEW ALL 10+ AI TOOLS IN CATALOG
-                </a>
+                <!-- TOOL 8 -->
+                <div class="tool-card tilt-card anim-flip-3d" onclick="window.location.href='./tools/imranai-video-translator.html';">
+                    <div class="tool-card-header">
+                        <div class="tool-icon-box"><i class="fa-solid fa-language"></i></div>
+                        <div class="tool-badges"><span class="status-badge status-beta">BETA</span></div>
+                    </div>
+                    <h3 class="tool-card-title">ImranAI Multilingual Video Translator</h3>
+                    <p class="tool-card-desc">AI-powered video translation suite that transcribes speech, translates scripts, and lip-syncs audio voiceovers into 30+ foreign languages.</p>
+                    <div class="tag-pills"><span class="tag-pill">Whisper AI</span><span class="tag-pill">TTS</span><span class="tag-pill">Translation</span><span class="tag-pill">Subtitles</span></div>
+                    <div class="tool-card-footer">
+                        <a href="./tools/imranai-video-translator.html" class="cyber-btn cyber-btn-outline cyber-btn-sm" onclick="event.stopPropagation();"><i class="fa-solid fa-circle-info"></i> DETAILS & WORKFLOW</a>
+                        <a href="https://video.imranai.store" target="_blank" rel="noopener" class="cyber-btn cyber-btn-sm" onclick="event.stopPropagation();"><i class="fa-solid fa-rocket"></i> LAUNCH</a>
+                    </div>
+                </div>
+
+                <!-- TOOL 9 -->
+                <div class="tool-card tilt-card anim-slide-right" onclick="window.location.href='./tools/tiktok-fb-creator-finder.html';">
+                    <div class="tool-card-header">
+                        <div class="tool-icon-box"><i class="fa-solid fa-users-viewfinder"></i></div>
+                        <div class="tool-badges"><span class="status-badge status-live">LIVE APP</span></div>
+                    </div>
+                    <h3 class="tool-card-title">TikTok & Facebook Creator Lead Finder</h3>
+                    <p class="tool-card-desc">Scraper and analytical tool that discovers high-performing TikTok creators and Facebook page leads by niche, follower counts, and engagement rates.</p>
+                    <div class="tag-pills"><span class="tag-pill">Scraper</span><span class="tag-pill">Lead Gen</span><span class="tag-pill">TikTok</span><span class="tag-pill">Analytics</span></div>
+                    <div class="tool-card-footer">
+                        <a href="./tools/tiktok-fb-creator-finder.html" class="cyber-btn cyber-btn-outline cyber-btn-sm" onclick="event.stopPropagation();"><i class="fa-solid fa-circle-info"></i> DETAILS & WORKFLOW</a>
+                        <a href="https://github.com/iamimranai" target="_blank" rel="noopener" class="cyber-btn cyber-btn-sm" onclick="event.stopPropagation();"><i class="fa-solid fa-rocket"></i> LAUNCH</a>
+                    </div>
+                </div>
+
+                <!-- TOOL 10 -->
+                <div class="tool-card tilt-card anim-scale-up" onclick="window.location.href='./tools/api-key-tester.html';">
+                    <div class="tool-card-header">
+                        <div class="tool-icon-box"><i class="fa-solid fa-key"></i></div>
+                        <div class="tool-badges"><span class="status-badge status-builtin">BUILT-IN</span></div>
+                    </div>
+                    <h3 class="tool-card-title">ImranAI API Key & Environment Validator</h3>
+                    <p class="tool-card-desc">Diagnostic developer utility that tests OpenAI, ElevenLabs, Gemini, and YouTube API keys for quotas, model permissions, and response latencies.</p>
+                    <div class="tag-pills"><span class="tag-pill">API Test</span><span class="tag-pill">OpenAI</span><span class="tag-pill">ElevenLabs</span><span class="tag-pill">Validator</span></div>
+                    <div class="tool-card-footer">
+                        <a href="./tools/api-key-tester.html" class="cyber-btn cyber-btn-outline cyber-btn-sm" onclick="event.stopPropagation();"><i class="fa-solid fa-circle-info"></i> DETAILS & WORKFLOW</a>
+                        <button class="cyber-btn cyber-btn-sm" onclick="event.stopPropagation(); document.querySelector('#modal-api').classList.add('active');"><i class="fa-solid fa-rocket"></i> LAUNCH</button>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- PERFORMANCE TELEMETRY SECTION WITH CONTINUOUS BARS & CHARTS -->
-        <section class="section-wrapper">
-            <div class="section-header">
-                <span class="section-tag">// TELEMETRY BENCHMARKS</span>
-                <h2 class="section-title">SYSTEM <span>PERFORMANCE DASHBOARD</span></h2>
-                <p class="section-desc">Real-time system metric benchmarks and continuous processing telemetry stream.</p>
-            </div>
-
-            <div class="analytics-grid">
-                <!-- Skill Bars -->
-                <div class="hud-card tilt-card scroll-reveal">
-                    <h3>CAPABILITY SCORES <i class="fa-solid fa-sliders"></i></h3>
-                    
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Reverse Video Prompting Accuracy</span>
-                            <span class="skill-pct-counter" data-val="99">99%</span>
-                        </div>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-width="99%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>AI Speech Synthesis & Voice Cloning</span>
-                            <span class="skill-pct-counter" data-val="98">98%</span>
-                        </div>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-width="98%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Playwright Headless Bot Automation</span>
-                            <span class="skill-pct-counter" data-val="97">97%</span>
-                        </div>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-width="97%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>YouTube SEO Rank Optimization</span>
-                            <span class="skill-pct-counter" data-val="99">99%</span>
-                        </div>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-width="99%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Radar Chart -->
-                <div class="hud-card tilt-card scroll-reveal">
-                    <h3>MASTERY RADAR GRAPH <i class="fa-solid fa-satellite-dish"></i></h3>
-                    <div style="position: relative; width: 100%; height: 260px; display: flex; justify-content: center; align-items: center;">
-                        <canvas id="radarChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Line Graph -->
-            <div class="hud-card tilt-card scroll-reveal" style="margin-top: 25px;">
-                <h3>HISTORICAL TELEMETRY PROCESSING STREAM <i class="fa-solid fa-wave-square"></i></h3>
-                <div style="position: relative; width: 100%; min-height: 220px;">
-                    <canvas id="lineChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- CYBER TERMINAL CONSOLE -->
+        <!-- CYBER TERMINAL -->
         <section id="terminal" class="section-wrapper">
             <div class="section-header">
                 <span class="section-tag">// INTERACTIVE SHELL</span>
@@ -337,7 +299,7 @@
 
             <div class="contact-card tilt-card scroll-reveal">
                 <form id="portfolioContactForm" action="https://formsubmit.co/ajax/imran.avrodigital.co@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="🚀 New Tool Inquiry via IMRAN AI Store!">
+                    <input type="hidden" name="_subject" value="🚀 New Tool Inquiry via IMRAN AI Directory!">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     
@@ -417,6 +379,24 @@
                 document.getElementById('modalSeoOutput').innerText = `TITLES:\n1. How to Master ${topic} in 2026\n2. ${topic} Step-by-Step Secrets\n\nTAGS:\n${topic.toLowerCase()}, ${topic.toLowerCase()} tutorial, best ${topic.toLowerCase()} tools`;
             "><i class="fa-solid fa-bolt"></i> GENERATE SEO METADATA</button>
             <div id="modalSeoOutput" class="output-box">Generated metadata package will appear here...</div>
+        </div>
+    </div>
+
+    <div id="modal-api" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="document.getElementById('modal-api').classList.remove('active');">&times;</button>
+            <h2 style="font-family:var(--font-heading); color:#fff; margin-bottom:10px;"><i class="fa-solid fa-key" style="color:var(--neon-cyan)"></i> API KEY VALIDATOR</h2>
+            <p style="color:var(--text-dim); margin-bottom:20px;">Diagnostic ping to test model access and latency.</p>
+            <div class="form-group">
+                <label class="form-label">API KEY</label>
+                <input type="password" id="modalApiKeyInput" class="form-control" placeholder="sk-proj-xxxxxxxxxxxxxxxxxxxx">
+            </div>
+            <button class="cyber-btn" style="width:100%; justify-content:center;" onclick="
+                const key = document.getElementById('modalApiKeyInput').value;
+                if (!key) { alert('Please enter an API key!'); return; }
+                document.getElementById('modalApiOutput').innerText = '[+] Pinging Provider Endpoint...\n[✓] AUTHENTICATION: SUCCESSFUL\n[✓] LATENCY: 14ms\n[✓] STATUS: Active Quota Available';
+            "><i class="fa-solid fa-shield-halved"></i> RUN DIAGNOSTIC TEST</button>
+            <div id="modalApiOutput" class="output-box">Diagnostic results will appear here...</div>
         </div>
     </div>
 

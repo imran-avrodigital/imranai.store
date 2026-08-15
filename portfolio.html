@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Imran Nazir Personal Portfolio - SEO Strategist, AI Automation Lead, WordPress Engineer & Digital Marketing Specialist.">
+    <meta property="og:title" content="IMRAN NAZIR // PERSONAL PORTFOLIO">
+    <meta property="og:description" content="5+ Years Experience in SEO Strategy, AI Automation & Digital Marketing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imranai.store/portfolio.html">
+    <title>IMRAN NAZIR // PERSONAL PORTFOLIO</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- FontAwesome & Chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --bg-primary: #040711;
+            --bg-card: rgba(13, 20, 38, 0.75);
+            --bg-card-hover: rgba(20, 30, 55, 0.9);
+            --neon-cyan: #00f3ff;
+            --neon-magenta: #ff0055;
+            --neon-purple: #9d4edd;
+            --neon-green: #00ff66;
+            --neon-blue: #1877f2;
+            --neon-gold: #ffbd2e;
+            --text-main: #e2e8f0;
+            --text-dim: #94a3b8;
+            --border-glow: rgba(0, 243, 255, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @media (min-width: 900px) {
+            * { cursor: none !important; }
+        }
+
+        html, body {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden !important;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            min-height: 100vh;
+        }
+
+        #cyber-cursor {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: var(--neon-cyan);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 15px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+            transition: transform 0.05s ease-out, background-color 0.2s ease;
+        }
+
+        #cyber-cursor-ring {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--neon-cyan);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99998;
+            transform: translate(-50%, -50%);
+            transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+        }
+
+        @media (max-width: 899px) {
+            #cyber-cursor, #cyber-cursor-ring { display: none !important; }
+        }
+
+        body.cursor-hover #cyber-cursor {
+            background: var(--neon-magenta);
+            transform: translate(-50%, -50%) scale(1.8);
+            box-shadow: 0 0 20px var(--neon-magenta);
+        }
+
+        body.cursor-hover #cyber-cursor-ring {
+            width: 65px;
+            height: 65px;
+            border-color: var(--neon-magenta);
+            box-shadow: 0 0 30px rgba(255, 0, 85, 0.5);
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(4, 7, 17, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-glow);
+            padding: 14px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(0.75rem, 3.8vw, 1.15rem);
+            font-weight: 900;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease;
+            max-width: calc(100% - 50px);
+            text-decoration: none;
+        }
+
+        .logo-text {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .logo-sub {
+            color: var(--text-dim);
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--neon-magenta);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-magenta);
+            animation: pulse 2.5s infinite alternate;
+            flex-shrink: 0;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1.2); opacity: 1; }
+        }
+
+        .nav-desktop ul {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .nav-desktop a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-desktop a:hover, .nav-desktop a.active {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 12px var(--neon-cyan);
+        }
+
+        .hud-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--neon-green);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 255, 102, 0.08);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            padding: 6px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(0, 243, 255, 0.08);
+            border: 1px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            cursor: pointer;
+            z-index: 1002;
+            flex-shrink: 0;
+        }
+
+        .mobile-nav-drawer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(4, 7, 17, 0.98);
+            backdrop-filter: blur(25px);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-100%);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+        }
+
+        .mobile-nav-drawer.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .mobile-nav-drawer ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .mobile-nav-drawer a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mobile-social-row {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .mobile-social-row a {
+            font-size: 1.5rem;
+            color: var(--text-dim);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            width: 100%;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            align-items: center;
+            min-height: 75vh;
+            width: 100%;
+        }
+
+        .hero-text {
+            flex: 1.2;
+            order: 1;
+            width: 100%;
+        }
+
+        .avatar-frame-wrapper {
+            flex: 1;
+            order: 2;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .hero-text h2 {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--neon-cyan);
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #ffffff, var(--neon-cyan), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .typing-role-wrapper {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.35rem;
+            color: var(--neon-gold);
+            margin-bottom: 20px;
+            min-height: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1.2rem;
+            background: var(--neon-cyan);
+            animation: blink 1.2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .cyber-btn {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 13px 26px;
+            color: var(--neon-cyan);
+            background: rgba(0, 243, 255, 0.05);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cyber-btn:hover, .cyber-btn:active {
+            background: var(--neon-cyan);
+            color: #000;
+            box-shadow: 0 0 30px var(--neon-cyan);
+            transform: scale(1.05) translateY(-2px);
+        }
+
+        .cyber-btn-secondary {
+            color: var(--neon-magenta);
+            border-color: var(--neon-magenta);
+            background: rgba(255, 0, 85, 0.05);
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.2);
+        }
+
+        .cyber-btn-secondary:hover, .cyber-btn-secondary:active {
+            background: var(--neon-magenta);
+            color: #fff;
+            box-shadow: 0 0 35px var(--neon-magenta);
+        }
+
+        .avatar-frame {
+            position: relative;
+            width: 360px;
+            height: 360px;
+            max-width: 90vw;
+            max-height: 90vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cyber-train-track {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            border: 3px dashed rgba(0, 243, 255, 0.35);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.25), inset 0 0 25px rgba(0, 243, 255, 0.15);
+            pointer-events: none;
+        }
+
+        .cyber-train-track::before {
+            content: '';
+            position: absolute;
+            top: -6px; left: -6px; right: -6px; bottom: -6px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 243, 255, 0.5);
+        }
+
+        .cyber-train-track::after {
+            content: '';
+            position: absolute;
+            top: 6px; left: 6px; right: 6px; bottom: 6px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 0, 85, 0.4);
+        }
+
+        .curved-button-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 25;
+            border-radius: 50%;
+            cursor: pointer;
+            text-decoration: none;
+            animation: orbit-spin 16s linear infinite;
+            display: block;
+        }
+
+        .curved-btn-svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .arc-btn-bg {
+            filter: drop-shadow(0 0 12px #00f3ff) drop-shadow(0 0 25px rgba(255, 0, 85, 0.7));
+            transition: all 0.4s ease;
+            transform-origin: center;
+        }
+
+        .curved-button-wrapper:hover .arc-btn-bg {
+            filter: drop-shadow(0 0 22px #00f3ff) drop-shadow(0 0 45px #ff0055);
+            stroke: #ff0055;
+        }
+
+        .arc-btn-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+            fill: #ffffff;
+            letter-spacing: 1.8px;
+            text-shadow: 0 0 6px #000000, 0 0 10px #00f3ff, 0 0 20px #00f3ff, 0 0 30px #ff0055;
+            transition: all 0.3s ease;
+        }
+
+        .curved-button-wrapper:hover .arc-btn-text {
+            fill: #00f3ff;
+            text-shadow: 0 0 8px #ffffff, 0 0 18px #00f3ff, 0 0 35px #00f3ff, 0 0 50px #ff0055;
+        }
+
+        @keyframes orbit-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .curved-button-wrapper:hover, .curved-button-wrapper:active {
+            animation-duration: 6s;
+        }
+
+        .avatar-ring-2 {
+            position: absolute;
+            width: 78%;
+            height: 78%;
+            border: 1px dashed var(--neon-magenta);
+            border-radius: 50%;
+            animation: spin-reverse 22s linear infinite;
+        }
+
+        @keyframes spin-reverse { 100% { transform: rotate(-360deg); } }
+
+        .avatar-core {
+            width: 68%;
+            height: 68%;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--neon-cyan);
+            box-shadow: 0 0 35px rgba(0, 243, 255, 0.5);
+            position: relative;
+            background: #060913;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .avatar-core img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .avatar-frame:hover .avatar-core, .avatar-core:hover {
+            border-color: var(--neon-magenta);
+            box-shadow: 0 0 45px var(--neon-magenta), 0 0 85px rgba(0, 243, 255, 0.8), inset 0 0 35px rgba(255, 0, 85, 0.6);
+            transform: scale(1.07);
+        }
+
+        .avatar-frame:hover .avatar-core img, .avatar-core:hover img {
+            transform: scale(1.14);
+            filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 20px var(--neon-cyan));
+        }
+
+        .avatar-frame:hover .cyber-train-track {
+            border-color: var(--neon-magenta);
+            box-shadow: 0 0 45px var(--neon-magenta), inset 0 0 35px var(--neon-cyan);
+        }
+
+        .avatar-frame:hover .avatar-ring-2 {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 30px var(--neon-cyan);
+        }
+
+        .stats-banner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0 50px 0;
+            width: 100%;
+        }
+
+        .stat-hud-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.5s ease;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 15px var(--neon-cyan);
+        }
+
+        .stat-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin-top: 5px;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #fff;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--neon-cyan), transparent);
+        }
+
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .hud-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 12px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .hud-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.15rem;
+            color: var(--neon-cyan);
+            margin-bottom: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-item {
+            margin-bottom: 18px;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.95rem;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+            box-shadow: 0 0 12px var(--neon-cyan);
+            border-radius: 5px;
+            width: 0%;
+            transition: width 3.2s cubic-bezier(0.1, 0.5, 0.1, 1);
+        }
+
+        .skill-tool-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        .mini-tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid rgba(0, 243, 255, 0.25);
+            color: var(--neon-cyan);
+            border-radius: 3px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .project-card:hover, .project-card:active {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 15px 35px rgba(0, 243, 255, 0.35);
+        }
+
+        .project-card h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.25rem;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .project-role-badge {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--neon-cyan);
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .project-result-box {
+            background: rgba(0, 243, 255, 0.07);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 15px;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .result-highlight {
+            color: var(--neon-green);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .tag-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+
+        .tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            color: var(--neon-cyan);
+            border-radius: 4px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 243, 255, 0.25);
+            border-radius: 12px;
+            padding: 25px;
+            position: relative;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .t-stars { color: var(--neon-gold); margin-bottom: 15px; font-size: 0.9rem; }
+        .t-quote-text { color: #d1d5db; font-style: italic; line-height: 1.6; margin-bottom: 20px; font-size: 0.98rem; }
+        .t-author-info { display: flex; align-items: center; gap: 12px; }
+
+        .t-avatar-icon {
+            width: 42px; height: 42px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+            display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem;
+        }
+
+        .t-author-name { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; }
+        .t-author-title { font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; color: var(--text-dim); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .contact-info-card, .contact-form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 243, 255, 0.15);
+            border-radius: 8px;
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 44px; height: 44px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; color: #fff; flex-shrink: 0;
+        }
+
+        .contact-label { font-family: 'Orbitron', sans-serif; font-size: 0.85rem; color: var(--text-dim); }
+        .contact-val { font-family: 'Share Tech Mono', monospace; font-size: 0.95rem; color: #fff; margin-top: 2px; word-break: break-all; }
+
+        .form-group { margin-bottom: 18px; width: 100%; }
+        .form-group label { display: block; font-family: 'Orbitron', sans-serif; font-size: 0.8rem; color: var(--neon-cyan); margin-bottom: 8px; }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            background: rgba(4, 7, 17, 0.8);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 6px;
+            padding: 12px 14px;
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.4s ease;
+        }
+
+        .form-textarea { resize: vertical; min-height: 110px; }
+
+        .terminal-container {
+            background: #04060d;
+            border: 1px solid var(--border-glow);
+            border-radius: 12px;
+            overflow: hidden;
+            font-family: 'Share Tech Mono', monospace;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .terminal-header {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-title { color: var(--text-dim); font-size: 0.85rem; margin-left: auto; }
+        .terminal-body { padding: 20px; height: 220px; overflow-y: auto; color: var(--neon-green); font-size: 0.9rem; line-height: 1.6; }
+
+        .terminal-input-line { display: flex; gap: 10px; align-items: center; padding: 0 20px 15px 20px; }
+        .terminal-input { background: transparent; border: none; outline: none; color: var(--neon-cyan); font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; flex: 1; width: 100%; }
+
+        footer {
+            border-top: 1px solid var(--border-glow);
+            padding: 35px 20px;
+            text-align: center;
+            color: var(--text-dim);
+            font-family: 'Share Tech Mono', monospace;
+            background: rgba(4, 7, 17, 0.95);
+            display: flex; flex-direction: column; align-items: center; gap: 15px;
+            width: 100%;
+        }
+
+        .social-links { display: flex; gap: 20px; }
+        .social-icon { color: var(--text-dim); font-size: 1.3rem; transition: all 0.4s ease; text-decoration: none; }
+        .social-icon:hover { color: var(--neon-cyan); text-shadow: 0 0 15px var(--neon-cyan); transform: translateY(-4px); }
+
+        /* SCROLL REVEAL CYBER POP ANIMATIONS */
+        .cyber-pop {
+            opacity: 0;
+            transform: translateY(40px) scale(0.96);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .cyber-pop.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        @media (max-width: 899px) {
+            header { padding: 12px 16px; }
+            .nav-desktop, .hud-status { display: none !important; }
+            .mobile-menu-btn { display: flex !important; }
+            .container { padding: 20px 14px; }
+            .hero { flex-direction: column; text-align: center; min-height: auto; gap: 30px; }
+            .hero-text { order: 2; }
+            .avatar-frame-wrapper { order: 1; }
+            .typing-role-wrapper { justify-content: center; }
+            .stats-banner { grid-template-columns: 1fr; gap: 12px; margin: 25px 0 35px 0; }
+            .analytics-grid, .contact-grid { grid-template-columns: 1fr; gap: 20px; }
+            .projects-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .hud-card, .contact-info-card, .contact-form-card { padding: 20px 16px; }
+            .section-title { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cyber-cursor"></div>
+    <div id="cyber-cursor-ring"></div>
+    <canvas id="bg-canvas"></canvas>
+    <div class="cyber-grid"></div>
+
+    <header>
+        <a href="./index.html" class="logo">
+            <div class="logo-dot"></div>
+            <div class="logo-text">
+                IMRAN NAZIR <span class="logo-sub">// PORTFOLIO</span>
+            </div>
+        </a>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./tools.html">AI TOOLS</a></li>
+                <li><a href="#hero" class="active">PORTFOLIO</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#analytics">METRICS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#testimonials">TESTIMONIALS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="hud-status">
+            <i class="fa-solid fa-circle" style="font-size:0.6rem; color:var(--neon-green)"></i> LIVE TELEMETRY
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Mobile Menu">
+            <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
+    </header>
+
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <ul>
+            <li><a href="./index.html"><i class="fa-solid fa-house" style="color:var(--neon-cyan)"></i> STORE HOME</a></li>
+            <li><a href="./tools.html"><i class="fa-solid fa-microchip" style="color:var(--neon-cyan)"></i> AI TOOLS DIRECTORY</a></li>
+            <li><a href="#hero"><i class="fa-solid fa-user-astronaut" style="color:var(--neon-purple)"></i> PORTFOLIO HOME</a></li>
+            <li><a href="#about"><i class="fa-solid fa-user-gear" style="color:var(--neon-purple)"></i> ABOUT ME</a></li>
+            <li><a href="#analytics"><i class="fa-solid fa-chart-line" style="color:var(--neon-gold)"></i> METRICS & RADAR</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-cubes" style="color:var(--neon-cyan)"></i> FEATURED PROJECTS</a></li>
+            <li><a href="#testimonials"><i class="fa-solid fa-comment-dots" style="color:var(--neon-magenta)"></i> TESTIMONIALS</a></li>
+            <li><a href="#terminal"><i class="fa-solid fa-terminal" style="color:var(--neon-green)"></i> TERMINAL</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-paper-plane" style="color:var(--neon-green)"></i> CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-text cyber-pop">
+                <h2>// WELCOME TO MY PORTFOLIO SYSTEM</h2>
+                <h1>IMRAN NAZIR</h1>
+
+                <div class="typing-role-wrapper">
+                    <span id="typingRoleText">SEO Strategist</span>
+                    <span class="typing-cursor"></span>
+                </div>
+
+                <p>
+                    5+ Years Experience in SEO Strategy, AI Automation Lead, WordPress Engineer & Digital Marketing Specialist.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#contact" class="cyber-btn">
+                        <i class="fa-solid fa-paper-plane"></i> CONTACT ME
+                    </a>
+                    <a href="./tools.html" class="cyber-btn cyber-btn-secondary">
+                        <i class="fa-solid fa-microchip"></i> EXPLORE AI TOOLS DIRECTORY
+                    </a>
+                </div>
+            </div>
+
+            <!-- FUTURISTIC AVATAR FRAME WITH CURVED SVG ORBITING TEXT -->
+            <div class="avatar-frame-wrapper cyber-pop">
+                <div class="avatar-frame">
+                    <div class="cyber-train-track"></div>
+
+                    <a href="https://www.facebook.com/iamimranai" target="_blank" rel="noopener noreferrer" class="curved-button-wrapper" title="Click Contact Now! to connect on Facebook">
+                        <svg class="curved-btn-svg" viewBox="0 0 380 380">
+                            <defs>
+                                <path id="contactArcPath" d="M 87.2,67.4 A 160 160 0 0 1 292.8,67.4" fill="none" />
+                            </defs>
+                            <text class="arc-btn-text" dy="4">
+                                <textPath href="#contactArcPath" startOffset="50%" text-anchor="middle">
+                                    Contact Now!
+                                </textPath>
+                            </text>
+                        </svg>
+                    </a>
+
+                    <div class="avatar-ring-2"></div>
+                    <div class="avatar-core">
+                        <img src="./assets/profile.png" alt="Imran Nazir Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <div class="stats-banner">
+            <div class="stat-hud-box cyber-pop">
+                <div class="stat-number" data-target="260" data-suffix="%">+0%</div>
+                <div class="stat-label">Organic Traffic Growth</div>
+            </div>
+            <div class="stat-hud-box cyber-pop">
+                <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+                <div class="stat-label">Automated Workflows</div>
+            </div>
+            <div class="stat-hud-box cyber-pop">
+                <div class="stat-number" data-target="7" data-suffix="+">#0</div>
+                <div class="stat-label">Rank #1 Google Positions</div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="container" style="padding-left:0; padding-right:0;">
+            <div class="section-title cyber-pop">ABOUT IMRAN NAZIR</div>
+            <div class="hud-card cyber-pop" style="line-height: 1.8; color: #d1d5db; font-size: 1.1rem; padding: 35px;">
+                <p style="margin-bottom: 20px;">
+                    Hello! I am <strong style="color: var(--neon-cyan);">Imran Nazir</strong>, a passionate <strong style="color: var(--neon-cyan);">SEO Strategist, AI Automation Lead, and WordPress Specialist</strong> with over 5 years of experience delivering measurable digital growth. My expertise bridges high-level search engine optimization with cutting-edge AI software development.
+                </p>
+                <p>
+                    I design and implement end-to-end automated pipelines that scale organic traffic, streamline video content production, and automate repetitive workflows for businesses worldwide.
+                </p>
+            </div>
+        </section>
+
+        <!-- Analytics & Skills Section -->
+        <section id="analytics" class="container" style="padding-left:0; padding-right:0;">
+            <div class="section-title cyber-pop">SKILLS & TELEMETRY</div>
+
+            <div class="analytics-grid">
+                <div class="hud-card cyber-pop">
+                    <h3>TECHNICAL PROFICIENCY <i class="fa-solid fa-sliders"></i></h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>SEO Strategy & Organic Audit</span>
+                            <span class="skill-pct-counter" data-val="98">98%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="98%"></div></div>
+                        <div class="skill-tool-tags"><span class="mini-tag">Ahrefs</span><span class="mini-tag">SEMrush</span><span class="mini-tag">Rank Math</span></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>AI Video & Automation Development</span>
+                            <span class="skill-pct-counter" data-val="96">96%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="96%"></div></div>
+                        <div class="skill-tool-tags"><span class="mini-tag">Python</span><span class="mini-tag">FastAPI</span><span class="mini-tag">Playwright</span></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>WordPress & Full-Stack Web Development</span>
+                            <span class="skill-pct-counter" data-val="95">95%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
+                        <div class="skill-tool-tags"><span class="mini-tag">React</span><span class="mini-tag">HTML5/CSS3</span><span class="mini-tag">PHP</span></div>
+                    </div>
+                </div>
+
+                <div class="hud-card cyber-pop">
+                    <h3>SKILLS RADAR CHART <i class="fa-solid fa-satellite-dish"></i></h3>
+                    <div style="position: relative; width: 100%; height: 280px; display: flex; justify-content: center; align-items: center;">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hud-card cyber-pop" style="margin-top: 30px;">
+                <h3>LIVE ORGANIC TRAFFIC TELEMETRY STREAM <i class="fa-solid fa-wave-square"></i></h3>
+                <div style="position: relative; width: 100%; min-height: 220px;">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container" style="padding-left:0; padding-right:0;">
+            <div class="section-title cyber-pop">FEATURED PROJECTS</div>
+
+            <div class="projects-grid">
+                <div class="project-card cyber-pop">
+                    <h4>Avrodigital.co</h4>
+                    <div class="project-role-badge">Lead SEO & Digital Strategist</div>
+                    <p>Designed and executed an enterprise SEO strategy scaling agency client visibility across international markets.</p>
+                    <div class="project-result-box">
+                        <span class="result-highlight">+260% Traffic Growth</span> (6 Months)
+                    </div>
+                    <div class="tag-pills"><span class="tag">Technical SEO</span><span class="tag">Content Architecture</span></div>
+                </div>
+
+                <div class="project-card cyber-pop">
+                    <h4>BuyBigInflatableThings.com</h4>
+                    <div class="project-role-badge">E-Commerce SEO Specialist</div>
+                    <p>Optimized product taxonomy, schema markup, and speed performance for commercial inflatable e-commerce portal.</p>
+                    <div class="project-result-box">
+                        <span class="result-highlight">#1 Ranking</span> For Commercial Keywords
+                    </div>
+                    <div class="tag-pills"><span class="tag">WooCommerce</span><span class="tag">Schema SEO</span></div>
+                </div>
+
+                <div class="project-card cyber-pop">
+                    <h4>ElectricScooter.com</h4>
+                    <div class="project-role-badge">SEO & Affiliate Specialist</div>
+                    <p>Built targeted review silos and high-intent buyer comparison guides for electric vehicle affiliate platform.</p>
+                    <div class="project-result-box">
+                        <span class="result-highlight">3x Affiliate Revenue</span> Increase
+                    </div>
+                    <div class="tag-pills"><span class="tag">Affiliate SEO</span><span class="tag">CRO</span></div>
+                </div>
+
+                <div class="project-card cyber-pop">
+                    <h4>Phototovector.com</h4>
+                    <div class="project-role-badge">SEO Strategist</div>
+                    <p>Ranked vector conversion web tool on competitive search terms via programmatic SEO pages.</p>
+                    <div class="project-result-box">
+                        <span class="result-highlight">150K Monthly Users</span>
+                    </div>
+                    <div class="tag-pills"><span class="tag">Programmatic SEO</span><span class="tag">Web App</span></div>
+                </div>
+
+                <div class="project-card cyber-pop">
+                    <h4>Bestwheeled.com</h4>
+                    <div class="project-role-badge">Niche Site Builder</div>
+                    <p>Niche affiliate platform built with custom WordPress performance optimization and automated content updates.</p>
+                    <div class="project-result-box">
+                        <span class="result-highlight">Top 3 Rankings</span> For Key Terms
+                    </div>
+                    <div class="tag-pills"><span class="tag">WordPress</span><span class="tag">Speed Optimization</span></div>
+                </div>
+
+                <div class="project-card cyber-pop">
+                    <h4>Dola AI Video Automation Studio</h4>
+                    <div class="project-role-badge">Lead Developer</div>
+                    <p>Full-stack AI video generation platform converting text scripts into automated vertical short-form videos.</p>
+                    <div class="project-result-box">
+                        <span class="result-highlight">100K+ Videos Rendered</span>
+                    </div>
+                    <div class="tag-pills"><span class="tag">FastAPI</span><span class="tag">FFmpeg</span><span class="tag">Playwright</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="container" style="padding-left:0; padding-right:0;">
+            <div class="section-title cyber-pop">CLIENT TESTIMONIALS</div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card cyber-pop">
+                    <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="t-quote-text">"Imran transformed our organic traffic strategy completely. His combination of technical SEO audits and AI content workflows delivered phenomenal growth."</p>
+                    <div class="t-author-info">
+                        <div class="t-avatar-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <div>
+                            <div class="t-author-name">Arafat Rahman</div>
+                            <div class="t-author-title">CEO, Avro Digital</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card cyber-pop">
+                    <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="t-quote-text">"The Dola AI Video Studio built by Imran sped up our video output by 10x. Highly skilled developer who understands both technical code and marketing results!"</p>
+                    <div class="t-author-info">
+                        <div class="t-avatar-icon"><i class="fa-solid fa-user-gear"></i></div>
+                        <div>
+                            <div class="t-author-name">Sarah M.</div>
+                            <div class="t-author-title">Digital Marketing Director</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card cyber-pop">
+                    <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="t-quote-text">"Imran ranked our commercial keywords at #1 on Google in less than 4 months. Exceptional work ethics and technical depth."</p>
+                    <div class="t-author-info">
+                        <div class="t-avatar-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <div>
+                            <div class="t-author-name">David K.</div>
+                            <div class="t-author-title">E-Commerce Store Owner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal Section -->
+        <section id="terminal" class="container" style="padding-left:0; padding-right:0;">
+            <div class="section-title cyber-pop">INTERACTIVE CYBER TERMINAL</div>
+
+            <div class="terminal-container cyber-pop">
+                <div class="terminal-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <div class="terminal-title">imranai@store:~ (IMRAN AI OS v3.0)</div>
+                </div>
+
+                <div class="terminal-body" id="term-body">
+                    <div><span style="color:var(--neon-cyan)">IMRAN AI OS v3.0 [BUILD 2026]</span> - Connected to Imran Nazir Portfolio System</div>
+                    <div>Type <span style="color:var(--neon-gold)">help</span> for available commands, or <span style="color:var(--neon-gold)">skills</span> for tech stack.</div>
+                </div>
+
+                <div class="terminal-input-line">
+                    <span style="color:var(--neon-magenta)">imranai@store:~$</span>
+                    <input type="text" id="term-input" class="terminal-input" placeholder="Type command (e.g. help, skills, projects, contact, status)...">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container" style="padding-left:0; padding-right:0;">
+            <div class="section-title cyber-pop">CONTACT IMRAN NAZIR</div>
+
+            <div class="contact-grid">
+                <div class="contact-info-card cyber-pop">
+                    <h3 style="font-family:'Orbitron',sans-serif; color:#fff; font-size:1.3rem; margin-bottom:20px;">DIRECT CONTACT CHANNELS</h3>
+
+                    <a href="mailto:imran.avrodigital.co@gmail.com" class="contact-item">
+                        <div class="contact-icon" style="background:rgba(0, 243, 255, 0.1); border:1px solid var(--neon-cyan);">
+                            <i class="fa-solid fa-envelope" style="color:var(--neon-cyan)"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">EMAIL ADDRESS</div>
+                            <div class="contact-val">imran.avrodigital.co@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.facebook.com/iamimranai" target="_blank" rel="noopener" class="contact-item">
+                        <div class="contact-icon" style="background:rgba(24, 119, 242, 0.1); border:1px solid var(--neon-blue);">
+                            <i class="fa-brands fa-facebook-f" style="color:var(--neon-blue)"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">FACEBOOK PROFILE</div>
+                            <div class="contact-val">facebook.com/iamimranai</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/iamimranai" target="_blank" rel="noopener" class="contact-item">
+                        <div class="contact-icon" style="background:rgba(255, 255, 255, 0.1); border:1px solid var(--text-main);">
+                            <i class="fa-brands fa-github" style="color:#fff"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">GITHUB REPOSITORY</div>
+                            <div class="contact-val">github.com/iamimranai</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contact-form-card cyber-pop">
+                    <form id="portfolioContactForm" action="https://formsubmit.co/ajax/imran.avrodigital.co@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="🚀 New Message via Imran Nazir Portfolio!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="form-group">
+                            <label>YOUR NAME</label>
+                            <input type="text" name="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>YOUR EMAIL ADDRESS</label>
+                            <input type="email" name="email" class="form-input" placeholder="imran.avrodigital.co@gmail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>PROJECT / MESSAGE</label>
+                            <textarea name="message" class="form-textarea" placeholder="Describe your project goal, SEO audit request, or AI tool idea..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="cyber-btn" style="width:100%; justify-content:center;">
+                            TRANSMIT MESSAGE <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div id="formStatusMsg" style="margin-top:15px; font-family:'Share Tech Mono',monospace; font-size:0.9rem; text-align:center; display:none;"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/iamimranai" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:imran.avrodigital.co@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.facebook.com/iamimranai" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/imranai/" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <div>&copy; 2026 IMRAN NAZIR // PERSONAL PORTFOLIO & AI ECOSYSTEM.</div>
+    </footer>
+
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+        // TYPING ROLE ANIMATION
+        document.addEventListener('DOMContentLoaded', () => {
+            const typingElem = document.getElementById('typingRoleText');
+            if (typingElem) {
+                const roles = ["SEO Strategist", "AI Automation Lead", "WordPress Engineer", "Digital Marketing Specialist"];
+                let rIdx = 0, cIdx = 0, isDel = false;
+                function type() {
+                    const cur = roles[rIdx];
+                    typingElem.innerText = isDel ? cur.substring(0, cIdx - 1) : cur.substring(0, cIdx + 1);
+                    cIdx += isDel ? -1 : 1;
+                    let speed = isDel ? 40 : 80;
+                    if (!isDel && cIdx === cur.length) { speed = 2000; isDel = true; }
+                    else if (isDel && cIdx === 0) { isDel = false; rIdx = (rIdx + 1) % roles.length; speed = 400; }
+                    setTimeout(type, speed);
+                }
+                type();
+            }
+
+            // MOBILE MENU TOGGLE
+            const mBtn = document.getElementById('mobileMenuBtn');
+            const mDrawer = document.getElementById('mobileDrawer');
+            if (mBtn && mDrawer) {
+                mBtn.addEventListener('click', () => {
+                    mDrawer.classList.toggle('active');
+                });
+                mDrawer.querySelectorAll('a').forEach(l => {
+                    l.addEventListener('click', () => mDrawer.classList.remove('active'));
+                });
+            }
+        });
+    </script>
+</body>
+</html>

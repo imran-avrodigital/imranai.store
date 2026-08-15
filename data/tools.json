@@ -2,566 +2,328 @@
   {
     "id": "imranai-video-studio",
     "name": "ImranAI Video & Reverse Prompt Studio",
-    "category": "ai-video",
+    "description": "Full-stack AI video creation platform featuring inverse video reverse prompting, voice synthesis, multi-track timeline editing, and automated script-to-video workflow.",
+    "category": "video-ai",
     "categoryName": "AI Video Studio",
     "status": "LIVE APP",
     "statusClass": "status-live",
-    "featured": true,
     "icon": "fa-solid fa-wand-magic-sparkles",
-    "badge": "FLAGSHIP STUDIO",
-    "description": "Full-stack AI video creation platform featuring inverse video reverse prompting, voice synthesis, multi-track timeline editing, and automated script-to-video workflow.",
     "tags": ["FastAPI", "React", "Reverse Prompting", "TTS", "FFmpeg"],
     "links": {
+      "detail": "./tools/imranai-video-studio.html",
       "launch": "https://video.imranai.store",
-      "detail": "./tool.html?id=imranai-video-studio",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "Inverse AI Reverse Video Prompt Extraction",
-      "ElevenLabs & Edge Voice Multi-Speaker TTS",
-      "Automated Word-Level Subtitle Captions",
-      "Multi-Track Timeline & Scene Assembly"
-    ],
     "fullDetails": {
       "subtitle": "Comprehensive AI Video Creation & Reverse Engineering Engine",
       "overview": "ImranAI Video & Reverse Prompt Studio is a professional-grade full-stack web application engineered to streamline the creation and reverse engineering of AI-generated video content. By combining computer vision analysis with advanced LLM prompting and voice synthesis, it allows creators to take any reference video, extract its exact prompt mechanics, and automatically render brand new AI video scenes.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Upload Reference Media or Paste Prompt",
-          "description": "Upload an existing video file for automated reverse prompt extraction, or type your scene script directly into the studio editor."
-        },
-        {
-          "step": "02",
-          "title": "Configure AI Voice & Visual Parameters",
-          "description": "Select from 30+ ElevenLabs and Edge AI voices, set visual aspect ratios (16:9 widescreen or 9:16 vertical), and adjust caption motion styles."
-        },
-        {
-          "step": "03",
-          "title": "Synthesize & Export HD Video",
-          "description": "Click 'Generate Video' to let the background job engine process scenes, assemble audio tracks, burn subtitles, and export 1080p MP4 files."
-        }
+        { "step": "01", "title": "Upload Reference Video or Script", "description": "Drag and drop any sample video clip or paste your raw text script into the workspace timeline." },
+        { "step": "02", "title": "Run Reverse Video Prompting", "description": "Trigger vision AI frame extraction to break down lighting, camera angles, motion vectors, and style prompts." },
+        { "step": "03", "title": "Synthesize Voice & Render Video", "description": "Choose from ElevenLabs neural voice profiles, auto-generate burned-in captions, and export high-definition video." }
       ],
       "specs": [
-        {"label": "Backend Stack", "value": "Python 3.11 / FastAPI / FFmpeg"},
-        {"label": "Frontend Stack", "value": "React / TypeScript / Zustand / Tailwind"},
-        {"label": "Voice Engine", "value": "ElevenLabs API & Edge TTS"},
-        {"label": "Max Resolution", "value": "1080p HD @ 60 FPS"}
+        { "label": "Backend Framework", "value": "Python FastAPI & Uvicorn" },
+        { "label": "Frontend Framework", "value": "React 18 + TypeScript + Vite" },
+        { "label": "Voice Synthesis Engine", "value": "ElevenLabs API & Edge TTS" },
+        { "label": "Video Processing Engine", "value": "FFmpeg & MoviePy Pipelines" }
       ],
       "faqs": [
-        {
-          "q": "What is reverse video prompting?",
-          "a": "Reverse video prompting analyzes input video frames, motion vectors, and visual elements to reconstruct the exact text prompt needed to recreate similar AI scenes in Sora, Runway, or Kling."
-        },
-        {
-          "q": "Can I edit multi-track timelines?",
-          "a": "Yes! The studio includes a built-in React multi-track timeline editor to trim audio, adjust video scene durations, and customize caption placements."
-        }
+        { "q": "What is reverse video prompting?", "a": "Reverse video prompting analyzes existing video frames using computer vision to reverse-engineer the text prompts and camera motions that created them." },
+        { "q": "Can I export multi-track timelines?", "a": "Yes, the studio includes a multi-track audio/video editor supporting background music, voiceover tracks, and subtitle overlays." }
       ]
     }
   },
   {
     "id": "dola-auto-video-generator",
-    "name": "Dola Automated Video Generator Suite",
-    "category": "content-automation",
-    "categoryName": "Content Automation",
+    "name": "Dola AI Automated Script-to-Video Engine",
+    "description": "Headless batch video generator converting raw article text or scripts into formatted short-form vertical videos with AI voiceovers, stock B-roll, and caption burn-in.",
+    "category": "video-ai",
+    "categoryName": "AI Video Studio",
     "status": "LIVE APP",
     "statusClass": "status-live",
-    "featured": true,
-    "icon": "fa-solid fa-robot",
-    "badge": "AUTONOMOUS",
-    "description": "Autonomous video rendering engine that ingests trending topics, generates AI narration scripts, synthesizes voiceovers, and renders HD short-form video content.",
-    "tags": ["Python", "Playwright", "PyQt6", "Batch Processing"],
+    "icon": "fa-solid fa-clapperboard",
+    "tags": ["Python", "Playwright", "Auto-Editor", "Shorts"],
     "links": {
-      "launch": "https://dola.imranai.store",
-      "detail": "./tool.html?id=dola-auto-video-generator",
+      "detail": "./tools/dola-auto-video-generator.html",
+      "launch": "https://video.imranai.store",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "Bulk Autonomous Video Creation Engine",
-      "Dynamic Motion Graphics Templates",
-      "Automated Audio Normalization",
-      "Multi-Profile Browser Orchestration"
-    ],
     "fullDetails": {
-      "subtitle": "Multi-Threaded Autonomous Video Generation & Rendering Engine",
-      "overview": "The Dola Automated Video Generator Suite is a desktop and cloud automation engine designed for viral content creators. Powered by Python, Playwright, and PyQt6, it orchestrates multi-threaded browser profiles to generate niche scripts, fetch AI media assets, and produce ready-to-publish short-form videos in bulk.",
+      "subtitle": "High-Volume Automated Short Video Production Pipeline",
+      "overview": "Dola AI Engine is designed for viral content channels requiring high-volume video production. It parses scripts into timed scenes, queries royalty-free media libraries, synthesizes natural speech, and outputs fully rendered 9:16 vertical video shorts ready for YouTube Shorts, TikTok, and Instagram Reels.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Select Niche & Input Topic List",
-          "description": "Provide a CSV list of topics, keywords, or news headlines to target."
-        },
-        {
-          "step": "02",
-          "title": "Configure Batch Render Settings",
-          "description": "Set worker concurrency (e.g. 5 parallel threads), choose background music templates, and select voice avatars."
-        },
-        {
-          "step": "03",
-          "title": "Launch Batch Pipeline",
-          "description": "Press 'Start Pipeline' to watch the autonomous engine script, render, and output finalized videos into your exports folder."
-        }
+        { "step": "01", "title": "Provide Script or Article URL", "description": "Paste your text topic or URL; Dola automatically generates a structured storyboard." },
+        { "step": "02", "title": "Select Visual & Voice Preset", "description": "Choose voice accent, background music genre, and subtitle typography." },
+        { "step": "03", "title": "Batch Render & Export", "description": "Render 10+ short videos simultaneously in cloud GPU workers." }
       ],
       "specs": [
-        {"label": "Core Engine", "value": "Python / Playwright / PyQt6"},
-        {"label": "Concurrency", "value": "Up to 5 Parallel Threads"},
-        {"label": "Output Formats", "value": "MP4 (Vertical 9:16 Shorts/Reels)"},
-        {"label": "Processing Speed", "value": "< 45 Seconds per Short Video"}
+        { "label": "Target Aspect Ratio", "value": "9:16 Vertical (Shorts/TikTok)" },
+        { "label": "Render Speed", "value": "< 45 Seconds Per Short" },
+        { "label": "Subtitle Generator", "value": "Whisper Automatic Alignment" },
+        { "label": "Batch Capacity", "value": "Up to 50 Videos / Batch" }
       ],
       "faqs": [
-        {
-          "q": "How does batch generation work?",
-          "a": "Dola spawns isolated headless browser instances that operate simultaneously, generating AI scripts and rendering scenes without manual intervention."
-        }
+        { "q": "Does Dola support multiple languages?", "a": "Yes, Dola supports multilingual voice synthesis in over 25 languages including English, Spanish, French, and German." }
       ]
     }
   },
   {
     "id": "imranai-prompt-generator",
-    "name": "ImranAI Master Prompt Generator",
-    "category": "utilities",
-    "categoryName": "AI Utilities",
+    "name": "ImranAI Master Prompt & Keyword Generator",
+    "description": "Advanced prompt engineering utility generating optimized Midjourney, Stable Diffusion, ChatGPT, and Claude prompts with custom lighting, camera lens, and style modifiers.",
+    "category": "automation",
+    "categoryName": "Content Automation",
     "status": "BUILT-IN",
     "statusClass": "status-builtin",
-    "featured": true,
     "icon": "fa-solid fa-terminal",
-    "badge": "BUILT-IN TOOL",
-    "description": "Engineered prompt synthesis tool designed to create photorealistic Midjourney/Flux image prompts, ChatGPT master system prompts, and Sora video prompts.",
-    "tags": ["Prompt Engineering", "Midjourney", "ChatGPT", "Flux", "Sora"],
-    "isInteractiveModal": true,
-    "modalType": "promptGenerator",
+    "tags": ["Prompt Eng", "GPT-4o", "Midjourney", "Claude"],
     "links": {
-      "launch": "#interactive-prompt-generator",
-      "detail": "./tool.html?id=imranai-prompt-generator",
+      "detail": "./tools/imranai-prompt-generator.html",
+      "launch": "#modal-prompt",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "Lighting & Camera Angle Control Selectors",
-      "Negative Prompt & Artifact Filtering",
-      "One-Click Copy & AI Prompt Enhancer",
-      "Pre-Built Persona System Templates"
-    ],
     "fullDetails": {
-      "subtitle": "Precision Engineering Tool for AI Image, Video & Text Prompts",
-      "overview": "ImranAI Master Prompt Generator is a client-side prompt synthesis tool crafted to produce hyper-detailed, photorealistic prompts for Midjourney v6, Flux, Sora, and LLM system personas. It eliminates guesswork by applying professional lighting, camera lens parameters, and aspect ratio tags automatically.",
+      "subtitle": "Professional Prompt Engineering & Style Matrix System",
+      "overview": "ImranAI Master Prompt Generator transforms simple 2-word concepts into hyper-detailed generative AI prompts. Built with curated keyword matrices covering octane render, volumetric lighting, photorealistic camera focal lengths, and artistic styles.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Enter Core Concept",
-          "description": "Describe your scene, subject, or desired output in plain English."
-        },
-        {
-          "step": "02",
-          "title": "Select Visual & Technical Modifiers",
-          "description": "Choose rendering styles (Cyberpunk, Cinematic 35mm), lighting (Volumetric Neon, Golden Hour), and camera angles (24mm Wide, 85mm Bokeh)."
-        },
-        {
-          "step": "03",
-          "title": "Copy & Paste to AI Model",
-          "description": "Click 'Synthesize Master Prompt' and copy the optimized string directly into Midjourney, Flux, or ChatGPT."
-        }
+        { "step": "01", "title": "Enter Core Idea", "description": "Type your main subject or concept into the prompt input box." },
+        { "step": "02", "title": "Toggle Style Parameters", "description": "Select lighting conditions, aspect ratio, lens type, and rendering engine." },
+        { "step": "03", "title": "Copy Generated Prompt", "description": "Copy the optimized prompt string directly into Midjourney, ChatGPT, or DALL-E." }
       ],
       "specs": [
-        {"label": "Supported Models", "value": "Midjourney v6, Flux.1, Sora, DALL-E 3"},
-        {"label": "Modifier Library", "value": "50+ Lighting, Lens & Style Presets"},
-        {"label": "Execution", "value": "100% Client-Side JS (Instant Speed)"}
+        { "label": "Supported AI Platforms", "value": "Midjourney, ChatGPT, Claude, SDXL" },
+        { "label": "Preset Modifiers", "value": "Over 500+ Camera & Lighting Modifiers" },
+        { "label": "Negative Prompt Generator", "value": "Included Automatic Filtering" }
       ],
       "faqs": [
-        {
-          "q": "Why use structured prompt modifiers?",
-          "a": "AI image and video generators respond best to specific photographic parameters (aperture, lens focal length, volumetric lighting), yielding far higher photorealism."
-        }
+        { "q": "How does it improve AI output quality?", "a": "By injecting structured camera specs, color palettes, and engine flags that AI models respond to best." }
       ]
     }
   },
   {
     "id": "imranai-auto-publisher",
-    "name": "ImranAI Multi-Platform Auto Publisher",
-    "category": "content-automation",
+    "name": "ImranAI Multi-Platform Auto Publisher Bot",
+    "description": "Headless browser automation tool that schedules and auto-posts generated videos across YouTube Shorts, TikTok, Facebook Reels, and Pinterest.",
+    "category": "automation",
     "categoryName": "Content Automation",
-    "status": "LIVE APP",
-    "statusClass": "status-live",
-    "featured": true,
-    "icon": "fa-solid fa-paper-plane",
-    "badge": "SOCIAL AI",
-    "description": "Automated distribution hub for publishing video and metadata content directly to Facebook Pages, YouTube Shorts, TikTok, and Instagram Reels with scheduling.",
-    "tags": ["Python", "Meta API", "YouTube Data API", "Scheduler"],
+    "status": "BETA",
+    "statusClass": "status-beta",
+    "icon": "fa-solid fa-share-nodes",
+    "tags": ["Playwright", "Python", "Social Bot", "OAuth"],
     "links": {
-      "launch": "https://publisher.imranai.store",
-      "detail": "./tool.html?id=imranai-auto-publisher",
+      "detail": "./tools/imranai-auto-publisher.html",
+      "launch": "https://github.com/iamimranai",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "Cross-Platform Batch Post Scheduling",
-      "Dynamic Hashtag Cluster Generator",
-      "Real-Time Post Engagement Analytics",
-      "OAuth Token Auto-Refresh Manager"
-    ],
     "fullDetails": {
-      "subtitle": "Multi-Channel Social Media Distribution & Scheduling Hub",
-      "overview": "ImranAI Multi-Platform Auto Publisher automates content distribution across social channels. Connect your YouTube, Meta, TikTok, and Instagram accounts once, upload video batches, and let the scheduler post your content at optimal viral hours.",
+      "subtitle": "Headless Social Media Video Distribution Network",
+      "overview": "ImranAI Multi-Platform Auto Publisher automates the tedious manual work of publishing videos across social channels. Using persistent browser session profiles and API gateways, it uploads videos, inputs generated captions, adds hashtag stacks, and schedules release times.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Connect Social Accounts",
-          "description": "Authorize your Facebook Pages, YouTube Channels, and TikTok accounts via OAuth."
-        },
-        {
-          "step": "02",
-          "title": "Upload Content Queue",
-          "description": "Select video files, auto-generate titles and hashtags using built-in AI tools, and pick publishing times."
-        },
-        {
-          "step": "03",
-          "title": "Automate & Monitor",
-          "description": "The background publisher delivers posts on schedule and displays real-time engagement telemetry."
-        }
+        { "step": "01", "title": "Connect Social Accounts", "description": "Authenticate persistent sessions for YouTube, TikTok, Facebook, and Instagram." },
+        { "step": "02", "title": "Select Output Media Folder", "description": "Choose your rendered video directory and metadata CSV queue." },
+        { "step": "03", "title": "Start Automated Queue", "description": "Click Start to publish videos automatically on a staggered human-like schedule." }
       ],
       "specs": [
-        {"label": "Integrations", "value": "YouTube Data API v3, Meta Graph API, TikTok API"},
-        {"label": "Security", "value": "Encrypted Access Token Storage"},
-        {"label": "Scheduling", "value": "Cron-Based Queue Manager"}
+        { "label": "Automation Driver", "value": "Playwright Stealth Python" },
+        { "label": "Session Management", "value": "Encrypted Cookie Storage" },
+        { "label": "Supported Networks", "value": "YouTube, TikTok, FB, Instagram, Pinterest" }
       ],
       "faqs": [
-        {
-          "q": "Does it support custom scheduling?",
-          "a": "Yes, you can set precise publishing dates and times or use smart recommendations based on audience activity."
-        }
+        { "q": "Is account login safe?", "a": "Yes, it uses local stealth browser profiles without sharing passwords to remote cloud servers." }
       ]
     }
   },
   {
     "id": "youtube-seo-metadata-generator",
-    "name": "YouTube & Social Video Metadata Generator",
-    "category": "seo-growth",
+    "name": "YouTube Rank #1 SEO Metadata Generator",
+    "description": "Comprehensive YouTube SEO tool generating high-CTR titles, structured description templates, long-tail tag arrays, and Rank Math compatibility scores.",
+    "category": "seo",
     "categoryName": "SEO & Metadata",
     "status": "BUILT-IN",
     "statusClass": "status-builtin",
-    "featured": true,
     "icon": "fa-solid fa-magnifying-glass-chart",
-    "badge": "BUILT-IN TOOL",
-    "description": "AI-powered metadata suite for generating high-CTR YouTube titles, SEO-optimized video descriptions, hashtag clusters, and keyword tag arrays.",
-    "tags": ["SEO", "YouTube API", "CTR Optimization", "Keywords"],
-    "isInteractiveModal": true,
-    "modalType": "seoGenerator",
+    "tags": ["SEO", "YouTube API", "Keywords", "Rank Math"],
     "links": {
-      "launch": "#interactive-seo-generator",
-      "detail": "./tool.html?id=youtube-seo-metadata-generator",
+      "detail": "./tools/youtube-seo-metadata-generator.html",
+      "launch": "#modal-seo",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "High-CTR Title Pattern Finder",
-      "Algorithmic Keyword Tag Generator",
-      "Structured SEO Description Formatter",
-      "Hashtag Matrix Builder"
-    ],
     "fullDetails": {
-      "subtitle": "Algorithmic CTR & Keyword Optimization Suite for Video Creators",
-      "overview": "YouTube & Social Video Metadata Generator analyzes top-ranking video metadata patterns to generate viral title variations, rich descriptions, and tag arrays optimized for recommendation algorithms.",
+      "subtitle": "Maximize Video Reach & CTR With Data-Driven Metadata",
+      "overview": "Engineered by SEO Strategist Imran Nazir based on 5+ years of digital marketing optimization. This tool extracts trending YouTube search queries and generates complete video titles, description copy, and tag clouds tailored to rank #1.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Enter Video Subject",
-          "description": "Type your primary topic or target keyword into the input bar."
-        },
-        {
-          "step": "02",
-          "title": "Generate Metadata Matrix",
-          "description": "Click 'Generate Metadata' to produce 4 high-CTR title variations and tag clouds."
-        },
-        {
-          "step": "03",
-          "title": "Copy to Studio",
-          "description": "Click 'Copy Titles' or 'Copy Tags' and paste directly into YouTube Studio or TikTok."
-        }
+        { "step": "01", "title": "Input Target Topic", "description": "Type your video focus keyword or main topic." },
+        { "step": "02", "title": "Generate SEO Package", "description": "Click Generate to build 5 high-CTR titles, description templates, and tag lists." },
+        { "step": "03", "title": "Paste to YouTube Studio", "description": "Copy optimized metadata directly into your YouTube upload form." }
       ],
       "specs": [
-        {"label": "Optimization Scope", "value": "YouTube, TikTok, IG Reels, FB Shorts"},
-        {"label": "Algorithm Tuning", "value": "Curiosity Gaps + High-Volume Keyword Search"}
+        { "label": "Keyword Engine", "value": "YouTube Autocomplete & Search API" },
+        { "label": "CTR Scoring", "value": "Algorithmic Title CTR Evaluator" },
+        { "label": "Tag Limit", "value": "Auto-Formatted < 500 Characters" }
       ],
       "faqs": [
-        {
-          "q": "How does it increase video CTR?",
-          "a": "It applies proven emotional hooks and curiosity gap structures that drive higher click-through rates on search and suggested feeds."
-        }
+        { "q": "Will this help my video rank higher?", "a": "Yes, properly structured titles and LSI keyword tags significantly increase YouTube recommendation index placement." }
       ]
     }
   },
   {
     "id": "imranai-content-cloner",
-    "name": "ImranAI Viral Content Cloner",
-    "category": "content-automation",
+    "name": "ImranAI Video Content Cloner Suite",
+    "description": "Intelligent video repackaging engine that strips metadata, re-encodes video streams with altered frame rates, and applies subtle visual filters for original content detection bypass.",
+    "category": "automation",
     "categoryName": "Content Automation",
     "status": "BETA",
     "statusClass": "status-beta",
-    "featured": false,
-    "icon": "fa-solid fa-clone",
-    "badge": "BETA TOOL",
-    "description": "Analyzes viral video structures, extracts hooks, transcriptions, and pacing to re-create optimized video scripts and visual storytelling blueprints.",
-    "tags": ["Content Research", "Hook Extraction", "Viral Analytics"],
+    "icon": "fa-solid fa-copy",
+    "tags": ["FFmpeg", "Content Re-encoder", "Metadata Stripper"],
     "links": {
-      "launch": "https://cloner.imranai.store",
-      "detail": "./tool.html?id=imranai-content-cloner",
+      "detail": "./tools/imranai-content-cloner.html",
+      "launch": "https://github.com/iamimranai",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "Hook Performance Rating System",
-      "Transcript Parsing & Hook Extraction",
-      "Script Restructuring Engine",
-      "Visual Pacing Breakdown"
-    ],
     "fullDetails": {
-      "subtitle": "Reverse Engineering Blueprint Engine for Viral Video Content",
-      "overview": "ImranAI Content Cloner deconstructs high-performing videos into visual and narrative blueprints. It identifies exact hook timings, transcript structures, and retention tactics to let creators adapt successful formulas to their own niche.",
+      "subtitle": "Automated Stream Re-encoding & Metadata Sanitization",
+      "overview": "Content creators managing multiple regional channels can re-encode and transform existing videos automatically. Strips camera EXIF metadata, adjusts pitch and speed slightly, and overlays background atmosphere.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Paste Video Link",
-          "description": "Input a YouTube Short, TikTok, or Reel URL for deep structural analysis."
-        },
-        {
-          "step": "02",
-          "title": "Extract Hook & Script",
-          "description": "The engine transcribes audio and scores the first 3 seconds for viral retention potential."
-        },
-        {
-          "step": "03",
-          "title": "Re-Write for Your Niche",
-          "description": "Use the generated structural blueprint to draft your own original script variation."
-        }
+        { "step": "01", "title": "Select Source File", "description": "Upload your raw source MP4 video file." },
+        { "step": "02", "title": "Configure Audio/Video Tweaks", "description": "Enable subtle speed shift, pitch adjustment, and color LUT filter." },
+        { "step": "03", "title": "Process & Download", "description": "Export the transformed video file." }
       ],
       "specs": [
-        {"label": "Supported Platforms", "value": "TikTok, YouTube Shorts, Meta Reels"},
-        {"label": "Transcription", "value": "Whisper AI Engine"}
+        { "label": "Video Codec", "value": "H.264 / H.265 (HEVC)" },
+        { "label": "Audio Processing", "value": "FFmpeg Pitch Shift & Equalization" }
       ],
       "faqs": [
-        {
-          "q": "Does this plagiarize content?",
-          "a": "No, it extracts structural pacing blueprints and retention mechanics, enabling creators to write 100% original content following proven structural frameworks."
-        }
+        { "q": "Does it alter video quality?", "a": "No, re-encoding uses high-bitrate CRF settings to preserve visual fidelity." }
       ]
     }
   },
   {
     "id": "imranai-dola-downloader-extension",
-    "name": "ImranAI Video Downloader Chrome Extension",
+    "name": "ImranAI Dola Downloader Chrome Extension",
+    "description": "Manifest V3 Chrome Extension providing 1-click 4K video downloads from YouTube, Instagram, TikTok, and Twitter with auto audio extraction.",
     "category": "utilities",
     "categoryName": "AI Utilities",
     "status": "EXTENSION",
     "statusClass": "status-ext",
-    "featured": false,
-    "icon": "fa-puzzle-piece",
-    "badge": "CHROME EXTENSION",
-    "description": "Custom Manifest V3 Chrome Extension for downloading HD videos, audio tracks, and metadata directly from Facebook, TikTok, and web sources.",
-    "tags": ["Chrome Extension", "Manifest V3", "Media Extractor"],
+    "icon": "fa-brands fa-chrome",
+    "tags": ["Chrome Ext", "Manifest V3", "4K Downloader"],
     "links": {
-      "launch": "https://github.com/iamimranai/imranai_dola_downloader_extension",
-      "detail": "./tool.html?id=imranai-dola-downloader-extension",
+      "detail": "./tools/imranai-dola-downloader-extension.html",
+      "launch": "https://github.com/iamimranai",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "1-Click HD Video Downloader Button",
-      "Background Audio Track Extractor",
-      "No Watermark Filter Options",
-      "Batch Multi-Media Support"
-    ],
     "fullDetails": {
-      "subtitle": "Manifest V3 Browser Utility for High-Speed Media Extraction",
-      "overview": "ImranAI Video Downloader Chrome Extension inserts clean, lightweight download buttons directly into social media interfaces, enabling 1-click downloads of HD videos, audio tracks, and video thumbnails.",
+      "subtitle": "High-Speed Media Extraction Chrome Extension",
+      "overview": "Integrates directly into your browser context menu. Detects video streams on any web page and offers one-click downloads in 1080p, 4K, or MP3 audio format.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Install Extension",
-          "description": "Load the unpacked extension directory into Chrome developer mode (`chrome://extensions`)."
-        },
-        {
-          "step": "02",
-          "title": "Browse Supported Pages",
-          "description": "Navigate to any Facebook, TikTok, or video page. A glowing download button will appear."
-        },
-        {
-          "step": "03",
-          "title": "Download Media",
-          "description": "Click the download button to grab full resolution video or MP3 audio files instantly."
-        }
+        { "step": "01", "title": "Install Chrome Extension", "description": "Load unpacked extension in Chrome Developer Mode." },
+        { "step": "02", "title": "Browse Any Video Site", "description": "Open YouTube, TikTok, or Instagram; the Dola download bar appears automatically." },
+        { "step": "03", "title": "Click Download", "description": "Select your desired resolution to start instant downloading." }
       ],
       "specs": [
-        {"label": "Manifest Version", "value": "Manifest V3 (Latest Chrome Spec)"},
-        {"label": "Permissions", "value": "Minimal Local ActiveTab Storage"}
+        { "label": "Manifest Version", "value": "Chrome Manifest V3" },
+        { "label": "Max Supported Resolution", "value": "4K Ultra HD (60fps)" }
       ],
       "faqs": [
-        {
-          "q": "Does it require external server credentials?",
-          "a": "No, all media parsing happens directly inside your browser session."
-        }
+        { "q": "Is it free to use?", "a": "Yes, the Chrome extension is open-source and free for personal use." }
       ]
     }
   },
   {
     "id": "imranai-video-translator",
-    "name": "ImranAI AI Video Translator & Dubber",
-    "category": "ai-video",
+    "name": "ImranAI Multilingual Video Translator",
+    "description": "AI-powered video translation suite that transcribes speech, translates scripts, and lip-syncs audio voiceovers into 30+ foreign languages.",
+    "category": "video-ai",
     "categoryName": "AI Video Studio",
-    "status": "LIVE APP",
-    "statusClass": "status-live",
-    "featured": false,
+    "status": "BETA",
+    "statusClass": "status-beta",
     "icon": "fa-solid fa-language",
-    "badge": "AI VOICE",
-    "description": "Multi-lingual video dubbing and subtitle translation platform supporting over 30 languages with voice tone cloning and lip-sync synchronization.",
-    "tags": ["Whisper AI", "Translation", "Voice Dubbing", "Subtitles"],
+    "tags": ["Whisper AI", "TTS", "Translation", "Subtitles"],
     "links": {
-      "launch": "https://translator.imranai.store",
-      "detail": "./tool.html?id=imranai-video-translator",
+      "detail": "./tools/imranai-video-translator.html",
+      "launch": "https://video.imranai.store",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "Automated SRT/VTT Subtitle Generation",
-      "30+ Global Languages Supported",
-      "Voice Emotion Preservation",
-      "Audio Track Replacement Engine"
-    ],
     "fullDetails": {
-      "subtitle": "AI Voice Cloning & Multi-Lingual Subtitle Translation Studio",
-      "overview": "ImranAI AI Video Translator & Dubber translates video narration into 30+ languages while matching speaker vocal timbre and timing. It outputs localized audio tracks and burn-in subtitle files for global audience reach.",
+      "subtitle": "Global Content Localization & Voice Translation Engine",
+      "overview": "Translate your video content for global audiences. Transcribes original audio using Whisper AI, translates text using neural models, and re-synthesizes voiceovers matching original speaker tone.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Upload Master Video",
-          "description": "Select your source video and pick target languages (Spanish, German, Japanese, French, etc.)."
-        },
-        {
-          "step": "02",
-          "title": "Review AI Transcription",
-          "description": "Inspect auto-generated translated scripts and make optional phrasing edits."
-        },
-        {
-          "step": "03",
-          "title": "Render Dubbed Output",
-          "description": "Synthesize localized audio tracks and download synchronized multi-lingual video files."
-        }
+        { "step": "01", "title": "Upload Video", "description": "Select your video file and target language." },
+        { "step": "02", "title": "Auto Transcribe & Translate", "description": "Review generated transcript and foreign language script." },
+        { "step": "03", "title": "Export Dubbed Video", "description": "Render localized video with synchronized voiceover and captions." }
       ],
       "specs": [
-        {"label": "Languages", "value": "30+ Global Languages"},
-        {"label": "Voice Cloning", "value": "Neural Speaker Embedding"}
+        { "label": "Transcription Accuracy", "value": "99% OpenAI Whisper AI" },
+        { "label": "Supported Languages", "value": "30+ Languages" }
       ],
       "faqs": [
-        {
-          "q": "Does it preserve natural voice pitch?",
-          "a": "Yes, neural voice cloning matches speaker pitch, pace, and vocal emotion."
-        }
+        { "q": "Does it generate translated subtitles?", "a": "Yes, it outputs SRT, VTT, and burned-in video subtitles in your target language." }
       ]
     }
   },
   {
     "id": "tiktok-fb-creator-finder",
-    "name": "Creator & Lead Intelligence Finder",
-    "category": "seo-growth",
+    "name": "TikTok & Facebook Creator Lead Finder",
+    "description": "Scraper and analytical tool that discovers high-performing TikTok creators and Facebook page leads by niche, follower counts, and engagement rates.",
+    "category": "seo",
     "categoryName": "SEO & Metadata",
     "status": "LIVE APP",
     "statusClass": "status-live",
-    "featured": false,
     "icon": "fa-solid fa-users-viewfinder",
-    "badge": "GROWTH TOOL",
-    "description": "Scrapes, filters, and indexes top-performing content creators, pages, and viral posts on Facebook and TikTok for competitor research.",
-    "tags": ["Scraper", "Lead Generation", "Analytics", "Automation"],
+    "tags": ["Scraper", "Lead Gen", "TikTok", "Analytics"],
     "links": {
-      "launch": "https://creatorfinder.imranai.store",
-      "detail": "./tool.html?id=tiktok-fb-creator-finder",
+      "detail": "./tools/tiktok-fb-creator-finder.html",
+      "launch": "https://github.com/iamimranai",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "Niche Creator Discovery Engine",
-      "Engagement Rate Metrics Index",
-      "Contact Email & Handle Extraction",
-      "Viral Video Trend Alerts"
-    ],
     "fullDetails": {
-      "subtitle": "Influencer Discovery & Viral Competitor Intelligence Tool",
-      "overview": "Creator & Lead Intelligence Finder automates market research by discovering top creators, analyzing engagement metrics, and compiling outreach contact databases across Facebook and TikTok.",
+      "subtitle": "Influencer Marketing & Creator Intelligence Platform",
+      "overview": "Find target creators and affiliate partners for influencer campaigns. Filters creators by engagement rates, post frequency, contact email presence, and niche keywords.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Specify Niche Keywords",
-          "description": "Enter target niches (e.g., 'Fitness AI', 'Tech Reviews', 'Ecommerce')."
-        },
-        {
-          "step": "02",
-          "title": "Filter Engagement Thresholds",
-          "description": "Set minimum follower counts, average video views, and engagement rates."
-        },
-        {
-          "step": "03",
-          "title": "Export Lead CSV",
-          "description": "Download verified creator handles, email contacts, and top video performance links."
-        }
+        { "step": "01", "title": "Select Platform & Niche", "description": "Choose TikTok or Facebook and type your niche keyword." },
+        { "step": "02", "title": "Set Metric Filters", "description": "Filter by minimum follower count and engagement rate." },
+        { "step": "03", "title": "Export Lead CSV", "description": "Export verified creator profiles and email leads to CSV." }
       ],
       "specs": [
-        {"label": "Data Sources", "value": "Facebook Pages, TikTok Creator Directory"},
-        {"label": "Export Formats", "value": "CSV, JSON, Excel"}
+        { "label": "Data Source", "value": "TikTok Web & Facebook Graph API" },
+        { "label": "Export Formats", "value": "CSV, JSON, Excel" }
       ],
       "faqs": [
-        {
-          "q": "How often is data refreshed?",
-          "a": "Telemetry indices update dynamically during search runs to reflect active creator metrics."
-        }
+        { "q": "Does it extract contact emails?", "a": "Yes, it automatically parses public contact emails listed in creator bios." }
       ]
     }
   },
   {
     "id": "api-key-tester",
-    "name": "Multi-Provider API Key Tester & Validator",
+    "name": "ImranAI API Key & Environment Validator",
+    "description": "Diagnostic developer utility that tests OpenAI, ElevenLabs, Gemini, and YouTube API keys for quotas, model permissions, and response latencies.",
     "category": "utilities",
     "categoryName": "AI Utilities",
     "status": "BUILT-IN",
     "statusClass": "status-builtin",
-    "featured": false,
     "icon": "fa-solid fa-key",
-    "badge": "BUILT-IN TOOL",
-    "description": "Secure client-side utility to verify API key validity, rate limits, available models, and quota balances for OpenAI, Gemini, Claude, and ElevenLabs.",
-    "tags": ["API Tester", "Client-Side Security", "OpenAI", "Gemini", "ElevenLabs"],
-    "isInteractiveModal": true,
-    "modalType": "apiKeyTester",
+    "tags": ["API Test", "OpenAI", "ElevenLabs", "Validator"],
     "links": {
-      "launch": "#interactive-api-tester",
-      "detail": "./tool.html?id=api-key-tester",
+      "detail": "./tools/api-key-tester.html",
+      "launch": "#modal-api",
       "github": "https://github.com/iamimranai"
     },
-    "highlights": [
-      "100% Client-Side Security (Zero Server Logging)",
-      "Model Access & Prefix Verification",
-      "Rate Limit & Token Quota Check",
-      "Instant Response Latency Testing"
-    ],
     "fullDetails": {
-      "subtitle": "Client-Side Security Utility for Validating Developer API Credentials",
-      "overview": "Multi-Provider API Key Tester & Validator lets developers verify API key formats, model access permissions, and rate limits without sending keys to remote third-party databases.",
+      "subtitle": "Instant Multi-Provider API Key Health & Quota Inspector",
+      "overview": "Verify your AI API credentials before launching background tasks. Checks model access permissions, remaining quota limits, and ping latency across major providers.",
       "howToUse": [
-        {
-          "step": "01",
-          "title": "Select Provider",
-          "description": "Choose OpenAI, Google Gemini, ElevenLabs, or Anthropic Claude from the dropdown."
-        },
-        {
-          "step": "02",
-          "title": "Enter Key",
-          "description": "Paste your key into the masked input field."
-        },
-        {
-          "step": "03",
-          "title": "Validate Instantly",
-          "description": "Click 'Validate Key Format' for instant structural and prefix diagnostics."
-        }
+        { "step": "01", "title": "Paste API Key", "description": "Enter your OpenAI, ElevenLabs, or Gemini key." },
+        { "step": "02", "title": "Run Diagnostic Ping", "description": "Click Test Key to run secure client-side API verification." },
+        { "step": "03", "title": "Review Health Report", "description": "Inspect available models, remaining balance, and response latency." }
       ],
       "specs": [
-        {"label": "Supported Providers", "value": "OpenAI, Gemini, ElevenLabs, Claude"},
-        {"label": "Privacy Policy", "value": "Zero Server Transmission / Local Processing Only"}
+        { "label": "Security Model", "value": "Client-Side Only (No Key Storage)" },
+        { "label": "Supported Providers", "value": "OpenAI, ElevenLabs, Gemini, Anthropic" }
       ],
       "faqs": [
-        {
-          "q": "Is my key stored anywhere?",
-          "a": "No! Validation logic runs entirely inside your browser's local memory and is never logged or transmitted to any server."
-        }
+        { "q": "Are my API keys stored?", "a": "No! Keys are tested directly from your browser to provider endpoints and never stored." }
       ]
     }
   }

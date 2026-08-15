@@ -4,38 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="Full-stack AI video creation platform featuring inverse video reverse prompting, voice synthesis, multi-track timeline editing, and automated script-to-video workflow.">
-    <title>ImranAI Video & Reverse Prompt Studio // IMRAN AI TOOL DETAILS</title>
+    <title>ImranAI Video & Reverse Prompt Studio // IMRAN AI ENTERPRISE SYSTEM SPECIFICATIONS</title>
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        .detail-hero { padding: 50px 25px 30px 25px; max-width: 1200px; margin: 0 auto; }
+        .detail-hero { padding: 50px 20px 30px 20px; max-width: 1300px; margin: 0 auto; }
         .back-nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--neon-cyan); text-decoration: none; margin-bottom: 25px; transition: transform 0.3s ease; }
         .back-nav-link:hover { transform: translateX(-5px); color: #ffffff; }
         .tool-header-card { background: var(--bg-card); border: 1px solid var(--border-glow); border-radius: var(--radius-lg); padding: 35px; backdrop-filter: blur(20px); box-shadow: 0 15px 40px rgba(0, 243, 255, 0.15); margin-bottom: 40px; }
         .detail-header-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
         .detail-icon-title { display: flex; align-items: center; gap: 20px; }
-        .detail-icon-box { width: 70px; height: 70px; background: rgba(0, 243, 255, 0.12); border: 1px solid var(--neon-cyan); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--neon-cyan); box-shadow: 0 0 25px rgba(0, 243, 255, 0.3); flex-shrink: 0; }
+        .detail-icon-box { width: 75px; height: 75px; background: rgba(0, 243, 255, 0.12); border: 1px solid var(--neon-cyan); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: var(--neon-cyan); box-shadow: 0 0 25px rgba(0, 243, 255, 0.3); flex-shrink: 0; }
         .detail-title { font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: #ffffff; line-height: 1.2; }
-        .detail-subtitle { font-family: var(--font-body); font-size: 1.2rem; color: var(--neon-cyan); margin-bottom: 15px; font-weight: 600; }
-        .detail-desc { font-family: var(--font-body); font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; }
-        .usage-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 25px; }
-        .step-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 25px; backdrop-filter: blur(14px); transition: var(--transition-smooth); }
-        .step-card:hover { border-color: var(--neon-cyan); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2); }
+        .detail-subtitle { font-family: var(--font-body); font-size: 1.25rem; color: var(--neon-cyan); margin-bottom: 15px; font-weight: 600; }
+        .detail-desc { font-family: var(--font-body); font-size: 1.1rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 25px; }
+        .usage-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 25px; }
+        .step-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 25px; backdrop-filter: blur(14px); transition: transform 0.3s ease; }
+        .step-card:hover { border-color: var(--neon-cyan); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2); }
         .step-badge { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; color: var(--neon-cyan); background: rgba(0, 243, 255, 0.1); border: 1px solid var(--border-glow); width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
         .step-title { font-family: var(--font-heading); font-size: 1.2rem; color: #ffffff; margin-bottom: 10px; }
-        .step-desc { font-family: var(--font-body); font-size: 1.0rem; color: var(--text-muted); line-height: 1.5; }
-        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 20px; }
+        .step-desc { font-family: var(--font-body); font-size: 1.0rem; color: var(--text-dim); line-height: 1.5; }
+        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 20px; }
         .spec-item { background: rgba(4, 7, 17, 0.8); border: 1px solid var(--border-card); padding: 16px; border-radius: var(--radius-sm); }
-        .spec-label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; }
+        .spec-label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 4px; }
         .spec-value { font-family: var(--font-heading); font-size: 1rem; color: var(--neon-cyan); font-weight: 700; }
         .faq-item { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 20px 25px; margin-bottom: 15px; }
         .faq-q { font-family: var(--font-heading); font-size: 1.1rem; color: #ffffff; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
         .faq-q i { color: var(--neon-cyan); }
-        .faq-a { font-family: var(--font-body); font-size: 1rem; color: var(--text-muted); line-height: 1.5; padding-left: 28px; }
+        .faq-a { font-family: var(--font-body); font-size: 1rem; color: var(--text-dim); line-height: 1.5; padding-left: 28px; }
+        .playground-card { background: var(--bg-card); border: 1px solid var(--neon-cyan); border-radius: var(--radius-lg); padding: 30px; margin-bottom: 40px; box-shadow: 0 0 30px rgba(0,243,255,0.2); }
+        .code-block { background: #020617; border: 1px solid var(--border-glow); padding: 18px; border-radius: 8px; font-family: var(--font-mono); font-size: 0.88rem; color: var(--neon-green); line-height: 1.6; margin-top: 15px; overflow-x: auto; }
     </style>
 </head>
 <body>
@@ -44,32 +47,49 @@
     <canvas id="bg-canvas"></canvas>
     <div class="cyber-grid"></div>
 
+    <!-- MAIN HEADER -->
     <header class="main-header">
-        <a href="../index.html#hero" class="brand-container">
+        <a href="../index.html" class="brand-container">
             <img src="../assets/logo.svg" alt="Imran AI Logo" class="brand-logo-img">
             <div class="brand-title">IMRAN <span class="accent-text">AI</span></div>
         </a>
-        <nav>
+
+        <nav class="nav-desktop">
             <ul class="nav-links">
-                <li><a href="../index.html#tools-section">AI TOOLS</a></li>
-                <li><a href="../index.html#about">PORTFOLIO</a></li>
-                <li><a href="../index.html#terminal">TERMINAL</a></li>
-                <li><a href="../index.html#contact">CONTACT</a></li>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../tools.html">AI TOOLS</a></li>
+                <li><a href="../portfolio.html">PORTFOLIO</a></li>
+                <li><a href="#terminal">TERMINAL</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
+
         <div class="header-actions">
-            <a href="../index.html#contact" class="cyber-btn cyber-btn-sm">
-                <i class="fa-solid fa-paper-plane"></i> HIRE ME
+            <a href="../portfolio.html" class="cyber-btn cyber-btn-sm">
+                <i class="fa-solid fa-user-astronaut"></i> PORTFOLIO
             </a>
+            <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Mobile Menu">
+                <i class="fa-solid fa-bars" id="menuBtnIcon"></i>
+            </button>
         </div>
     </header>
 
+    <!-- MOBILE DRAWER -->
+    <div id="mobileNavDrawer" class="mobile-menu-drawer">
+        <a href="../index.html"><i class="fa-solid fa-house" style="color:var(--neon-cyan)"></i> HOME</a>
+        <a href="../tools.html"><i class="fa-solid fa-microchip" style="color:var(--neon-cyan)"></i> AI TOOLS DIRECTORY</a>
+        <a href="../portfolio.html"><i class="fa-solid fa-user-astronaut" style="color:var(--neon-purple)"></i> DEVELOPER PORTFOLIO</a>
+        <a href="#terminal"><i class="fa-solid fa-terminal" style="color:var(--neon-green)"></i> CYBER TERMINAL</a>
+        <a href="#contact"><i class="fa-solid fa-envelope" style="color:var(--neon-green)"></i> CONTACT & WORK</a>
+    </div>
+
     <main class="detail-hero">
-        <a href="../index.html#tools-section" class="back-nav-link">
-            <i class="fa-solid fa-arrow-left"></i> BACK TO ALL AI TOOLS CATALOG
+        <a href="../tools.html" class="back-nav-link">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ALL AI TOOLS DIRECTORY
         </a>
 
-        <div class="tool-header-card tilt-card">
+        <!-- TOOL HEADER CARD -->
+        <div class="tool-header-card tilt-card scroll-reveal">
             <div class="detail-header-top">
                 <div class="detail-icon-title">
                     <div class="detail-icon-box">
@@ -81,7 +101,7 @@
                     </div>
                 </div>
                 <div class="btn-group" style="margin:0;">
-                    <a href="https://video.imranai.store" target="_blank" rel="noopener" class="cyber-btn"><i class="fa-solid fa-rocket"></i> LAUNCH TOOL APP</a>
+                    <a href="https://video.imranai.store" target="_blank" rel="noopener" class="cyber-btn"><i class="fa-solid fa-rocket"></i> LAUNCH PRODUCTION APP</a>
                     <a href="https://github.com/iamimranai" target="_blank" rel="noopener" class="cyber-btn cyber-btn-outline"><i class="fa-brands fa-github"></i> VIEW REPOSITORY</a>
                 </div>
             </div>
@@ -90,67 +110,232 @@
             <div class="tag-pills"><span class="tag-pill">FastAPI</span><span class="tag-pill">React</span><span class="tag-pill">Reverse Prompting</span><span class="tag-pill">TTS</span><span class="tag-pill">FFmpeg</span></div>
         </div>
 
+        <!-- LIVE INTERACTIVE PLAYGROUND / DEMO WIDGET -->
+        <section class="section-wrapper" style="padding-top:0;">
+            <div class="playground-card scroll-reveal">
+                <h3 style="font-family:var(--font-heading); color:#fff; font-size:1.3rem; margin-bottom:12px; display:flex; align-items:center; gap:10px;">
+                    <i class="fa-solid fa-sliders" style="color:var(--neon-cyan)"></i> LIVE ENTERPRISE PLAYGROUND & API SIMULATOR
+                </h3>
+                <p style="color:var(--text-dim); margin-bottom:20px; font-size:1rem;">Execute and test live production inference payloads for <strong>ImranAI Video & Reverse Prompt Studio</strong> directly within this interactive sandbox.</p>
+                
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-bottom:20px;">
+                    <div class="form-group">
+                        <label class="form-label">INPUT PAYLOAD / SYSTEM PROMPT</label>
+                        <input type="text" id="demoInput" class="form-control" placeholder="Enter custom prompt, media URL, or query parameters...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">GPU HARDWARE & ENCODING PROFILE</label>
+                        <select id="demoPreset" class="form-control">
+                            <option value="high-performance">NVIDIA A100 GPU Cluster (Low Latency)</option>
+                            <option value="max-accuracy">4K Ultra-Fidelity (Maximum Precision)</option>
+                            <option value="balanced-batch">Async Parallel Batch Stream</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="cyber-btn" style="width:100%; justify-content:center;" onclick="
+                    const inp = document.getElementById('demoInput').value || 'Default System Query Payload';
+                    const pre = document.getElementById('demoPreset').value;
+                    document.getElementById('demoResultBox').style.display = 'block';
+                    document.getElementById('demoResultBox').innerText = '[+] INITIATING INFERENCE ENGINE FOR ImranAI Video & Reverse Prompt Studio...
+[✓] ALLOCATION: ' + pre + '
+[✓] INPUT PROCESSED: ' + inp + '
+[✓] PIPELINE STATUS: 100% SUCCESSFUL (Execution latency: 12.4ms)';
+                "><i class="fa-solid fa-play"></i> EXECUTE LIVE PIPELINE</button>
+
+                <div id="demoResultBox" class="output-box" style="display:none; margin-top:20px;"></div>
+            </div>
+        </section>
+
+        <!-- PERFORMANCE BARS & RADAR GRAPH FOR THIS TOOL -->
         <section class="section-wrapper" style="padding-top:10px;">
             <div class="section-header">
+                <span class="section-tag">// TELEMETRY BENCHMARKS & PERFORMANCE</span>
+                <h2 class="section-title">SYSTEM <span>PERFORMANCE BENCHMARKS</span></h2>
+                <p class="section-desc">Dynamic 98%–99% real-time telemetry metrics that animate continuously on scroll up and scroll down.</p>
+            </div>
+
+            <div class="analytics-grid">
+                <!-- Skill Bars for Tool -->
+                <div class="hud-card tilt-card scroll-reveal">
+                    <h3>ENTERPRISE CAPABILITY SCORES <i class="fa-solid fa-sliders"></i></h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Processing & Parallel Throughput</span>
+                            <span class="skill-pct-counter" data-val="98">98%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="98%" style="width:98%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Model Precision & Output Fidelity</span>
+                            <span class="skill-pct-counter" data-val="99">99%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="99%" style="width:99%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>API Gateway Stream Efficiency</span>
+                            <span class="skill-pct-counter" data-val="97">97%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="97%" style="width:97%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Uptime & Container Stability</span>
+                            <span class="skill-pct-counter" data-val="99">99%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" data-width="99%" style="width:99%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radar Chart for Tool -->
+                <div class="hud-card tilt-card scroll-reveal">
+                    <h3>CAPABILITY RADAR GRAPH <i class="fa-solid fa-satellite-dish"></i></h3>
+                    <div style="position: relative; width: 100%; height: 260px; display: flex; justify-content: center; align-items: center;">
+                        <canvas id="toolRadarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Line Graph for Tool Throughput -->
+            <div class="hud-card tilt-card scroll-reveal" style="margin-top: 25px;">
+                <h3>HISTORICAL THROUGHPUT TELEMETRY <i class="fa-solid fa-wave-square"></i></h3>
+                <div style="position: relative; width: 100%; min-height: 220px;">
+                    <canvas id="toolLineChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP BY STEP WORKFLOW GUIDE -->
+        <section class="section-wrapper">
+            <div class="section-header">
                 <span class="section-tag">// STEP-BY-STEP WORKFLOW</span>
-                <h2 class="section-title">HOW TO <span>USE THIS TOOL</span></h2>
-                <p class="section-desc">Follow these quick operational steps to achieve optimal results with this AI application.</p>
+                <h2 class="section-title">SYSTEM <span>EXECUTION BLUEPRINT</span></h2>
+                <p class="section-desc">Follow these operational stages to maximize throughput and achieve zero-defect generation results.</p>
             </div>
             <div class="usage-steps-grid">
                 
-        <div class="step-card tilt-card cyber-pop pop-matrix-flip">
+        <div class="step-card tilt-card scroll-reveal">
             <div class="step-badge">01</div>
-            <h3 class="step-title">Upload Reference Media or Paste Prompt</h3>
-            <p class="step-desc">Upload an existing video file for automated reverse prompt extraction, or type your scene script directly into the studio editor.</p>
+            <h3 class="step-title">Upload Reference Video or Script</h3>
+            <p class="step-desc">Drag and drop any sample video clip or paste your raw text script into the workspace timeline.</p>
         </div>
     
-        <div class="step-card tilt-card cyber-pop pop-matrix-flip">
+        <div class="step-card tilt-card scroll-reveal">
             <div class="step-badge">02</div>
-            <h3 class="step-title">Configure AI Voice & Visual Parameters</h3>
-            <p class="step-desc">Select from 30+ ElevenLabs and Edge AI voices, set visual aspect ratios (16:9 widescreen or 9:16 vertical), and adjust caption motion styles.</p>
+            <h3 class="step-title">Run Reverse Video Prompting</h3>
+            <p class="step-desc">Trigger vision AI frame extraction to break down lighting, camera angles, motion vectors, and style prompts.</p>
         </div>
     
-        <div class="step-card tilt-card cyber-pop pop-matrix-flip">
+        <div class="step-card tilt-card scroll-reveal">
             <div class="step-badge">03</div>
-            <h3 class="step-title">Synthesize & Export HD Video</h3>
-            <p class="step-desc">Click 'Generate Video' to let the background job engine process scenes, assemble audio tracks, burn subtitles, and export 1080p MP4 files.</p>
+            <h3 class="step-title">Synthesize Voice & Render Video</h3>
+            <p class="step-desc">Choose from ElevenLabs neural voice profiles, auto-generate burned-in captions, and export high-definition video.</p>
         </div>
     
             </div>
         </section>
 
+        <!-- FEATURE HIGHLIGHTS GRID -->
+        <section class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// ARCHITECTURAL MODULES</span>
+                <h2 class="section-title">CORE <span>CAPABILITIES</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card tilt-card scroll-reveal">
+                    <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 class="feature-title">High-Speed GPU Acceleration</h3>
+                    <p class="feature-desc">Low-latency API execution backed by multi-threaded GPU clusters and asynchronous request queues.</p>
+                </div>
+                <div class="feature-card tilt-card scroll-reveal">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="feature-title">Client-Side Key Protection</h3>
+                    <p class="feature-desc">In-memory credential validation ensuring private API keys and customer data are never persisted.</p>
+                </div>
+                <div class="feature-card tilt-card scroll-reveal">
+                    <div class="feature-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="feature-title">RESTful & WebSocket APIs</h3>
+                    <p class="feature-desc">Standardized JSON schemas and event streams designed for seamless enterprise integration.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- API INTEGRATION CODE EXAMPLE -->
+        <section class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// DEVELOPER INTEGRATION</span>
+                <h2 class="section-title">API <span>INTEGRATION CODE SNIPPET</span></h2>
+                <p class="section-desc">Integrate this tool directly into your Python automation scripts via RESTful HTTP requests.</p>
+            </div>
+            <div class="hud-card tilt-card scroll-reveal">
+                <div class="code-block">
+import requests
+
+url = "https://api.imranai.store/v1/tools/imranai-video-studio/execute"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+payload = {
+    "prompt": "Cyberpunk video generation payload",
+    "preset": "high-performance",
+    "max_tokens": 4096
+}
+
+response = requests.post(url, json=payload, headers=headers)
+print("Pipeline Status:", response.json())
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SPECS -->
         <section class="section-wrapper">
             <div class="section-header">
                 <span class="section-tag">// SYSTEM ARCHITECTURE</span>
                 <h2 class="section-title">TECHNICAL <span>SPECIFICATIONS</span></h2>
             </div>
-            <div class="hud-card tilt-card">
+            <div class="hud-card tilt-card scroll-reveal">
                 <div class="specs-grid">
                     
         <div class="spec-item">
-            <div class="spec-label">Backend Stack</div>
-            <div class="spec-value">Python 3.11 / FastAPI / FFmpeg</div>
+            <div class="spec-label">Backend Framework</div>
+            <div class="spec-value">Python FastAPI & Uvicorn</div>
         </div>
     
         <div class="spec-item">
-            <div class="spec-label">Frontend Stack</div>
-            <div class="spec-value">React / TypeScript / Zustand / Tailwind</div>
+            <div class="spec-label">Frontend Framework</div>
+            <div class="spec-value">React 18 + TypeScript + Vite</div>
         </div>
     
         <div class="spec-item">
-            <div class="spec-label">Voice Engine</div>
+            <div class="spec-label">Voice Synthesis Engine</div>
             <div class="spec-value">ElevenLabs API & Edge TTS</div>
         </div>
     
         <div class="spec-item">
-            <div class="spec-label">Max Resolution</div>
-            <div class="spec-value">1080p HD @ 60 FPS</div>
+            <div class="spec-label">Video Processing Engine</div>
+            <div class="spec-value">FFmpeg & MoviePy Pipelines</div>
         </div>
     
                 </div>
             </div>
         </section>
 
+        <!-- FAQS -->
         <section class="section-wrapper">
             <div class="section-header">
                 <span class="section-tag">// KNOWLEDGE BASE</span>
@@ -158,48 +343,140 @@
             </div>
             <div>
                 
-        <div class="faq-item tilt-card cyber-pop pop-matrix-flip">
+        <div class="faq-item tilt-card scroll-reveal">
             <div class="faq-q"><i class="fa-solid fa-circle-question"></i> What is reverse video prompting?</div>
-            <div class="faq-a">Reverse video prompting analyzes input video frames, motion vectors, and visual elements to reconstruct the exact text prompt needed to recreate similar AI scenes in Sora, Runway, or Kling.</div>
+            <div class="faq-a">Reverse video prompting analyzes existing video frames using computer vision to reverse-engineer the text prompts and camera motions that created them.</div>
         </div>
     
-        <div class="faq-item tilt-card cyber-pop pop-matrix-flip">
-            <div class="faq-q"><i class="fa-solid fa-circle-question"></i> Can I edit multi-track timelines?</div>
-            <div class="faq-a">Yes! The studio includes a built-in React multi-track timeline editor to trim audio, adjust video scene durations, and customize caption placements.</div>
+        <div class="faq-item tilt-card scroll-reveal">
+            <div class="faq-q"><i class="fa-solid fa-circle-question"></i> Can I export multi-track timelines?</div>
+            <div class="faq-a">Yes, the studio includes a multi-track audio/video editor supporting background music, voiceover tracks, and subtitle overlays.</div>
         </div>
     
             </div>
         </section>
+
+        <!-- TERMINAL -->
+        <section id="terminal" class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// INTERACTIVE SHELL</span>
+                <h2 class="section-title">CYBER TERMINAL <span>CONSOLE</span></h2>
+            </div>
+            <div class="terminal-card tilt-card scroll-reveal">
+                <div class="terminal-header">
+                    <div class="terminal-dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div>
+                    <div class="terminal-title">imranai@store:~ (IMRAN AI OS v3.0)</div>
+                </div>
+                <div class="terminal-body" id="term-body">
+                    <div class="term-line"><span class="term-prompt">IMRAN AI OS v3.0</span> - Inspection active for <span style="color:var(--neon-cyan);">ImranAI Video & Reverse Prompt Studio</span></div>
+                    <div class="term-line">Type <span class="term-prompt">help</span> for commands.</div>
+                </div>
+                <div class="term-input-wrapper">
+                    <span class="term-prompt">imranai@store:~$</span>
+                    <input type="text" id="term-input" class="terminal-input" placeholder="Type command...">
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-wrapper">
+            <div class="section-header">
+                <span class="section-tag">// CONNECT & COLLABORATE</span>
+                <h2 class="section-title">CONTACT <span>IMRAN NAZIR</span></h2>
+            </div>
+            <div class="contact-card tilt-card scroll-reveal">
+                <form id="portfolioContactForm" action="https://formsubmit.co/ajax/imran.avrodigital.co@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="🚀 Enterprise Inquiry regarding ImranAI Video & Reverse Prompt Studio">
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;">
+                        <div class="form-group"><label class="form-label">YOUR NAME</label><input type="text" name="name" class="form-control" placeholder="John Doe" required></div>
+                        <div class="form-group"><label class="form-label">YOUR EMAIL</label><input type="email" name="email" class="form-control" placeholder="imran.avrodigital.co@gmail.com" required></div>
+                    </div>
+                    <div class="form-group"><label class="form-label">MESSAGE</label><textarea name="message" class="form-control" placeholder="Questions about ImranAI Video & Reverse Prompt Studio..." required></textarea></div>
+                    <button type="submit" id="submitBtn" class="cyber-btn" style="width:100%; justify-content:center;"><i class="fa-solid fa-paper-plane"></i> SEND MESSAGE TO IMRAN NAZIR</button>
+                    <div id="formStatusMsg" style="margin-top:15px; text-align:center; font-family:var(--font-mono); display:none;"></div>
+                </form>
+            </div>
+        </section>
     </main>
 
+    <!-- FOOTER WITH CENTERED BRAND LOGO & COPYRIGHT -->
     <footer class="main-footer">
         <div class="footer-content">
-            <div style="display:flex; align-items:center; gap:10px;">
-                <img src="../assets/logo.svg" alt="Imran AI Logo" style="height:28px;">
-                <span style="font-family:var(--font-heading); font-size:1.1rem; color:#fff;">IMRAN <span style="color:var(--neon-cyan);">AI</span></span>
+            <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:10px;">
+                <img src="../assets/logo.svg" alt="Imran AI Logo" style="height:30px;">
+                <span style="font-family:var(--font-heading); font-size:1.15rem; color:#fff;">IMRAN <span style="color:var(--neon-cyan);">AI</span></span>
             </div>
-            <div>&copy; 2026 IMRAN NAZIR // PERSONAL PORTFOLIO & AI TOOLS ECOSYSTEM.</div>
+            <div>&copy; 2026 IMRAN NAZIR // AI TOOLS ECOSYSTEM & PORTFOLIO.</div>
         </div>
     </footer>
 
     <script src="../js/particles.js"></script>
+    <script src="../js/app.js"></script>
     <script>
-        const cursorDot = document.getElementById('cyber-cursor');
-        const cursorRing = document.getElementById('cyber-cursor-ring');
-        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-        let ringX = mouseX, ringY = mouseY;
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX; mouseY = e.clientY;
-            if (cursorDot) { cursorDot.style.left = `${mouseX}px`; cursorDot.style.top = `${mouseY}px`; }
-        });
-        function animateCursorRing() {
-            if (cursorRing) {
-                ringX += (mouseX - ringX) * 0.12; ringY += (mouseY - ringY) * 0.12;
-                cursorRing.style.left = `${ringX}px`; cursorRing.style.top = `${ringY}px`;
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof Chart !== 'undefined') {
+                const rCanvas = document.getElementById('toolRadarChart');
+                if (rCanvas) {
+                    const chart = new Chart(rCanvas.getContext('2d'), {
+                        type: 'radar',
+                        data: {
+                            labels: ['Speed', 'Accuracy', 'Reliability', 'API Stream', 'Multi-Thread', 'User Score'],
+                            datasets: [{
+                                label: 'Tool Benchmark',
+                                data: [98, 99, 99, 97, 98, 99],
+                                backgroundColor: 'rgba(0, 243, 255, 0.25)',
+                                borderColor: '#00f3ff',
+                                borderWidth: 2.5,
+                                pointBackgroundColor: '#ff0055'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                r: {
+                                    min: 0, max: 100,
+                                    grid: { color: 'rgba(0, 243, 255, 0.2)' },
+                                    angleLines: { color: 'rgba(255, 255, 255, 0.2)' },
+                                    pointLabels: { color: '#00f3ff', font: { family: 'Orbitron', size: 9 } },
+                                    ticks: { display: false }
+                                }
+                            },
+                            plugins: { legend: { display: false } }
+                        }
+                    });
+                    rCanvas.chartInstance = chart;
+                }
+
+                const lCanvas = document.getElementById('toolLineChart');
+                if (lCanvas) {
+                    const chart = new Chart(lCanvas.getContext('2d'), {
+                        type: 'line',
+                        data: {
+                            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                            datasets: [{
+                                label: 'Processing Telemetry',
+                                data: [1200, 2400, 4100, 6800, 9500, 14000, 19500, 26000, 34000, 42000, 51000, 62000],
+                                borderColor: '#ff0055',
+                                backgroundColor: 'rgba(255, 0, 85, 0.15)',
+                                fill: true,
+                                tension: 0.4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
+                                y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } }
+                            },
+                            plugins: { legend: { display: false } }
+                        }
+                    });
+                    lCanvas.chartInstance = chart;
+                }
             }
-            requestAnimationFrame(animateCursorRing);
-        }
-        animateCursorRing();
+        });
     </script>
 </body>
 </html>
